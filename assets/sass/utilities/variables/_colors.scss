@@ -2,9 +2,13 @@ $base__color: #333;
 
 $body__background-color: #eee;
 
+// Link Colors
 $link__color: #c3251d;
 $link__color--hover: #333;
 
+//
+// Header
+//===================================
 $site-header__background-color: #fff;
 $site-title__link-color: #333;
 
@@ -12,21 +16,39 @@ $site-title__link-color: #333;
 // Navigation Colors
 //==================================
 
+// Nav Links
 $nav__link--color: #333;
 $nav__link--color-hover-focus: #c3251d;
+
+// Nav Primary
 $nav-primary__background-color: #eee;
 $nav-primary__border-color: #eee;
+
+// Submenu
 $submenu__border-color: #eee;
 $submenu__link--background-color: #fff;
+
+// Nav Toggle
 $nav-toggle__background-color: #fff;
 $nav-toggle__color: #333;
+
+// Archive Pagination
 $archive-pagination__color: #333;
 $archive-pagination__color--hover-focus: #fff;
 $archive-pagination__background-color: #fff;
 $archive-pagination__background-color--hover-focus: #c3251d;
+
+// js enabled
 $js-nav__background-color: $white;
 $js-nav__hover-color: #000;
 $js-nav__focus-color: #c3251d;
 
 
+//
+// Footer
+//===============================
 
+$site-footer__background-color: #fff;
+$site-footer__border-color: #eee;
+
+$footer-widgets__background-color: #fff;
