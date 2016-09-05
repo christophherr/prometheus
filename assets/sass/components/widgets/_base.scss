@@ -1,3 +1,7 @@
+//
+// Widget base stylings
+//====================================
+
 .widget-area .widget:last-of-type {
   margin-bottom: 0;
 }
@@ -5,21 +9,19 @@
 .widget {
   margin-bottom: 40px;
   word-wrap: break-word;
-}
 
-.widget {
-  p:last-child,
-  ul > li:last-of-type {
+  p:last-child {
     margin-bottom: 0;
   }
 
   ul > li {
     margin-bottom: 10px;
     padding-bottom: 10px;
-  }
 
-  ul > li:last-of-type {
-    padding-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   ol > li {
