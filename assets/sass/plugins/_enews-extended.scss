@@ -2,35 +2,35 @@
 --------------------------------------------- */
 
 .sidebar .widget.enews-widget {
-  background-color: #333;
+  background-color: $sidebar-enews-widget__background-color;
 }
 
 .sidebar .enews-widget {
 
   &, .widget-title {
-    color: #fff;
+    color: $sidebar-enews-widget__text-color#fff;
   }
 
   input,
   input:focus {
-    border: 1px solid #333;
+    border: 1px solid $sidebar-enews-widgets--input__border-color;
   }
 
   input[type="submit"] {
-    background-color: #c3251d;
-    color: #fff;
+    background-color: $sidebar-enews-widgets--input-submit__background-color;
+    color: $sidebar-enews-widgets--input-submit__text-color;#fff;
   }
 
   input:hover[type="submit"],
   input:focus[type="submit"] {
-    background-color: #fff;
-    color: #333;
+    background-color: $sidebar-enews-widgets--input-submit-hover-focus__background-color;
+    color: $sidebar-enews-widgets--input-submit-hover-focus__text-color;
   }
 }
 
 .enews-widget {
   input {
-    font-size: 16px;
+    font-size: rem( $enews-widget--imput__font-size );
     font-size: 1.6rem;
     margin-bottom: 16px;
 
