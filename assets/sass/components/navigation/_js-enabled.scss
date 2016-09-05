@@ -1,0 +1,89 @@
+//
+// .js enabled styles
+//======================================
+
+
+@media only screen and (max-width: 1023px) {
+  .js {
+    .genesis-nav-menu {
+      .sub-menu,
+      .sub-menu a {
+        width: 100%;
+      }
+
+      .menu-item:hover {
+        position: relative;
+      }
+
+      .menu-item > a:focus {
+        ul.sub-menu,
+        ul.sub-menu .sub-menu {
+          left: 0;
+          margin-left: 0;
+        }
+      }
+
+      > .menu-item-has-children > a:after {
+        content: none;
+      }
+
+      .sub-menu {
+        border: none;
+        clear: both;
+        display: none;
+        margin: 0;
+        opacity: 1;
+        padding-left: 15px;
+        position: static;
+        width: 100%;
+
+        .sub-menu {
+          margin: 0;
+        }
+      }
+
+    .nav-primary,
+    .site-header {
+      .genesis-nav-menu .menu-item {
+        display: block;
+        float: none;
+        margin: 1px 0;
+        position: relative;
+        text-align: left;
+
+        a {
+          border: none;
+          padding: 12px 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  nav.nav-primary,
+  .site-header nav {
+    display: none;
+    position: relative;
+  }
+
+  .site-header nav .wrap {
+    padding: 0;
+  }
+
+  nav.pagination {
+    display: block;
+  }
+
+  nav button:hover,
+  .menu-toggle:hover,
+  .nav-primary {
+    background-color: $js-nav__background-color;
+    color: $js-nav__hover-color;
+  }
+
+  nav button:focus,
+  .menu-toggle:focus {
+    background-color: $js-nav__background-color;
+    color: $js-nav__focus-color;
+  }
+}

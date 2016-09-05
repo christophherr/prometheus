@@ -1,0 +1,74 @@
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+  float: left;
+  padding: 10px 0;
+  width: 300px;
+
+  @media only screen and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  .header-image & {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 0;
+
+    @media only screen and (max-width: 1023px) {
+      float: none;
+    }
+  }
+
+  .header-full-width & {
+    float: none;
+    width: 100%;
+  }
+}
+
+.site-title {
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media only screen and (max-width: 1023px) {
+    text-align: center;
+  }
+
+  a,
+  a:hover,
+  a:focus {
+    color: $site-title__link-color;
+    text-decoration: none;
+  }
+
+  .header-image & > a {
+    background-position: center !important;
+    background-size: contain !important;
+    float: left;
+    min-height: 80px;
+    width: 100%;
+  }
+}
+
+.site-description {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media only screen and (max-width: 1023px) {
+    text-align: center;
+  }
+}
+
+.site-description,
+.site-title {
+  margin-bottom: 0;
+
+  .header-image & {
+    display: block;
+    text-indent: -9999px;
+  }
+}
