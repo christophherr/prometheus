@@ -4,15 +4,16 @@
 .title-area {
   float: left;
   padding: 10px 0;
-  width: 300px;
+  width: $title-area__width;
 
   @media only screen and (max-width: 1023px) {
     width: 100%;
+    text-align: center;
   }
 
   .header-image & {
     margin: 0 auto;
-    max-width: 300px;
+    max-width: $title-area__width;
     padding: 0;
 
     @media only screen and (max-width: 1023px) {
@@ -27,14 +28,9 @@
 }
 
 .site-title {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: rem( $site-title__font-size );
   font-weight: 700;
   line-height: 1.2;
-
-  @media only screen and (max-width: 1023px) {
-    text-align: center;
-  }
 
   a,
   a:hover,
@@ -47,25 +43,24 @@
     background-position: center !important;
     background-size: contain !important;
     float: left;
-    min-height: 80px;
+    min-height: $site-title__min-height;
     width: 100%;
   }
 }
 
 .site-description {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: rem ( $site-description__font-size );
   font-weight: 400;
   line-height: 1.5;
-
-  @media only screen and (max-width: 1023px) {
-    text-align: center;
-  }
 }
 
 .site-description,
 .site-title {
   margin-bottom: 0;
+
+  @media only screen and (max-width: 1023px) {
+    text-align: center;
+  }
 
   .header-image & {
     display: block;
