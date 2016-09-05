@@ -1,5 +1,7 @@
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 
-@import "entries";
-@import "meta";
+@import "base";
+@import "entry-header/index";
+@import "entry-content";
+@import "entry-footer/index";

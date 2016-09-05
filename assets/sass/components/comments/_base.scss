@@ -1,57 +1,70 @@
+//
+// Comments, Comment Responses & Pings
+//===========================================
 
-.comment-respond,
 .entry-comments,
 .entry-pings {
-  background-color: #fff;
-  font-size: 16px;
-  font-size: 1.6rem;
+  background-color: $comments-pings__background-color;
+  font-size: rem( $comments-pings__font-size );
   margin-bottom: 40px;
+
+  @media only screen and (max-width: 860px) {
+    padding: 30px;
+    margin-bottom: 5%;
+  }
 }
 
-.comment-respond,
 .entry-pings {
   padding: 60px 60px 32px;
+
+  .reply {
+    display: none;
+  }
 }
 
 .entry-comments {
   padding: 60px;
 }
 
-.comment-list li {
-  padding: 40px 0 0 30px;
+.comment-list {
+  li {
+    padding: 40px 0 0 30px;
+  }
+
+  .depth-1 {
+    padding-left: 0;
+  }
 }
 
-.comment-list .depth-1 {
-  padding-left: 0;
-}
+  .comment-header {
+    margin-bottom: 30px;
 
-.comment-header {
-  margin-bottom: 30px;
+    p {
+     margin-bottom: 0;
+   }
 }
+  .comment-content {
+    clear: both;
 
-.comment-content {
-  clear: both;
-}
+    ul > li {
+      list-style-type: disc;
+    }
+  }
 
-.comment-content ul > li {
-  list-style-type: disc;
-}
+  .comment-respond {
+    background-color: $comments-pings__background-color;
+    font-size: rem( $comments-pings__font-size );
+    margin-bottom: 40px;
+    padding: 60px 60px 32px;
 
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-  width: 50%;
-}
+    input[type="email"],
+    input[type="text"],
+    input[type="url"] {
+      width: 50%;
+    }
 
-.comment-respond label {
-  display: block;
-  margin-right: 12px;
-}
-
-.comment-header p {
-  margin-bottom: 0;
-}
-
-.entry-pings .reply {
-  display: none;
-}
+    label {
+      display: block;
+      margin-right: 12px;
+    }
+  }
