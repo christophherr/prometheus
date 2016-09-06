@@ -25,4 +25,10 @@
     background-color: $entry-content-code__background-color;
     color: $entry-content-code__text-color;
   }
+
+  .wp-audio-shortcode,
+  .wp-playlist,
+  .wp-video {
+    margin: 0 0 28px;
+  }
 }

@@ -1,14 +1,18 @@
 .sidebar {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: rem( $sidebar__font-size )16px;
   margin-bottom: 40px;
 
   @media only screen and (max-width: $small-screen) {
     margin-bottom: 5%;
   }
 
+  .widget-title a {
+    color: $sidebar-widget-title--link__text-color;
+    text-decoration: none;
+  }
+
   .widget {
-    background-color: #fff;
+    background-color: $sidebar-widget__background-color;
     padding: 40px;
 
     @media only screen and (max-width: 860px) {

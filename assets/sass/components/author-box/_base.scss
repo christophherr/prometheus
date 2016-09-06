@@ -1,0 +1,17 @@
+//
+// Author box base styles
+
+.author-box {
+  background-color: $author-box__background-color#fff;
+  font-size: rem( $author-box__font-size );
+  margin-bottom: 40px;
+  padding: 60px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.author-box-title {
+  font-size: rem( $author-box-title__font-size );
+}

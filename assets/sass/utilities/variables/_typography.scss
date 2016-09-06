@@ -8,13 +8,18 @@ $site-description__font-size: 16;
 $nav__font-size: 16;
 $submenu__font-size: 14;
 $primary-nav__font-size: 14;
-$archive-pagination__font-size: 16
+$archive-pagination__font-size: 16;
+
+//
+// Breadcrumb font size
+//==================================
+$breadcrumb__font-size: 16;
 
 //
 // Footer font size
 //================================
 $site-footer__font-size: 16;
-$footer-widgets__font-size: 18,
+$footer-widgets__font-size: 18;
 
 //
 // Entry Header
@@ -28,28 +33,55 @@ $entry-header-entry-meta__font-size: 16;
 $entry-title__font-size: 36;
 
 //
+// WP Caption
+//=========================================
+$wp-caption-text__font-size: 14;
+
+//
 // Entry Footer
 //=====================================
-
 $entry-footer-entry-meta__font-size: 16;
+
+//
+// Author Box
+//=====================================
+$author-box-title__font-size: 20;
+$author-box__font-size: 18;
+
+//
+// After Entry
+//=====================================
+$after-entry__font-size: 18;
 
 //
 // Comments & Pings
 //==========================================
-
 $comments-pings__font-size: 16;
 
 //
 // Featured Content Entry Title
 //===========================================
-
 $featured-content-entry-title__font-size: 20;
+
+//
+// Sidebars & Widgets
+//===========================================
+$sidebar__font-size: 16;
+$widget-title__font-size: 18;
 
 //
 // Plugins
 //============================================
 
 // Enews Extended
-
 $enews-widget--imput__font-size: 16;
 
+//
+// Views
+//===========================================
+
+// Archive
+//===========================================
+$archive-title__font-size: 20;
+$archive-description--entry-title__font-size: 20;
+$archive-description__font-size: 18;

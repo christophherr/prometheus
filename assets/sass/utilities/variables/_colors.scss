@@ -32,6 +32,9 @@ $submenu__link--background-color: #fff;
 $nav-toggle__background-color: #fff;
 $nav-toggle__color: #333;
 
+// Breadcrumbs
+$breadcrumb__background-color: #fff;
+
 // Archive Pagination
 $archive-pagination__color: #333;
 $archive-pagination__color--hover-focus: #fff;
@@ -43,54 +46,62 @@ $js-nav__background-color: $white;
 $js-nav__hover-color: #000;
 $js-nav__focus-color: #c3251d;
 
-
 //
 // Entry
 //=================================
-
 $entry__background-color: #fff;
 
 //
 // Entry Title
 //================================
-
 $entry-title__link-color: #333;
 $entry-title__link-color--hover-focus: #c3251d;
 
 //
 // Entry Content
 //=================================
-
 $entry-content-code__background-color: #333;
 $entry-content-code__text-color: #eee;
 
 //
 // Entry Footer
 //===============================
-
 $entry-footer-entry-meta__border-color: #eee;
+
+//
+// Author Box
+//================================
+$author-box__background-color: #fff;
+
+//
+// After Entry
+//================================
+$after-entry__background-color: #fff;
 
 //
 // Comments & Pings
 //===============================
-
 $comments-pings__background-color: #fff;
 
 //
 // Footer
 //===============================
-
 $site-footer__background-color: #fff;
 $site-footer__border-color: #eee;
 
 $footer-widgets__background-color: #fff;
 
 //
+// Sidebars & Widgets
+//===========================================
+$sidebar-widget-title--link__text-color: #333;
+$sidebar-widget__background-color: #fff;
+
+//
 // Plugins
 //=================================
 
 // Enews Extended
-
 $sidebar-enews-widget__background-color: #333;
 $sidebar-enews-widget__text-color: #fff;
 
@@ -101,3 +112,13 @@ $sidebar-enews-widgets--input-submit__text-color: #fff;
 
 $sidebar-enews-widgets--input-submit-hover-focus__background-color: #fff;
 $sidebar-enews-widgets--input-submit-hover-focus__text-color: #333;
+
+
+//
+// Views
+//===========================================
+
+// Archive
+//===========================================
+
+$archive-description__background-color: #fff;

@@ -1,0 +1,26 @@
+//
+// Responses to comments
+//===========================
+
+.comment-respond {
+  background-color: $comments-pings__background-color;
+  font-size: rem( $comments-pings__font-size );
+  margin-bottom: 40px;
+  padding: 60px 60px 32px;
+
+  input[type="email"],
+  input[type="text"],
+  input[type="url"] {
+    width: 50%;
+  }
+
+  label {
+    display: block;
+    margin-right: 12px;
+  }
+
+  @media only screen and (max-width: $small-screen) {
+    padding: 30px;
+    margin-bottom: 5%;
+  }
+}

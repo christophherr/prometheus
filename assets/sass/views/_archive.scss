@@ -1,0 +1,22 @@
+//
+// Archive styles
+//===================================
+
+.archive-title {
+  font-size: rem( $archive-title__font-size )20px;
+}
+
+.archive-description {
+  background-color: $archive-description__background-color;
+  font-size: rem( $archive-description__font-size );
+  margin-bottom: 40px;
+  padding: 60px;
+
+  .entry-title {
+    font-size: rem( $archive-description--entry-title__font-size );
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

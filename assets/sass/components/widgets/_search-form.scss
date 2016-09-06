@@ -1,0 +1,33 @@
+/* ## Search Form
+--------------------------------------------- */
+
+.search-form {
+  overflow: hidden;
+
+  .entry-content &,
+  .site-header & {
+    margin-bottom: 40px;
+    width: 50%;
+  }
+  .site-header & {
+    float: right;
+    margin: 12px auto 0;
+  }
+}
+
+input[type="submit"] {
+  .post-password-form &,
+  .search-form & {
+    margin-top: 10px;
+  }
+  .genesis-nav-menu .search &,
+  .widget_search & {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}

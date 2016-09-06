@@ -1,8 +1,11 @@
 //
 // Component Modules
 
+@import "accessibility/index";
 @import "comments/index";
 @import "content/index";
+@import "avatar";
+@import "author-box/index";
 @import "footer/index";
 @import "header/index";
 @import "navigation/index";

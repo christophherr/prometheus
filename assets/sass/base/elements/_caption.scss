@@ -1,0 +1,23 @@
+//
+// Caption Styles
+//=====================================
+
+.wp-caption.alignright {
+  margin: 0 0 24px 24px;
+}
+
+.wp-caption.alignleft {
+    margin: 0 24px 24px 0;
+}
+
+.entry-content p.wp-caption-text {
+    margin-bottom: 0;
+  }
+
+.wp-caption-text {
+  font-size: $wp-caption-text__font-size;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}

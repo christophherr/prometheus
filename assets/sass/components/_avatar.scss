@@ -1,0 +1,15 @@
+/* ## Avatar
+--------------------------------------------- */
+
+.avatar {
+  border-radius: 50%;
+  float: left;
+
+  .alignleft & {
+    margin-right: 24px;
+  }
+
+  .alignright & {
+    margin-left: 24px;
+  }
+}
