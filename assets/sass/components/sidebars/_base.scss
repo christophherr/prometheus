@@ -3,6 +3,10 @@
   font-size: 1.6rem;
   margin-bottom: 40px;
 
+  @media only screen and (max-width: $small-screen) {
+    margin-bottom: 5%;
+  }
+
   .widget {
     background-color: #fff;
     padding: 40px;

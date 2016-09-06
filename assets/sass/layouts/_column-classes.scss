@@ -53,3 +53,20 @@
   clear: both;
   margin-left: 0;
 }
+
+@media only screen and (max-width: $small-screen) {
+  .five-sixths,
+  .four-sixths,
+  .one-fourth,
+  .one-half,
+  .one-sixth,
+  .one-third,
+  .three-fourths,
+  .three-sixths,
+  .two-fourths,
+  .two-sixths,
+  .two-thirds {
+    margin: 0;
+    width: 100%;
+  }
+}

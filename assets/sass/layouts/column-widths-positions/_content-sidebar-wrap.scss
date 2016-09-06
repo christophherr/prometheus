@@ -1,0 +1,33 @@
+/* ### Wrapping div for .content and .sidebar-primary */
+
+.content-sidebar-wrap {
+  .content-sidebar-sidebar &,
+  .sidebar-content-sidebar &,
+  .sidebar-sidebar-content & {
+    width: $content-twosidebars--content-sidebar-wrap__width1060px;
+
+    @media only screen and (max-width: $larger-screen) {
+      width: $content-twosidebars--content-sidebar-wrap--larger-screen__width;
+    }
+
+    @media only screen and (max-width: $large-screen) {
+      width: $content-twosidebars--content-sidebar-wrap--large-screen__width;
+    }
+
+    @media only screen and (max-width: $medium-screen) {
+      width: 100%;
+    }
+  }
+
+  .content-sidebar-sidebar & {
+    float: left;
+  }
+
+  .sidebar-content-sidebar &,
+  .sidebar-sidebar-content & {
+    float: right;
+  }
+}
+
+
+

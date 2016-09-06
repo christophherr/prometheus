@@ -2,21 +2,45 @@
 
 .content {
   float: right;
-  width: 880px;
-}
+  width: $content__width;
 
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-  float: left;
-}
+  @media only screen and (max-width: $larger-screen) {
+    width: $content--larger-screen__width;
+  }
 
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-  width: 660px;
-}
+  @media only screen and (max-width: $large-screen) {
+    width: $content--large-screen__width;
+  }
 
-.full-width-content .content {
-  width: 100%;
+  @media only screen and (max-width: $medium-screen) {
+    width: 100%;
+  }
+
+  .content-sidebar &,
+  .content-sidebar-sidebar &,
+  .sidebar-content-sidebar & {
+    float: left;
+  }
+
+  .content-sidebar-sidebar &,
+  .sidebar-content-sidebar &,
+  .sidebar-sidebar-content & {
+    width: $content-twosidebars__width;
+
+    @media only screen and (max-width: $larger-screen) {
+      width: $content-twosidebars--larger-screen__width;
+    }
+
+    @media only screen and (max-width: $large-screen) {
+      width: $content-twosidebars--large-screen__width;
+    }
+
+    @media only screen and (max-width: $medium-screen) {
+      width: 100%;
+    }
+  }
+
+  .full-width-content & {
+    width: 100%;
+  }
 }

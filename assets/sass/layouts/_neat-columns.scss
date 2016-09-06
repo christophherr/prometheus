@@ -1,0 +1,74 @@
+//
+// Neat column classes
+//======================
+
+@include media($smaller-screen) {
+
+  .one-half,
+  .three-sixths,
+  .two-fourths,
+  .one-third,
+  .two-sixths,
+  .four-sixths,
+  .two-thirds,
+  .one-fourth {
+    @include span-columns(6);
+
+    @include media($small-screen-max) {
+      &:nth-child(even) {
+        @include omega();
+        clear: right;
+      }
+    }
+  }
+
+}
+
+
+@include media($small-screen) {
+
+  .one-half,
+  .three-sixths,
+  .two-fourths {
+    @include span-columns(6);
+  }
+
+  .one-third,
+  .two-sixths {
+    @include span-columns(4);
+  }
+
+  .four-sixths,
+  .two-thirds {
+    @include span-columns(8);
+  }
+
+  .one-fourth {
+    @include span-columns(3);
+  }
+
+  .three-fourths {
+    @include span-columns(9);
+  }
+
+  .one-sixth {
+    @include span-columns(2);
+  }
+
+  .five-sixths {
+    @include span-columns(10);
+  }
+
+  &.last {
+    @include omega();
+    clear: right;
+  }
+
+  .one-half {
+    clear: left;
+
+    &.last {
+      clear: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+//
+// Dimension Variables
+//============================
+
+//
+// Breakpoints
+// Webdevstudios wd_s
+//===================================
+
+$large-desktop: 1680px;
+$desktop: 1366px;
+$tablet-landscape: 1024px;
+$tablet-portrait: 768px;
+$phone-landscape: 640px;
+$phone-portrait: 360px;
+
+// Global Screen Sizes
+//------------------------------------------------------------------------------
+$smallest-screen: 320px;
+$smaller-screen: 480px;
+$small-screen: 860px;
+$medium-screen: 1023px;
+$large-screen: 1200px;
+$larger-screen: 1340px;
+$huge-screen: 1600px;
+
+// Global Breakpoints
+//------------------------------------------------------------------------------
+$smallest-screen-up: new-breakpoint(min-width $smallest-screen 4);
+$smaller-screen-up: new-breakpoint(min-width $smaller-screen 6);
+$small-screen-up: new-breakpoint(min-width $small-screen 12);
+$medium-screen-up: new-breakpoint(min-width $medium-screen 12);
+$large-screen-up: new-breakpoint(min-width $large-screen 12);
+$huge-screen-up: new-breakpoint(min-width $huge-screen 12);
+
+// Max Breakpoints
+$smallest-screen-max: new-breakpoint(max-width $smallest-screen 4);
+$smaller-screen-max: new-breakpoint(max-width $smaller-screen 6);
+$small-screen-max: new-breakpoint(max-width $small-screen 12);
+$medium-screen-max: new-breakpoint(max-width $medium-screen 12);
+

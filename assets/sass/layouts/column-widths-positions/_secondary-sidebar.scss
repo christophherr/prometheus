@@ -2,9 +2,13 @@
 
 .sidebar-secondary {
   float: left;
-  width: 180px;
-}
+  width: $secondary-sidebar__width;
 
-.content-sidebar-sidebar .sidebar-secondary {
-  float: right;
+  @media only screen and (max-width: $medium-screen) {
+    width: 100%;
+  }
+
+  .content-sidebar-sidebar & {
+    float: right;
+  }
 }

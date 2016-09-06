@@ -2,6 +2,16 @@
 // Dimension Variables
 //============================
 
+$base-width: 1280;
+$gutter: 40px;
+
+
+// Max Widths
+$max-width: $base-width + px;
+$max-width__larger-screen: 1140px;
+$max-width__large-screen: 960px;
+$max-width__medium-screen: 800px;
+
 // Header Area
 $title-area__width: 300px;
 $header-right__width: 800px;
@@ -9,10 +19,32 @@ $header-right__laptop-width: 620px;
 
 $site-title__min-height: 80px
 
+// Content Area
+$content__width: $base-width * 0.6875 + px; //880px
+$content--larger-screen__width: 800px;
+$content--large-screen__width: 620px;
+
+$content-twosidebars__width: 660px;
+$content-twosidebars--larger-screen__width: 580px;
+$content-twosidebars--large-screen__width: 400px;
+
+
+$content-twosidebars--content-sidebar-wrap__width: 1060px;
+$content-twosidebars--content-sidebar-wrap--larger-screen__width: 920px;
+$content-twosidebars--content-sidebar-wrap--large-screen__width: 740px:
+
+// Sidebar
+$primary-sidebar__width: $base-width * 0.28125 + px; //360
+$primary-sidebar--larger-screen__width: 300px;
+
+$secondary-sidebar__width: 180px;
+
 // Footer Area
-$footer-widgets__width: 380;
-$footer-widgets__desktop-width: 340;
-$footer-widgets__laptop-width: 300;
+$footer-widgets__width: 380px;
+$footer-widgets__desktop-width: 340px;
+$footer-widgets__laptop-width: 300px;
 $footer-widgets__tablet-width: 100%;
 
+// Landing Page
 
+$landing-page--site-inner__max-width: 800px;

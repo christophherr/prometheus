@@ -4,18 +4,25 @@
 .site-inner,
 .wrap {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: $max-width;
 
-  @media only screen and (max-width: 1340px) {
-    max-width: 1140px;
+  @media only screen and (max-width: $larger-screen) {
+    max-width: $max-width__larger-screen;
   }
 
-  @media only screen and (max-width: 1200px) {
-    max-width: 960px;
+  @media only screen and (max-width: $large-screen) {
+    max-width: $max-width__large-screen;
   }
 
-  @media only screen and (max-width: 1023px) {
-    max-width: 800px;
+  @media only screen and (max-width: $medium-screen) {
+    max-width: $max-width__medium-screen;
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  .wrap {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -24,11 +31,11 @@
   padding-top: 40px;
   word-wrap: break-word;
 
-  @media only screen and (max-width: 860px) {
+  @media only screen and (max-width: $small-screen) {
     padding: 5% 5% 0;
   }
 }
 
 .landing-page .site-inner {
-  max-width: 800px;
+  max-width: $landing-page--site-inner__max-width;
 }
