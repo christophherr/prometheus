@@ -4,11 +4,10 @@
 input,
 select,
 textarea {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  color: #333;
-  font-size: 18px;
-  font-size: 1.8rem;
+  background-color: $form--input-select-textarea__background-color;
+  border: 1px solid $form--input-select-textarea__border-color;
+  color: $form--input-select-textarea__text-color;
+  font-size: rem( $form--input-select-textarea__text-size );
   font-weight: 400;
   padding: 16px;
   width: 100%;
@@ -16,7 +15,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 1px solid #999;
+  border: 1px solid $form--input-select-textarea--focus__border;
   outline: none;
 }
 
@@ -27,12 +26,12 @@ input[type="radio"] {
 }
 
 ::-moz-placeholder {
-  color: #333;
+  color: $form--placeholder__text-color;
   opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-  color: #333;
+  color: $form--placeholder__text-color;
 }
 
 button,
@@ -40,12 +39,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-  background-color: #333;
+  background-color: $button__background-color;
   border: 0;
-  color: #fff;
+  color: $button__text-color;
   cursor: pointer;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: rem( $button__text-size );
   font-weight: 700;
   padding: 16px 24px;
   text-decoration: none;
@@ -63,13 +61,8 @@ input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
 .button:focus  {
-  background-color: #c3251d;
-  color: #fff;
-}
-
-.entry-content .button:hover,
-.entry-content .button:focus {
-  color: #fff;
+  background-color: $button--hover__background-color;
+  color: $button--hover__text-color;
 }
 
 .button {
@@ -84,23 +77,26 @@ input[type="submit"].small {
   padding: 8px 16px;
 }
 
-.site-container button:disabled,
-.site-container button:disabled:hover,
-.site-container input:disabled,
-.site-container input:disabled:hover,
-.site-container input[type="button"]:disabled,
-.site-container input[type="button"]:disabled:hover,
-.site-container input[type="reset"]:disabled,
-.site-container input[type="reset"]:disabled:hover,
-.site-container input[type="submit"]:disabled,
-.site-container input[type="submit"]:disabled:hover {
-  background-color: #eee;
-  border-width: 0;
-  color: #777;
-  cursor: not-allowed;
+.site-container {
+  button:disabled,
+  button:disabled:hover,
+  input:disabled,
+  input:disabled:hover,
+  input[type="button"]:disabled,
+  input[type="button"]:disabled:hover,
+  input[type="reset"]:disabled,
+  input[type="reset"]:disabled:hover,
+  input[type="submit"]:disabled,
+  input[type="submit"]:disabled:hover {
+    background-color: $site-container--button--disabled__background-color;
+    border-width: 0;
+    color: $site-container--button--disabled__text-color;
+    cursor: not-allowed;
+  }
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button {
-  display: none;
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button {
+    display: none;
+  }
 }

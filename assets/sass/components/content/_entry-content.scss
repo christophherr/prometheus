@@ -25,6 +25,11 @@
     background-color: $entry-content-code__background-color;
     color: $entry-content-code__text-color;
   }
+   .button:hover,
+   .button:focus {
+      color: $entry-content--button--hover__text-color;
+   }
+}
 
   .wp-audio-shortcode,
   .wp-playlist,

@@ -11,7 +11,7 @@ table {
 }
 
 tbody {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $tbody__border-bottom-color;
 }
 
 td,
@@ -20,7 +20,7 @@ th {
 }
 
 td {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $td__border-top-color;
   padding: 6px;
 }
 

@@ -1,4 +1,47 @@
 
+//
+// Fonts
+//==============================
+
+$body__font-family: 'Source Sans Pro', sans-serif;
+$headings__font-family: 'Source Sans Pro', sans-serif;
+
+//
+// Body
+//============================
+
+$html__font-size: 62.5%;
+
+$body__font-size: 20;
+$body__line-height: 1.625;
+
+$body-div__font-size: 20;
+$body-div--small-screen__font-size: 18;
+
+$body--small-screen__font-size: 18;
+
+//
+// Headings
+//=============================
+$headings__line-height: 1.2;
+
+$h1__font-size: 36;
+$h2__font-size: 30;
+$h3__font-size: 24;
+$h4__font-size: 20;
+$h5__font-size: 18;
+$h6__font-size: 16;
+
+//
+// Forms font size
+//=============================
+$form--input-select-textarea__text-size: 18;
+
+$button__text-size: 16;
+
+//
+// Site Title and Description font size
+//=============================
 $site-title__font-size: 30;
 $site-description__font-size: 16;
 
@@ -31,6 +74,12 @@ $entry-header-entry-meta__font-size: 16;
 // Entry Title
 //========================================
 $entry-title__font-size: 36;
+
+//
+// Blockquote
+//========================================
+
+$blockquote__font-size: 30;
 
 //
 // WP Caption

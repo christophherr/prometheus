@@ -15,8 +15,7 @@
   }
 
 .wp-caption-text {
-  font-size: $wp-caption-text__font-size;
-  font-size: 1.4rem;
+  font-size: rem( $wp-caption-text__font-size );
   font-weight: 600;
   margin: 0;
   text-align: center;

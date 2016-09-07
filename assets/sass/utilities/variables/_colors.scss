@@ -1,10 +1,61 @@
 $base__color: #333;
 
-$body__background-color: #eee;
 
-// Link Colors
+//
+// Body
+//==============================
+$body__background-color: #eee;
+$body__text-color: #333;
+
+
+//
+// hr
+//=============================
+$hr__border-top: #eee;
+
+//
+// Forms
+//=============================
+$form--input-select-textarea__background-color: #fff;
+$form--input-select-textarea__border-color: #ddd;
+$form--input-select-textarea__text-color: #333;
+
+$form--input-select-textarea--focus__border: #999;
+
+$form--placeholder__text-color: #333;
+
+$button__background-color: #333;
+$button__text-color: #fff;
+
+$button--hover__background-color: #c3251d;
+$button--hover__text-color: #fff;
+
+$site-container--button--disabled__background-color: #eee;
+$site-container--button--disabled__text-color: #777;
+
+
+//
+// Links
+//===================================
+$link__text-color: #c3251d;
+$link--hover-focus__text-color: #333;
+
+
 $link__color: #c3251d;
 $link__color--hover: #333;
+
+
+//
+// Tables
+//====================================
+$tbody__border-bottom-color: #eee;
+$td__border-top-color: #eee;
+
+//
+// Gallery
+//======================================
+$gallery-img__border-color: #eee;
+$gallery-img--hover__border-color: #999;
 
 //
 // Header
@@ -46,6 +97,13 @@ $js-nav__background-color: $white;
 $js-nav__hover-color: #000;
 $js-nav__focus-color: #c3251d;
 
+
+//
+// Search
+//====================================
+$search-input-submit--focus__text-color: #333;
+$search-input-submit--focus__background-color: #fff;
+
 //
 // Entry
 //=================================
@@ -63,6 +121,7 @@ $entry-title__link-color--hover-focus: #c3251d;
 $entry-content-code__background-color: #333;
 $entry-content-code__text-color: #eee;
 
+$entry-content--button--hover__text-color: #fff;
 //
 // Entry Footer
 //===============================

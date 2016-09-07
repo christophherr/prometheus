@@ -12,6 +12,11 @@
   margin-bottom: 40px;
   padding: 60px;
 
+  @media only screen and (max-width: $small-screen) {
+    padding: 30px;
+    margin-bottom: 5%;
+  }
+
   .entry-title {
     font-size: rem( $archive-description--entry-title__font-size );
   }
