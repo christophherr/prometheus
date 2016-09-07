@@ -19,7 +19,7 @@
     margin-right: 12px;
   }
 
-  @media only screen and (max-width: $screen-size--small) {
+  @include media( $breakpoint__screen-size--small-max ) {
     padding: 30px;
     margin-bottom: 5%;
   }

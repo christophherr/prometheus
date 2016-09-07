@@ -4,11 +4,11 @@
   float: right;
   width: $primary-sidebar--width;
 
-  @media only screen and (max-width: $screen-size--larger) {
+  @include media( $breakpoint__screen-size--larger-max ) {
     width: $primary-sidebar--width--larger-screen;
   }
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     width: 100%;
   }
 

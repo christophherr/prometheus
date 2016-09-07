@@ -4,15 +4,15 @@
   float: right;
   width: $content--width;
 
-  @media only screen and (max-width: $screen-size--larger) {
+  @include media( $breakpoint__screen-size--larger-max ) {
     width: $content--width--larger-screen;
   }
 
-  @media only screen and (max-width: $screen-size--large) {
+  @include media( $breakpoint__screen-size--large-max ) {
     width: $content--width--large-screen;
   }
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     width: 100%;
   }
 
@@ -27,15 +27,15 @@
   .sidebar-sidebar-content & {
     width: $content-twosidebars--width;
 
-    @media only screen and (max-width: $screen-size--larger) {
+    @include media( $breakpoint__screen-size--larger-max ) {
       width: $content-twosidebars--width--larger-screen;
     }
 
-    @media only screen and (max-width: $screen-size--large) {
+    @include media( $breakpoint__screen-size--large-max ) {
       width: $$content-twosidebars--width--large-screen;
     }
 
-    @media only screen and (max-width: $screen-size--medium) {
+    @include media( $breakpoint__screen-size--medium-max ) {
       width: 100%;
     }
   }

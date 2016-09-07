@@ -9,7 +9,7 @@ html {
 body > div {
   font-size: rem( $body__div--font-size);
 
-  @media only screen and (max-width: $screen-size--small) {
+  @include media( $breakpoint__screen-size--small-max ) {
     font-size: rem( $body__div--font-size--small-screen );
   }
 }
@@ -24,7 +24,7 @@ body {
   line-height: $body--line-height;
   margin: 0;
 
-  @media only screen and (max-width: $screen-size--small) {
+  @include media( $breakpoint__screen-size--small-max ) {
     font-size: rem( $body--font-size--small-screen );
   }
 }

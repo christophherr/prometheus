@@ -6,15 +6,15 @@
   .sidebar-sidebar-content & {
     width: $content-twosidebars__content-sidebar-wrap--width;
 
-    @media only screen and (max-width: $screen-size--larger) {
+    @include media( $breakpoint__screen-size--larger-max ) {
       width: $content-twosidebars__content-sidebar-wrap--width--larger-screen;
     }
 
-    @media only screen and (max-width: $screen-size--large) {
+    @include media( $breakpoint__screen-size--large-max ) {
       width: $content-twosidebars__content-sidebar-wrap--width--large-screen;
     }
 
-    @media only screen and (max-width: $screen-size--medium) {
+    @include media( $breakpoint__screen-size--medium-max ) {
       width: 100%;
     }
   }

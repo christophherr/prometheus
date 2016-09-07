@@ -54,7 +54,7 @@
   margin-left: 0;
 }
 
-@media only screen and (max-width: $screen-size--small) {
+@include media( $breakpoint__screen-size--small-max ) {
   .five-sixths,
   .four-sixths,
   .one-fourth,

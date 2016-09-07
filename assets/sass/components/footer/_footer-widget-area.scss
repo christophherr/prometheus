@@ -13,15 +13,15 @@
 .footer-widgets-3 {
   width: $footer-widgets--width;
 
-  @media only screen and (max-width: $screen-size--larger) {
+  @include media( $breakpoint__screen-size--larger-max ) {
     width: $footer-widgets--width--larger-screen;
   }
 
-  @media only screen and (max-width: $screen-size--large) {
+  @include media( $breakpoint__screen-size--large-max ) {
     width: $footer-widgets--width--large-screen;
   }
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
   width: 100%;
   }
 }
@@ -29,11 +29,11 @@
 .footer-widgets-1 {
   margin-right: 70px;
 
-  @media only screen and (max-width: $screen-size--larger) {
+  @include media( $breakpoint__screen-size--larger-max ) {
     margin-right: 60px;
   }
 
-  @media only screen and (max-width: $screen-size--large) {
+  @include media( $breakpoint__screen-size--large-max ) {
     margin-right: 30px;
   }
 }
@@ -42,7 +42,7 @@
 .footer-widgets-2 {
   float: left;
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     margin: 0 auto 40px;
   }
 }

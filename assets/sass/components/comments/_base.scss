@@ -8,7 +8,7 @@
   font-size: rem( $comments-pings--font-size );
   margin-bottom: 40px;
 
-  @media only screen and (max-width: 860px) {
+ @include media( $breakpoint__screen-size--small-max ) {
     padding: 30px;
     margin-bottom: 5%;
   }

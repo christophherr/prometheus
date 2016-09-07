@@ -3,7 +3,7 @@
 //======================================
 
 
-@media only screen and (max-width: $screen-size--medium) {
+@include media( $breakpoint__screen-size--medium-max ) {
   .js {
     .genesis-nav-menu {
       .sub-menu,

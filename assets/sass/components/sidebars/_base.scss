@@ -2,7 +2,7 @@
   font-size: rem( $sidebar--font-size )16px;
   margin-bottom: 40px;
 
-  @media only screen and (max-width: $screen-size--small) {
+  @include media( $breakpoint__screen-size--small-max ) {
     margin-bottom: 5%;
   }
 
@@ -15,7 +15,7 @@
     background-color: $sidebar-widget--background-color;
     padding: 40px;
 
-    @media only screen and (max-width: 860px) {
+   @include media( $breakpoint__screen-size--small-max ) {
       padding: 30px;
       margin-bottom: 5%;
     }

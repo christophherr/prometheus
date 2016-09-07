@@ -6,15 +6,15 @@
   text-align: right;
   width: $header-right--width;
 
-  @media only screen and (max-width: $screen-size--larger) {
+  @include media( $breakpoint__screen-size--larger-max ) {
     width: $header-right--width;
   }
 
-  @media only screen and (max-width: $screen-size--large) {
+  @include media( $breakpoint__screen-size--large-max ) {
     width: $header-right--width--large-screen;
   }
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     width: 100%;
     text-align: center;
   }

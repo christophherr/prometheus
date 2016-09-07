@@ -6,7 +6,7 @@
   padding: 10px 0;
   width: $title-area--width;
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     width: 100%;
     text-align: center;
   }
@@ -16,7 +16,7 @@
     max-width: $title-area--width;
     padding: 0;
 
-    @media only screen and (max-width: $screen-size--medium) {
+    @include media( $breakpoint__screen-size--medium-max ) {
       float: none;
     }
   }
@@ -58,7 +58,7 @@
 .site-title {
   margin-bottom: 0;
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     text-align: center;
   }
 

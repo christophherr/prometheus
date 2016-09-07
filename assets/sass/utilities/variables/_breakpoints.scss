@@ -2,18 +2,6 @@
 // Dimension Variables
 //============================
 
-//
-// Breakpoints
-// Webdevstudios wd_s
-//===================================
-
-$large-desktop: 1680px;
-$desktop: 1366px;
-$tablet-landscape: 1024px;
-$tablet-portrait: 768px;
-$phone-landscape: 640px;
-$phone-portrait: 360px;
-
 // Global Screen Sizes
 //------------------------------------------------------------------------------
 $screen-size--smallest: 320px;
@@ -26,6 +14,19 @@ $screen-size--huge: 1600px;
 
 // Global Breakpoints
 //------------------------------------------------------------------------------
+
+//@media only screen and (max-width: 1340px) {
+$breakpoint__screen-size--larger-max: new-breakpoint(max-width $screen-size--larger 12);
+//@media only screen and (max-width: 1200px) {
+$breakpoint__screen-size--large-max: new-breakpoint(max-width $screen-size--large 12);
+//@media only screen and (max-width: 1023px) {
+$breakpoint__screen-size--medium-max: new-breakpoint(max-width $screen-size--medium 6);
+//@media only screen and (max-width: 860px) {
+$breakpoint__screen-size--small-max: new-breakpoint(max-width $screen-size--small 4);
+
+@include media( $breakpoint__screen-size--larger-max ) {
+
+/*
 $screen-size--smallest-up: new-breakpoint(min-width $screen-size--smallest 4);
 $screen-size--smaller-up: new-breakpoint(min-width $screen-size--smaller 6);
 $screen-size--small-up: new-breakpoint(min-width $screen-size--small 12);
@@ -39,3 +40,14 @@ $screen-size--smaller-max: new-breakpoint(max-width $screen-size--smaller 6);
 $screen-size--small-max: new-breakpoint(max-width $screen-size--small 12);
 $screen-size--medium-max: new-breakpoint(max-width $screen-size--medium 12);
 
+// Breakpoints
+// Webdevstudios wd_s
+//===================================
+
+$large-desktop: 1680px;
+$desktop: 1366px;
+$tablet-landscape: 1024px;
+$tablet-portrait: 768px;
+$phone-landscape: 640px;
+$phone-portrait: 360px;
+*/

@@ -6,20 +6,20 @@
   margin: 0 auto;
   max-width: $max-width;
 
-  @media only screen and (max-width: $screen-size--larger) {
+  @include media( $breakpoint__screen-size--larger-max ) {
     max-width: $max-width__larger-screen;
   }
 
-  @media only screen and (max-width: $screen-size--large) {
+  @include media( $breakpoint__screen-size--large-max ) {
     max-width: $max-width__large-screen;
   }
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     max-width: $max-width__medium-screen;
   }
 }
 
-@media only screen and (max-width: $screen-size--small) {
+@include media( $breakpoint__screen-size--small-max ) {
   .wrap {
     padding-left: 5%;
     padding-right: 5%;
@@ -31,7 +31,7 @@
   padding-top: 40px;
   word-wrap: break-word;
 
-  @media only screen and (max-width: $screen-size--small) {
+  @include media( $breakpoint__screen-size--small-max ) {
     padding: 5% 5% 0;
   }
 }

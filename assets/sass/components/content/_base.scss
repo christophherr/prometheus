@@ -6,7 +6,7 @@
   margin-bottom: 40px;
   padding: 70px 80px;
 
-  @media only screen and (max-width: 860px) {
+ @include media( $breakpoint__screen-size--small-max ) {
     padding: 30px;
     margin-bottom: 5%;
   }

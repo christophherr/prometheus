@@ -9,7 +9,7 @@
     padding: 20px 0;
   }
 
-  @media only screen and (max-width: $screen-size--medium) {
+  @include media( $breakpoint__screen-size--medium-max ) {
     .wrap {
       padding-left: 5%;
       padding-right: 5%;

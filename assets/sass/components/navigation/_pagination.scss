@@ -5,7 +5,7 @@
   clear: both;
   margin: 40px 0;
 
-  @media only screen and (max-width: 860px) {
+ @include media( $breakpoint__screen-size--small-max ) {
     margin: 5% auto;
   }
 }
@@ -18,7 +18,7 @@
   li {
     display: inline;
 
-    @media only screen and (max-width: 860px) {
+   @include media( $breakpoint__screen-size--small-max ) {
       a {
         margin-bottom: 4px;
       }

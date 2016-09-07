@@ -1,30 +1,24 @@
 /*!
 	Theme Name: Prometheus
 	Theme URI: https://www.christophherr.com/
+
 	Description: A modular starter child theme for the Genesis Framework.
 	Author: Christoph Herr
 	Author URI: https://www.christophherr.com/
+
 	Version: 1.0.0
 
 	Template: genesis
+	Template Version: 2.3.1
 
 	License: GPL-2.0+
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Text Domain: prometheus
 */
-
+@import "utilities/index";
 @import "base/index";
 @import "layouts/index";
-@import "common-classes/index";
-@import "components/widgets/index";
+@import "components/index";
 @import "plugins/index";
-@import "components/accessibility/index";
-@import "components/header/index";
-@import "components/navigation/index";
-@import "components/content/index";
-@import "components/comments/index";
-@import "components/sidebars/index";
-@import "components/footer/index";
-
 @import "views/index";
 @import "print-styles";

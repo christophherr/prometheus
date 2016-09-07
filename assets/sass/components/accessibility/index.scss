@@ -1,18 +1,6 @@
-/* # Skip Links
----------------------------------------------------------------------------------------------------- */
+//
+// Accessibility Component
+//=============================
 
-.genesis-skip-link {
-  margin: 0;
-
-  li {
-    height: 0;
-    width: 0;
-    list-style: none;
-  }
-}
-
-/* Display outline on focus */
-:focus {
-  color: #333;
-  outline: #ccc solid 1px;
-}
+//@import "base";
+@import "skip-links";
