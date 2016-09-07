@@ -1,11 +1,11 @@
-$base__color: #333;
+$base--color: #333;
 
 
 //
 // Body
 //==============================
-$body__background-color: #eee;
-$body__text-color: #333;
+$body--background-color: #eee;
+$body--text-color: #333;
 
 
 //
@@ -16,52 +16,47 @@ $hr__border-top: #eee;
 //
 // Forms
 //=============================
-$form--input-select-textarea__background-color: #fff;
-$form--input-select-textarea__border-color: #ddd;
-$form--input-select-textarea__text-color: #333;
+$form__input-select-textarea--background-color: #fff;
+$form__input-select-textarea--border-color: #ddd;
+$form__input-select-textarea--text-color: #333;
 
-$form--input-select-textarea--focus__border: #999;
+$form__input-select-textarea--focus-border-color: #999;
 
-$form--placeholder__text-color: #333;
+$form--placeholder--text-color: #333;
 
-$button__background-color: #333;
-$button__text-color: #fff;
+$button--background-color: #333;
+$button--text-color: #fff;
 
-$button--hover__background-color: #c3251d;
-$button--hover__text-color: #fff;
+$button--hover-background-color: #c3251d;
+$button--hover-text-color: #fff;
 
-$site-container--button--disabled__background-color: #eee;
-$site-container--button--disabled__text-color: #777;
+$site-container__button--disabled-background-color: #eee;
+$site-container__button--disabled-text-color: #777;
 
 
 //
 // Links
 //===================================
-$link__text-color: #c3251d;
-$link--hover-focus__text-color: #333;
-
-
-$link__color: #c3251d;
-$link__color--hover: #333;
-
+$link--text-color: #c3251d;
+$link--hover-focus-text-color: #333;
 
 //
 // Tables
 //====================================
-$tbody__border-bottom-color: #eee;
-$td__border-top-color: #eee;
+$tbody--border-bottom-color: #eee;
+$td--border-top-color: #eee;
 
 //
 // Gallery
 //======================================
-$gallery-img__border-color: #eee;
-$gallery-img--hover__border-color: #999;
+$gallery__img--border-color: #eee;
+$gallery__img--hover-border-color: #999;
 
 //
 // Header
 //===================================
-$site-header__background-color: #fff;
-$site-title__link-color: #333;
+$site-header--background-color: #fff;
+$site-title--link-color: #333;
 
 //
 // Navigation Colors
@@ -69,108 +64,108 @@ $site-title__link-color: #333;
 
 // Nav Links
 $nav__link--color: #333;
-$nav__link--color-hover-focus: #c3251d;
+$nav__link--hover-focus-color: #c3251d;
 
 // Nav Primary
-$nav-primary__background-color: #eee;
-$nav-primary__border-color: #eee;
+$nav-primary--background-color: #eee;
+$nav-primary--border-color: #eee;
 
 // Submenu
-$submenu__border-color: #eee;
+$submenu--border-color: #eee;
 $submenu__link--background-color: #fff;
 
 // Nav Toggle
-$nav-toggle__background-color: #fff;
-$nav-toggle__color: #333;
+$nav-toggle--background-color: #fff;
+$nav-toggle--color: #333;
 
 // Breadcrumbs
-$breadcrumb__background-color: #fff;
+$breadcrumb--background-color: #fff;
 
 // Archive Pagination
-$archive-pagination__color: #333;
-$archive-pagination__color--hover-focus: #fff;
-$archive-pagination__background-color: #fff;
-$archive-pagination__background-color--hover-focus: #c3251d;
+$archive-pagination--color: #333;
+$archive-pagination--color--hover-focus: #fff;
+$archive-pagination--background-color: #fff;
+$archive-pagination--hover-focus-background-color: #c3251d;
 
 // js enabled
-$js-nav__background-color: $white;
-$js-nav__hover-color: #000;
-$js-nav__focus-color: #c3251d;
+$js-nav--background-color: $white;
+$js-nav--hover-color: #000;
+$js-nav--focus-color: #c3251d;
 
 
 //
 // Search
 //====================================
-$search-input-submit--focus__text-color: #333;
-$search-input-submit--focus__background-color: #fff;
+$search-input-submit--focus-text-color: #333;
+$search-input-submit--focus-background-color: #fff;
 
 //
 // Entry
 //=================================
-$entry__background-color: #fff;
+$entry--background-color: #fff;
 
 //
 // Entry Title
 //================================
-$entry-title__link-color: #333;
-$entry-title__link-color--hover-focus: #c3251d;
+$entry-title--link-color: #333;
+$entry-title--hover-focus-link-color: #c3251d;
 
 //
 // Entry Content
 //=================================
-$entry-content-code__background-color: #333;
-$entry-content-code__text-color: #eee;
+$entry-content-code--background-color: #333;
+$entry-content-code--text-color: #eee;
 
-$entry-content--button--hover__text-color: #fff;
+$entry-content__button--hover-text-color: #fff;
 //
 // Entry Footer
 //===============================
-$entry-footer-entry-meta__border-color: #eee;
+$entry-footer__entry-meta--border-color: #eee;
 
 //
 // Author Box
 //================================
-$author-box__background-color: #fff;
+$author-box--background-color: #fff;
 
 //
 // After Entry
 //================================
-$after-entry__background-color: #fff;
+$after-entry--background-color: #fff;
 
 //
 // Comments & Pings
 //===============================
-$comments-pings__background-color: #fff;
+$comments-pings--background-color: #fff;
 
 //
 // Footer
 //===============================
-$site-footer__background-color: #fff;
-$site-footer__border-color: #eee;
+$site-footer--background-color: #fff;
+$site-footer--border-color: #eee;
 
-$footer-widgets__background-color: #fff;
+$footer-widgets--background-color: #fff;
 
 //
 // Sidebars & Widgets
 //===========================================
-$sidebar-widget-title--link__text-color: #333;
-$sidebar-widget__background-color: #fff;
+$sidebar-widget-title--link--text-color: #333;
+$sidebar-widget--background-color: #fff;
 
 //
 // Plugins
 //=================================
 
 // Enews Extended
-$sidebar-enews-widget__background-color: #333;
-$sidebar-enews-widget__text-color: #fff;
+$sidebar__enews-widget--background-color: #333;
+$sidebar__enews-widget--text-color: #fff;
 
-$sidebar-enews-widgets--input__border-color: #333;
+$sidebar__enews-widgets--input--border-color: #333;
 
-$sidebar-enews-widgets--input-submit__background-color: #c3251d;
-$sidebar-enews-widgets--input-submit__text-color: #fff;
+$sidebar__enews-widgets--input-submit--background-color: #c3251d;
+$sidebar__enews-widgets--input-submit--text-color: #fff;
 
-$sidebar-enews-widgets--input-submit-hover-focus__background-color: #fff;
-$sidebar-enews-widgets--input-submit-hover-focus__text-color: #333;
+$sidebar__enews-widgets--input-submit--hover-focus-background-color: #fff;
+$sidebar__enews-widgets--input-submit--hover-focus-text-color: #333;
 
 
 //
@@ -180,4 +175,4 @@ $sidebar-enews-widgets--input-submit-hover-focus__text-color: #333;
 // Archive
 //===========================================
 
-$archive-description__background-color: #fff;
+$archive-description--background-color: #fff;

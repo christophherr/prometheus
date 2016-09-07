@@ -2,35 +2,35 @@
 --------------------------------------------- */
 
 .sidebar .widget.enews-widget {
-  background-color: $sidebar-enews-widget__background-color;
+  background-color: $sidebar__enews-widget--background-color;
 }
 
 .sidebar .enews-widget {
 
   &, .widget-title {
-    color: $sidebar-enews-widget__text-color#fff;
+    color: $sidebar__enews-widget--text-color#fff;
   }
 
   input,
   input:focus {
-    border: 1px solid $sidebar-enews-widgets--input__border-color;
+    border: 1px solid $sidebar__enews-widgets--input--border-color;
   }
 
   input[type="submit"] {
-    background-color: $sidebar-enews-widgets--input-submit__background-color;
-    color: $sidebar-enews-widgets--input-submit__text-color;#fff;
+    background-color: $sidebar__enews-widgets--input-submit--background-color;
+    color: $sidebar__enews-widgets--input-submit--text-color;#fff;
   }
 
   input:hover[type="submit"],
   input:focus[type="submit"] {
-    background-color: $sidebar-enews-widgets--input-submit-hover-focus__background-color;
-    color: $sidebar-enews-widgets--input-submit-hover-focus__text-color;
+    background-color: $sidebar__enews-widgets--input-submit--hover-focus-background-color;
+    color: $sidebar__enews-widgets--input-submit--hover-focus-text-color;
   }
 }
 
 .enews-widget {
   input {
-    font-size: rem( $enews-widget--imput__font-size );
+    font-size: rem( $enews-widget--imput--font-size );
     font-size: 1.6rem;
     margin-bottom: 16px;
 

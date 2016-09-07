@@ -1,10 +1,10 @@
 a {
-  color: $link__text-color;
+  color: $link--text-color;
   text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: $link--hover-focus__text-color;
+  color: $link--hover-focus-text-color;
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 .sidebar {
-  font-size: rem( $sidebar__font-size )16px;
+  font-size: rem( $sidebar--font-size )16px;
   margin-bottom: 40px;
 
   @media only screen and (max-width: $small-screen) {
@@ -7,12 +7,12 @@
   }
 
   .widget-title a {
-    color: $sidebar-widget-title--link__text-color;
+    color: $sidebar-widget-title--link--text-color;
     text-decoration: none;
   }
 
   .widget {
-    background-color: $sidebar-widget__background-color;
+    background-color: $sidebar-widget--background-color;
     padding: 40px;
 
     @media only screen and (max-width: 860px) {

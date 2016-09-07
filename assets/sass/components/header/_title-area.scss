@@ -28,14 +28,14 @@
 }
 
 .site-title {
-  font-size: rem( $site-title__font-size );
+  font-size: rem( $site-title--font-size );
   font-weight: 700;
   line-height: 1.2;
 
   a,
   a:hover,
   a:focus {
-    color: $site-title__link-color;
+    color: $site-title--link-color;
     text-decoration: none;
   }
 
@@ -49,7 +49,7 @@
 }
 
 .site-description {
-  font-size: rem ( $site-description__font-size );
+  font-size: rem ( $site-description--font-size );
   font-weight: 400;
   line-height: 1.5;
 }

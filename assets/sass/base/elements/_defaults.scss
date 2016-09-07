@@ -2,30 +2,30 @@
 --------------------------------------------- */
 
 html {
-  font-size: $html__font-size; /* 10px browser default */
+  font-size: $html--font-size; /* 10px browser default */
 }
 
 /* Chrome fix */
 body > div {
-  font-size: rem( $body-div__font-size);
+  font-size: rem( $body__div--font-size);
 
   @media only screen and (max-width: $small-screen) {
-    font-size: rem( $body-div--small-screen__font-size );
+    font-size: rem( $body__div--font-size--small-screen );
   }
 }
 
 body {
-  background-color: $body__background-color;
-  color: $body__text-color;
-  font-family: $body__font-family;
-  font-size: rem( $body__font-size );
+  background-color: $body--background-color;
+  color: $body--text-color;
+  font-family: $body--font-family;
+  font-size: rem( $body--font-size );
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  line-height: $body__line-height;
+  line-height: $body--line-height;
   margin: 0;
 
   @media only screen and (max-width: $small-screen) {
-    font-size: rem( $body--small-screen__font-size );
+    font-size: rem( $body--font-size--small-screen );
   }
 }
 

@@ -26,11 +26,11 @@
   }
 
   a {
-    background-color: $archive-pagination__background-color;
-    color: $archive-pagination__color;
+    background-color: $archive-pagination--background-color;
+    color: $archive-pagination--color;
     cursor: pointer;
     display: inline-block;
-    font-size: rem($archive-pagination__font-size);
+    font-size: rem($archive-pagination--font-size);
     font-weight: 600;
     padding: 8px 12px;
     text-decoration: none;
@@ -38,8 +38,8 @@
     &:hover,
     &:focus,
     .active & {
-      background-color: $archive-pagination__background-color--hover-focus;
-      color: $archive-pagination__color--hover-focus;
+      background-color: $archive-pagination--hover-focus-background-color;
+      color: $archive-pagination--color--hover-focus;
     }
   }
 }

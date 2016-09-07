@@ -23,8 +23,8 @@
   font-size: 1em;
   font-weight: bold;
   padding: 15px 23px 14px;
-  color: $search-input-submit--focus__text-color;
-  background: $search-input-submit--focus__background-color;
+  color: $search-input-submit--focus-text-color;
+  background: $search-input-submit--focus-background-color;
   z-index: 100000; /* Above WP toolbar. */
   text-decoration: none;
   box-shadow: 0 0 2px 2px rgba(0,0,0,.6);

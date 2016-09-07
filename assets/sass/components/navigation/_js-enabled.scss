@@ -77,13 +77,13 @@
   nav button:hover,
   .menu-toggle:hover,
   .nav-primary {
-    background-color: $js-nav__background-color;
-    color: $js-nav__hover-color;
+    background-color: $js-nav--background-color;
+    color: $js-nav--hover-color;
   }
 
   nav button:focus,
   .menu-toggle:focus {
-    background-color: $js-nav__background-color;
-    color: $js-nav__focus-color;
+    background-color: $js-nav--background-color;
+    color: $js-nav--focus-color;
   }
 }

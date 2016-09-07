@@ -59,12 +59,12 @@
 }
 
 .gallery img {
-  border: 1px solid $gallery-img__border-color;
+  border: 1px solid $gallery__img--border-color;
   height: auto;
   padding: 4px;
 
   img:hover,
   img:focus {
-    border: 1px solid $gallery-img--hover__border-color;
+    border: 1px solid $gallery__img--hover-border-color;
   }
 }
