@@ -5,12 +5,7 @@
   .entry-meta {
     border-top: 1px solid $entry-footer__entry-meta--border-color;
     padding-top: 24px;
-
-    p& {
-      font-size: rem( $entry-footer__entry-meta--font-size );
-      margin-bottom: 0;
-    }
-  }
+   }
 }
 .entry-categories,
 .entry-tags {

@@ -3,11 +3,6 @@
 .entry-header {
   .entry-meta {
     margin-bottom: 24px;
-
-    p& {
-      font-size: rem ( $entry-header__entry-meta--font-size );
-      margin-bottom: 0;
-    }
   }
 }
 

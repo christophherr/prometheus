@@ -42,48 +42,50 @@
         }
       }
 
-    .nav-primary,
-    .site-header {
-      .genesis-nav-menu .menu-item {
-        display: block;
-        float: none;
-        margin: 1px 0;
-        position: relative;
-        text-align: left;
+      .nav-primary,
+      .site-header {
+        .genesis-nav-menu .menu-item {
+          display: block;
+          float: none;
+          margin: 1px 0;
+          position: relative;
+          text-align: left;
 
-        a {
-          border: none;
-          padding: 12px 0;
-          width: 100%;
+          a {
+            border: none;
+            padding: 12px 0;
+            width: 100%;
+          }
         }
       }
     }
-  }
 
-  nav.nav-primary,
-  .site-header nav {
-    display: none;
-    position: relative;
-  }
+    nav.nav-primary,
+    .site-header nav {
+      display: none;
+      position: relative;
+    }
 
-  .site-header nav .wrap {
-    padding: 0;
-  }
+    .site-header nav .wrap {
+      padding: 0;
+    }
 
-  nav.pagination {
-    display: block;
-  }
+    nav.pagination {
+      display: block;
+    }
 
-  nav button:hover,
-  .menu-toggle:hover,
-  .nav-primary {
-    background-color: $js-nav--background-color;
-    color: $js-nav--hover-color;
-  }
+    nav button:hover,
+    .menu-toggle:hover,
+    .nav-primary {
+      background-color: $js-nav--background-color;
+      color: $js-nav--hover-color;
+    }
 
-  nav button:focus,
-  .menu-toggle:focus {
-    background-color: $js-nav--background-color;
-    color: $js-nav--focus-color;
+    nav button:focus,
+    .menu-toggle:focus {
+      background-color: $js-nav--background-color;
+      color: $js-nav--focus-color;
+    }
   }
 }
+

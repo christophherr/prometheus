@@ -11,3 +11,8 @@
     margin-bottom: 5%;
   }
 }
+
+p.entry-meta {
+   @include rem( font-size, $entry-header__entry-meta--font-size );
+  margin-bottom: 0;
+}

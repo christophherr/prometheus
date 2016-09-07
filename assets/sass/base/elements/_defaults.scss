@@ -2,15 +2,16 @@
 --------------------------------------------- */
 
 html {
-  font-size: $html--font-size; /* 10px browser default */
+  @include rem-baseline;
+  //font-size: $html--font-size; /* 10px browser default */
 }
 
 /* Chrome fix */
 body > div {
-  font-size: rem( $body__div--font-size);
+   @include rem( font-size, $body__div--font-size);
 
   @include media( $breakpoint__screen-size--small-max ) {
-    font-size: rem( $body__div--font-size--small-screen );
+     @include rem( font-size, $body__div--font-size--small-screen );
   }
 }
 
@@ -18,14 +19,14 @@ body {
   background-color: $body--background-color;
   color: $body--text-color;
   font-family: $body--font-family;
-  font-size: rem( $body--font-size );
+   @include rem( font-size, $body--font-size );
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   line-height: $body--line-height;
   margin: 0;
 
   @include media( $breakpoint__screen-size--small-max ) {
-    font-size: rem( $body--font-size--small-screen );
+     @include rem( font-size, $body--font-size--small-screen );
   }
 }
 

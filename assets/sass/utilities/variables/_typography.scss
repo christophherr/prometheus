@@ -10,120 +10,121 @@ $headings--font-family: 'Source Sans Pro', sans-serif;
 // Body
 //============================
 
-$html--font-size: 62.5%;
+//$html--font-size: 62.5%; Sass-rem mixin directly in selector /base/elements/_defaults
+// Sass-rem module needs the px after the value!
 
-$body--font-size: 20;
+$body--font-size: 20px;
 $body--line-height: 1.625;
 
-$body__div--font-size: 20;
-$body__div--font-size--small-screen: 18;
+$body__div--font-size: 20px;
+$body__div--font-size--small-screen: 18px;
 
-$body--font-size--small-screen: 18;
+$body--font-size--small-screen: 18px;
 
 //
 // Headings
 //=============================
 $headings--line-height: 1.2;
 
-$h1--font-size: 36;
-$h2--font-size: 30;
-$h3--font-size: 24;
-$h4--font-size: 20;
-$h5--font-size: 18;
-$h6--font-size: 16;
+$h1--font-size: 36px;
+$h2--font-size: 30px;
+$h3--font-size: 24px;
+$h4--font-size: 20px;
+$h5--font-size: 18px;
+$h6--font-size: 16px;
 
 //
 // Forms font size
 //=============================
-$form__input-select-textarea--font-size: 18;
+$form__input-select-textarea--font-size: 18px;
 
-$button--font-size: 16;
+$button--font-size: 16px;
 
 //
 // Site Title and Description font size
 //=============================
-$site-title--font-size: 30;
-$site-description--font-size: 16;
+$site-title--font-size: 30px;
+$site-description--font-size: 16px;
 
 //
 // Navigation font size
 //=============================
-$nav--font-size: 16;
-$submenu--font-size: 14;
-$primary-nav--font-size: 14;
-$archive-pagination--font-size: 16;
+$nav--font-size: 16px;
+$submenu--font-size: 14px;
+$primary-nav--font-size: 14px;
+$archive-pagination--font-size: 16px;
 
 //
 // Breadcrumb font size
 //==================================
-$breadcrumb--font-size: 16;
+$breadcrumb--font-size: 16px;
 
 //
 // Footer font size
 //================================
-$site-footer--font-size: 16;
-$footer-widgets--font-size: 18;
+$site-footer--font-size: 16px;
+$footer-widgets--font-size: 18px;
 
 //
 // Entry Header
 //=====================================
 
-$entry-header__entry-meta--font-size: 16;
+$entry-header__entry-meta--font-size: 16px;
 
 //
 // Entry Title
 //========================================
-$entry-title--font-size: 36;
+$entry-title--font-size: 36px;
 
 //
 // Blockquote
 //========================================
 
-$blockquote--font-size: 30;
+$blockquote--font-size: 30px;
 
 //
 // WP Caption
 //=========================================
-$wp-caption-text--font-size: 14;
+$wp-caption-text--font-size: 14px;
 
 //
 // Entry Footer
 //=====================================
-$entry-footer__entry-meta--font-size: 16;
+$entry-footer__entry-meta--font-size: 16px;
 
 //
 // Author Box
 //=====================================
-$author-box-title--font-size: 20;
-$author-box--font-size: 18;
+$author-box-title--font-size: 20px;
+$author-box--font-size: 18px;
 
 //
 // After Entry
 //=====================================
-$after-entry--font-size: 18;
+$after-entry--font-size: 18px;
 
 //
 // Comments & Pings
 //==========================================
-$comments-pings--font-size: 16;
+$comments-pings--font-size: 16px;
 
 //
 // Featured Content Entry Title
 //===========================================
-$featured-content__entry-title--font-size: 20;
+$featured-content__entry-title--font-size: 20px;
 
 //
 // Sidebars & Widgets
 //===========================================
-$sidebar--font-size: 16;
-$widget-title--font-size: 18;
+$sidebar--font-size: 16px;
+$widget-title--font-size: 18px;
 
 //
 // Plugins
 //============================================
 
 // Enews Extended
-$enews-widget--imput--font-size: 16;
+$enews-widget--imput--font-size: 16px;
 
 //
 // Views
@@ -131,6 +132,6 @@ $enews-widget--imput--font-size: 16;
 
 // Archive
 //===========================================
-$archive-title--font-size: 20;
-$archive-description__entry-title--font-size: 20;
-$archive-description--font-size: 18;
+$archive-title--font-size: 20px;
+$archive-description__entry-title--font-size: 20px;
+$archive-description--font-size: 18px;

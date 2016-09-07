@@ -4,16 +4,16 @@
 
 .genesis-nav-menu {
   clear: both;
-  font-size: rem( $nav--font-size );
+   @include rem( font-size,$nav--font-size);
   font-weight: 600;
   line-height: 1;
   width: 100%;
 
-  @include media( $breakpoint__screen-size--medium-max ) {
+  @media only screen and (max-width: 1023px) {
     text-align: center;
 
-    li,
-    .site-header ul.& {
+    .genesis-nav-menu li,
+    .site-header ul & {
       float: none;
     }
   }
@@ -54,7 +54,7 @@
       background-color: $submenu__link--background-color;
       border: 1px solid $submenu--border-color;
       border-top: 0;
-      font-size: rem( $submenu--font-size );
+       @include rem( font-size, $submenu--font-size );
       padding: 20px;
       position: relative;
       width: 200px;

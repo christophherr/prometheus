@@ -3,7 +3,7 @@
 //======================================0
 
 .entry-title {
-  font-size: rem( $entry-title--font-size );
+   @include rem( font-size, $entry-title--font-size );
 
   a {
     color: $entry-title--link-color;

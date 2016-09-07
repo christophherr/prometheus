@@ -3,7 +3,7 @@
 
 .footer-widgets {
   background-color: $footer-widgets--background-color;
-  font-size: rem ( $footer-widgets--font-size );
+   @include rem( font-size, $footer-widgets--font-size );
   clear: both;
   padding: 60px 0;
 }

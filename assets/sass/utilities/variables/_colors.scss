@@ -21,15 +21,15 @@ $red: #c3251d;
 // Body
 //==============================
 $body--background-color: $gray--light;
-$body--text-color: $gray--darker;$black/
+$body--text-color: $gray--darker;
 // hr
 //=============================
-$hr__border-top: $gray--light$black/
+$hr__border-top: $gray--light;
 // Forms
 //=============================
 $form__input-select-textarea--background-color: $white;
 $form__input-select-textarea--border-color: #ddd;
-$form__input-select-t$blackrea--text-color: $gray--darker;
+$form__input-select-textarea--text-color: $gray--darker;
 
 $form__input-select-textarea--focus-border-color: #999;
 
@@ -78,7 +78,7 @@ $nav__link--color: $gray--darker;
 $nav__link--hover-focus-color: $red;
 
 // Nav Primary
-$nav-primary--background-color: $gray--light;
+$nav-primary--background-color: $white;
 $nav-primary--border-color: $gray--light;
 
 // Submenu

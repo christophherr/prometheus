@@ -32,7 +32,7 @@
     }
 
     @include media( $breakpoint__screen-size--large-max ) {
-      width: $$content-twosidebars--width--large-screen;
+      width: $content-twosidebars--width--large-screen;
     }
 
     @include media( $breakpoint__screen-size--medium-max ) {

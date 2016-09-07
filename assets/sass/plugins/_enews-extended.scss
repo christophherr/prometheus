@@ -8,7 +8,7 @@
 .sidebar .enews-widget {
 
   &, .widget-title {
-    color: $sidebar__enews-widget--text-color#fff;
+    color: $sidebar__enews-widget--text-color;
   }
 
   input,
@@ -18,7 +18,7 @@
 
   input[type="submit"] {
     background-color: $sidebar__enews-widgets--input-submit--background-color;
-    color: $sidebar__enews-widgets--input-submit--text-color;#fff;
+    color: $sidebar__enews-widgets--input-submit--text-color;
   }
 
   input:hover[type="submit"],
@@ -30,8 +30,7 @@
 
 .enews-widget {
   input {
-    font-size: rem( $enews-widget--imput--font-size );
-    font-size: 1.6rem;
+     @include rem( font-size, $enews-widget--imput--font-size );
     margin-bottom: 16px;
 
     &[type="submit"] {

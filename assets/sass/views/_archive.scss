@@ -3,12 +3,12 @@
 //===================================
 
 .archive-title {
-  font-size: rem( $archive-title--font-size )20px;
+   @include rem( font-size, $archive-title--font-size );
 }
 
 .archive-description {
   background-color: $archive-description--background-color;
-  font-size: rem( $archive-description--font-size );
+   @include rem( font-size, $archive-description--font-size );
   margin-bottom: 40px;
   padding: 60px;
 
@@ -18,7 +18,7 @@
   }
 
   .entry-title {
-    font-size: rem( $archive-description__entry-title--font-size );
+     @include rem( font-size, $archive-description__entry-title--font-size );
   }
 
   p:last-child {
