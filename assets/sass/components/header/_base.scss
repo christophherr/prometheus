@@ -9,7 +9,7 @@
     padding: 20px 0;
   }
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: $screen-size--medium) {
     .wrap {
       padding-left: 5%;
       padding-right: 5%;

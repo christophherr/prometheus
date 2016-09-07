@@ -4,17 +4,17 @@
   .content-sidebar-sidebar &,
   .sidebar-content-sidebar &,
   .sidebar-sidebar-content & {
-    width: $content-twosidebars--content-sidebar-wrap__width1060px;
+    width: $content-twosidebars__content-sidebar-wrap--width;
 
-    @media only screen and (max-width: $larger-screen) {
-      width: $content-twosidebars--content-sidebar-wrap--larger-screen__width;
+    @media only screen and (max-width: $screen-size--larger) {
+      width: $content-twosidebars__content-sidebar-wrap--width--larger-screen;
     }
 
-    @media only screen and (max-width: $large-screen) {
-      width: $content-twosidebars--content-sidebar-wrap--large-screen__width;
+    @media only screen and (max-width: $screen-size--large) {
+      width: $content-twosidebars__content-sidebar-wrap--width--large-screen;
     }
 
-    @media only screen and (max-width: $medium-screen) {
+    @media only screen and (max-width: $screen-size--medium) {
       width: 100%;
     }
   }

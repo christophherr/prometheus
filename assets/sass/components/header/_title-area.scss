@@ -4,19 +4,19 @@
 .title-area {
   float: left;
   padding: 10px 0;
-  width: $title-area__width;
+  width: $title-area--width;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: $screen-size--medium) {
     width: 100%;
     text-align: center;
   }
 
   .header-image & {
     margin: 0 auto;
-    max-width: $title-area__width;
+    max-width: $title-area--width;
     padding: 0;
 
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: $screen-size--medium) {
       float: none;
     }
   }
@@ -43,7 +43,7 @@
     background-position: center !important;
     background-size: contain !important;
     float: left;
-    min-height: $site-title__min-height;
+    min-height: $site-title--min-height;
     width: 100%;
   }
 }
@@ -58,7 +58,7 @@
 .site-title {
   margin-bottom: 0;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: $screen-size--medium) {
     text-align: center;
   }
 

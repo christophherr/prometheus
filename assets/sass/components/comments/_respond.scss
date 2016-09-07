@@ -19,7 +19,7 @@
     margin-right: 12px;
   }
 
-  @media only screen and (max-width: $small-screen) {
+  @media only screen and (max-width: $screen-size--small) {
     padding: 30px;
     margin-bottom: 5%;
   }

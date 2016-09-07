@@ -2,9 +2,9 @@
 
 .sidebar-secondary {
   float: left;
-  width: $secondary-sidebar__width;
+  width: $secondary-sidebar--width;
 
-  @media only screen and (max-width: $medium-screen) {
+  @media only screen and (max-width: $screen-size--medium) {
     width: 100%;
   }
 

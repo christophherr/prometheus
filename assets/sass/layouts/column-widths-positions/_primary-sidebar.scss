@@ -2,13 +2,13 @@
 
 .sidebar-primary {
   float: right;
-  width: $primary-sidebar__width;
+  width: $primary-sidebar--width;
 
-  @media only screen and (max-width: $larger-screen) {
-    width: $primary-sidebar--larger-screen__width;
+  @media only screen and (max-width: $screen-size--larger) {
+    width: $primary-sidebar--width--larger-screen;
   }
 
-  @media only screen and (max-width: $medium-screen) {
+  @media only screen and (max-width: $screen-size--medium) {
     width: 100%;
   }
 

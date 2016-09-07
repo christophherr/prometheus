@@ -6,20 +6,20 @@
   margin: 0 auto;
   max-width: $max-width;
 
-  @media only screen and (max-width: $larger-screen) {
+  @media only screen and (max-width: $screen-size--larger) {
     max-width: $max-width__larger-screen;
   }
 
-  @media only screen and (max-width: $large-screen) {
+  @media only screen and (max-width: $screen-size--large) {
     max-width: $max-width__large-screen;
   }
 
-  @media only screen and (max-width: $medium-screen) {
+  @media only screen and (max-width: $screen-size--medium) {
     max-width: $max-width__medium-screen;
   }
 }
 
-@media only screen and (max-width: $small-screen) {
+@media only screen and (max-width: $screen-size--small) {
   .wrap {
     padding-left: 5%;
     padding-right: 5%;
@@ -31,11 +31,11 @@
   padding-top: 40px;
   word-wrap: break-word;
 
-  @media only screen and (max-width: $small-screen) {
+  @media only screen and (max-width: $screen-size--small) {
     padding: 5% 5% 0;
   }
 }
 
 .landing-page .site-inner {
-  max-width: $landing-page--site-inner__max-width;
+  max-width: $landing-page__site-inner--max-width;
 }

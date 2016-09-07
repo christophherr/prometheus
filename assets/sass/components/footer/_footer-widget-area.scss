@@ -11,17 +11,17 @@
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-  width: $footer-widgets__width;
+  width: $footer-widgets--width;
 
-  @media only screen and (max-width: 1340px) {
-    width: $footer-widgets__desktop-width;
+  @media only screen and (max-width: $screen-size--larger) {
+    width: $footer-widgets--width--larger-screen;
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: $footer-widgets__laptop-width;
+  @media only screen and (max-width: $screen-size--large) {
+    width: $footer-widgets--width--large-screen;
   }
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: $screen-size--medium) {
   width: 100%;
   }
 }
@@ -29,11 +29,11 @@
 .footer-widgets-1 {
   margin-right: 70px;
 
-  @media only screen and (max-width: 1340px) {
+  @media only screen and (max-width: $screen-size--larger) {
     margin-right: 60px;
   }
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: $screen-size--large) {
     margin-right: 30px;
   }
 }
@@ -42,7 +42,7 @@
 .footer-widgets-2 {
   float: left;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: $screen-size--medium) {
     margin: 0 auto 40px;
   }
 }

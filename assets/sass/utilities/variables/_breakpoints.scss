@@ -16,26 +16,26 @@ $phone-portrait: 360px;
 
 // Global Screen Sizes
 //------------------------------------------------------------------------------
-$smallest-screen: 320px;
-$smaller-screen: 480px;
-$small-screen: 860px;
-$medium-screen: 1023px;
-$large-screen: 1200px;
-$larger-screen: 1340px;
-$huge-screen: 1600px;
+$screen-size--smallest: 320px;
+$screen-size--smaller: 480px;
+$screen-size--small: 860px;
+$screen-size--medium: 1023px;
+$screen-size--large: 1200px;
+$screen-size--larger: 1340px;
+$screen-size--huge: 1600px;
 
 // Global Breakpoints
 //------------------------------------------------------------------------------
-$smallest-screen-up: new-breakpoint(min-width $smallest-screen 4);
-$smaller-screen-up: new-breakpoint(min-width $smaller-screen 6);
-$small-screen-up: new-breakpoint(min-width $small-screen 12);
-$medium-screen-up: new-breakpoint(min-width $medium-screen 12);
-$large-screen-up: new-breakpoint(min-width $large-screen 12);
-$huge-screen-up: new-breakpoint(min-width $huge-screen 12);
+$screen-size--smallest-up: new-breakpoint(min-width $screen-size--smallest 4);
+$screen-size--smaller-up: new-breakpoint(min-width $screen-size--smaller 6);
+$screen-size--small-up: new-breakpoint(min-width $screen-size--small 12);
+$screen-size--medium-up: new-breakpoint(min-width $screen-size--medium 12);
+$screen-size--large-up: new-breakpoint(min-width $screen-size--large 12);
+$screen-size--huge-up: new-breakpoint(min-width $screen-size--huge 12);
 
 // Max Breakpoints
-$smallest-screen-max: new-breakpoint(max-width $smallest-screen 4);
-$smaller-screen-max: new-breakpoint(max-width $smaller-screen 6);
-$small-screen-max: new-breakpoint(max-width $small-screen 12);
-$medium-screen-max: new-breakpoint(max-width $medium-screen 12);
+$screen-size--smallest-max: new-breakpoint(max-width $screen-size--smallest 4);
+$screen-size--smaller-max: new-breakpoint(max-width $screen-size--smaller 6);
+$screen-size--small-max: new-breakpoint(max-width $screen-size--small 12);
+$screen-size--medium-max: new-breakpoint(max-width $screen-size--medium 12);
 

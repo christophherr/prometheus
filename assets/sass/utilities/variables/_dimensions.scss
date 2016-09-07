@@ -2,49 +2,48 @@
 // Dimension Variables
 //============================
 
-$base-width: 1280;
+$base--width: 1280;
 $gutter: 40px;
 
 
 // Max Widths
-$max-width: $base-width + px;
-$max-width__larger-screen: 1140px;
-$max-width__large-screen: 960px;
-$max-width__medium-screen: 800px;
+$max-width: $base--width + px;
+$max-width--larger-screen: 1140px;
+$max-width--large-screen: 960px;
+$max-width--medium-screen: 800px;
 
 // Header Area
-$title-area__width: 300px;
-$header-right__width: 800px;
-$header-right__laptop-width: 620px;
+$title-area--width: 300px;
+$header-right--width: 800px;
+$header-right--width--large-screen: 620px;
 
-$site-title__min-height: 80px
+$site-title--min-height: 80px
 
 // Content Area
-$content__width: $base-width * 0.6875 + px; //880px
-$content--larger-screen__width: 800px;
-$content--large-screen__width: 620px;
+$content--width: $base--width * 0.6875 + px; //880px
+$content--width--larger-screen: 800px;
+$content--width--large-screen: 620px;
 
-$content-twosidebars__width: 660px;
-$content-twosidebars--larger-screen__width: 580px;
-$content-twosidebars--large-screen__width: 400px;
+$content-twosidebars--width: 660px;
+$content-twosidebars--width--larger-screen: 580px;
+$content-twosidebars--width--large-screen: 400px;
 
 
-$content-twosidebars--content-sidebar-wrap__width: 1060px;
-$content-twosidebars--content-sidebar-wrap--larger-screen__width: 920px;
-$content-twosidebars--content-sidebar-wrap--large-screen__width: 740px:
+$content-twosidebars__content-sidebar-wrap--width: 1060px;
+$content-twosidebars__content-sidebar-wrap--width--larger-screen: 920px;
+$content-twosidebars__content-sidebar-wrap--width--large-screen: 740px:
 
 // Sidebar
-$primary-sidebar__width: $base-width * 0.28125 + px; //360
-$primary-sidebar--larger-screen__width: 300px;
+$primary-sidebar--width: $base--width * 0.28125 + px; //360
+$primary-sidebar--width--larger-screen: 300px;
 
-$secondary-sidebar__width: 180px;
+$secondary-sidebar--width: 180px;
 
 // Footer Area
-$footer-widgets__width: 380px;
-$footer-widgets__desktop-width: 340px;
-$footer-widgets__laptop-width: 300px;
-$footer-widgets__tablet-width: 100%;
+$footer-widgets--width: 380px;
+$footer-widgets--width--larger-screen: 340px;
+$footer-widgets--width--larger-screen: 300px;
 
 // Landing Page
 
-$landing-page--site-inner__max-width: 800px;
+$landing-page__site-inner--max-width: 800px;
