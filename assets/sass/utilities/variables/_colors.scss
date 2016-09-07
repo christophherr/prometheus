@@ -1,171 +1,182 @@
-$base--color: #333;
+//
+// Base colors
+//===============================
 
+$black: #000;
+$white: #fff;
+$gray--light: #eee;
+$gray--darker: #333;
+$red: #c3251d;
+
+//Other shades of gray
+//#999;
+//#ddd
+//#777
+
+//
+// Color Configurations
+//=============================
 
 //
 // Body
 //==============================
-$body--background-color: #eee;
-$body--text-color: #333;
-
-
-//
+$body--background-color: $gray--light;
+$body--text-color: $gray--darker;$black/
 // hr
 //=============================
-$hr__border-top: #eee;
-
-//
+$hr__border-top: $gray--light$black/
 // Forms
 //=============================
-$form__input-select-textarea--background-color: #fff;
+$form__input-select-textarea--background-color: $white;
 $form__input-select-textarea--border-color: #ddd;
-$form__input-select-textarea--text-color: #333;
+$form__input-select-t$blackrea--text-color: $gray--darker;
 
 $form__input-select-textarea--focus-border-color: #999;
 
-$form--placeholder--text-color: #333;
+$form--placeholder--text-color: $gray--darker;
 
-$button--background-color: #333;
-$button--text-color: #fff;
+$button--background-color: $gray--darker;
+$button--text-color: $white;
 
-$button--hover-background-color: #c3251d;
-$button--hover-text-color: #fff;
+$button--hover-background-color: $red;
+$button--hover-text-color: $white;
 
-$site-container__button--disabled-background-color: #eee;
+$site-container__button--disabled-background-color: $gray--light;
 $site-container__button--disabled-text-color: #777;
 
 
 //
 // Links
-//===================================
-$link--text-color: #c3251d;
-$link--hover-focus-text-color: #333;
+//====================================
+$link--text-color: $red;
+$link--hover-focus-text-color: $gray--darker;
 
 //
 // Tables
 //====================================
-$tbody--border-bottom-color: #eee;
-$td--border-top-color: #eee;
+$tbody--border-bottom-color: $gray--light;
+$td--border-top-color: $gray--light;
 
 //
 // Gallery
 //======================================
-$gallery__img--border-color: #eee;
+$gallery__img--border-color: $gray--light;
 $gallery__img--hover-border-color: #999;
 
 //
 // Header
 //===================================
-$site-header--background-color: #fff;
-$site-title--link-color: #333;
+$site-header--background-color: $white;
+$site-title--link-color: $gray--darker;
 
 //
 // Navigation Colors
 //==================================
 
 // Nav Links
-$nav__link--color: #333;
-$nav__link--hover-focus-color: #c3251d;
+$nav__link--color: $gray--darker;
+$nav__link--hover-focus-color: $red;
 
 // Nav Primary
-$nav-primary--background-color: #eee;
-$nav-primary--border-color: #eee;
+$nav-primary--background-color: $gray--light;
+$nav-primary--border-color: $gray--light;
 
 // Submenu
-$submenu--border-color: #eee;
-$submenu__link--background-color: #fff;
+$submenu--border-color: $gray--light;
+$submenu__link--background-color: $white;
 
 // Nav Toggle
-$nav-toggle--background-color: #fff;
-$nav-toggle--color: #333;
+$nav-toggle--background-color: $white;
+$nav-toggle--color: $gray--darker;
 
 // Breadcrumbs
-$breadcrumb--background-color: #fff;
+$breadcrumb--background-color: $white;
 
 // Archive Pagination
-$archive-pagination--color: #333;
-$archive-pagination--color--hover-focus: #fff;
-$archive-pagination--background-color: #fff;
-$archive-pagination--hover-focus-background-color: #c3251d;
+$archive-pagination--color: $gray--darker;
+$archive-pagination--color--hover-focus: $white;
+$archive-pagination--background-color: $white;
+$archive-pagination--hover-focus-background-color: $red;
 
 // js enabled
 $js-nav--background-color: $white;
-$js-nav--hover-color: #000;
-$js-nav--focus-color: #c3251d;
+$js-nav--hover-color: $black;
+$js-nav--focus-color: $red;
 
 
 //
 // Search
 //====================================
-$search-input-submit--focus-text-color: #333;
-$search-input-submit--focus-background-color: #fff;
+$search-input-submit--focus-text-color: $gray--darker;
+$search-input-submit--focus-background-color: $white;
 
 //
 // Entry
 //=================================
-$entry--background-color: #fff;
+$entry--background-color: $white;
 
 //
 // Entry Title
 //================================
-$entry-title--link-color: #333;
-$entry-title--hover-focus-link-color: #c3251d;
+$entry-title--link-color: $gray--darker;
+$entry-title--hover-focus-link-color: $red;
 
 //
 // Entry Content
 //=================================
-$entry-content-code--background-color: #333;
-$entry-content-code--text-color: #eee;
+$entry-content-code--background-color: $gray--darker;
+$entry-content-code--text-color: $gray--light;
 
-$entry-content__button--hover-text-color: #fff;
+$entry-content__button--hover-text-color: $white;
 //
 // Entry Footer
 //===============================
-$entry-footer__entry-meta--border-color: #eee;
+$entry-footer__entry-meta--border-color: $gray--light;
 
 //
 // Author Box
 //================================
-$author-box--background-color: #fff;
+$author-box--background-color: $white;
 
 //
 // After Entry
 //================================
-$after-entry--background-color: #fff;
+$after-entry--background-color: $white;
 
 //
 // Comments & Pings
 //===============================
-$comments-pings--background-color: #fff;
+$comments-pings--background-color: $white;
 
 //
 // Footer
 //===============================
-$site-footer--background-color: #fff;
-$site-footer--border-color: #eee;
+$site-footer--background-color: $white;
+$site-footer--border-color: $gray--light;
 
-$footer-widgets--background-color: #fff;
+$footer-widgets--background-color: $white;
 
 //
 // Sidebars & Widgets
 //===========================================
-$sidebar-widget-title--link--text-color: #333;
-$sidebar-widget--background-color: #fff;
+$sidebar-widget-title--link--text-color: $gray--darker;
+$sidebar-widget--background-color: $white;
 
 //
 // Plugins
 //=================================
 
 // Enews Extended
-$sidebar__enews-widget--background-color: #333;
-$sidebar__enews-widget--text-color: #fff;
+$sidebar__enews-widget--background-color: $gray--darker;
+$sidebar__enews-widget--text-color: $white;
 
-$sidebar__enews-widgets--input--border-color: #333;
+$sidebar__enews-widgets--input--border-color: $gray--darker;
 
-$sidebar__enews-widgets--input-submit--background-color: #c3251d;
-$sidebar__enews-widgets--input-submit--text-color: #fff;
+$sidebar__enews-widgets--input-submit--background-color: $red;
+$sidebar__enews-widgets--input-submit--text-color: $white;
 
-$sidebar__enews-widgets--input-submit--hover-focus-background-color: #fff;
-$sidebar__enews-widgets--input-submit--hover-focus-text-color: #333;
+$sidebar__enews-widgets--input-submit--hover-focus-background-color: $white;
+$sidebar__enews-widgets--input-submit--hover-focus-text-color: $gray--darker;
 
 
 //
@@ -175,4 +186,4 @@ $sidebar__enews-widgets--input-submit--hover-focus-text-color: #333;
 // Archive
 //===========================================
 
-$archive-description--background-color: #fff;
+$archive-description--background-color: $white;
