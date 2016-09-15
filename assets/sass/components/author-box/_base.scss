@@ -2,7 +2,7 @@
 // Author box base styles
 
 .author-box {
-  background-color: $author-box--background-color#fff;
+  background-color: $author-box--background-color;
    @include rem( font-size, $author-box--font-size );
   margin-bottom: 40px;
   padding: 60px;
