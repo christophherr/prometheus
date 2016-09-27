@@ -3,7 +3,7 @@
  * Description
  *
  * @package     Prometheus
- * @since       1.0.0
+ * @since       1.0.1
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
  * @license     GNU General Public License 2+
@@ -18,4 +18,3 @@ include_once( 'lib/functions/autoload.php' );
 
 // Start the Genesis Framework.
 include_once( get_template_directory() . '/lib/init.php' );
-

@@ -3,7 +3,7 @@
  * Description
  *
  * @package     Prometheus\Functions
- * @since       1.0.0
+ * @since       1.0.1
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
  * @license     GNU General Public License 2+
@@ -29,13 +29,14 @@ function load_nonadmin_files() {
 		'structure/menu.php',
 		'structure/post.php',
 		'structure/sidebar.php',
+		'components/customizer/customizer.php',
 	);
 
 	load_specified_files( $filenames );
 
 }
 
-add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
+//add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
 /**
  * Loads admin files.
  *
@@ -43,7 +44,7 @@ add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
  */
 function load_admin_files() {
 	$filenames = array(
-		'components/customizer/customizer.php',
+
 	);
 
 	load_specified_files( $filenames );
