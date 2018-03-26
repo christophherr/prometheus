@@ -1,0 +1,27 @@
+/* Sidebar
+------------------------------------------------ */
+
+.sidebar {
+	font-size: $sidebar__font-size;
+	line-height: $line-height__medium;
+
+	@media only screen and (min-width: 960px) {
+		float: right;
+		width: 30%;
+	}
+
+	.sidebar-content & {
+
+		@media only screen and (min-width: 960px) {
+			float: left;
+		}
+	}
+
+	.widget {
+		margin-bottom: 40px;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+}

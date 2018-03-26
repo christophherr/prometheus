@@ -1,0 +1,78 @@
+/*!
+	Theme Name: Prometheus 2
+	Theme URI: https://www.christophherr.com/
+	Description: This is the developer friendly, modular,
+	             sassified version of the Genesis sample theme.
+	Author: Christoph Herr
+	Author URI: https://www.christophherr.com/
+
+	Version: 1.0.0
+
+	Template: genesis
+
+	License: GPL-2.0+
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+	Text Domain: prometheus-2
+*/
+
+/* Table of Contents
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Accessibility
+		- Screen Reader Text
+		- Skip Links
+- Structure and Layout
+	- Site Container
+	- Site Inner
+- Common Classes
+	- Avatar
+	- Genesis
+	- Search Form
+	- Titles
+	- WordPress
+- Widgets
+	- Featured Content
+- Plugins
+	- Genesis eNews Extended
+	- Genesis Simple FAQ
+	- Jetpack
+- Site Header
+	- Title Area
+- Site Navigation
+	- Responsive Menu
+	- Header Menu
+	- Footer Menu
+- Content Area
+	- Entry Content
+	- Entry Meta
+	- Pagination
+	- Entry Comments
+- Sidebar
+- Footer Widgets
+- Site Footer
+- Print Styles
+*/
+
+@import "utilities/index.scss";
+@import "resets/index.scss";
+@import "defaults/index.scss";
+@import "structure/index.scss";
+@import "common-classes/index.scss";
+@import "widgets/index.scss";
+@import "plugins/index.scss";
+@import "header/index.scss";
+@import "menu/index.scss";
+@import "content-area/index.scss";
+@import "sidebar/index.scss";
+@import "footer-area/index.scss";
+@import "print/index.scss";
