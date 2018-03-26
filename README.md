@@ -18,6 +18,7 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
 8.  Some basic Gulp commands are available to lint and compile Sass and minify the stylesheet. I might add functionality (e.g. JavaScript processing) in the future.
 9.  Stylelint and ESlint are configured to WordPress standards and available to check CSS and JavaScript code.
 10. If you are using VS Code, you can automatically format those files with Prettier (prettier-eslint and prettier-stylelint extensions).
+11. Gulp outputs the message `postcss-sorting: Invalid "order" option value`. This is caused by an incompatibility between postcss-sorting and the Stylelint Order plugin. It does not affect the CSS output.
 
 ## Installation Instructions
 
