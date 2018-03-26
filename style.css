@@ -15,7 +15,6 @@
 
 	Text Domain: prometheus-2
 */
-
 /* Table of Contents
 - HTML5 Reset
 	- Baseline Normalize
@@ -62,13 +61,10 @@
 - Site Footer
 - Print Styles
 */
-
 /* HTML5 Reset
 --------------------------------------------- */
-
 /* Baseline Normalize
 --------------------------------------------- */
-
 /* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 button,
 hr,
@@ -124,8 +120,8 @@ a {
 
 abbr[title] {
 	border-bottom: none;
-	-webkit-text-decoration: underline dotted;
 	text-decoration: underline;
+	-webkit-text-decoration: underline dotted;
 	text-decoration: underline dotted;
 }
 
@@ -216,8 +212,8 @@ textarea {
 }
 
 [type="search"] {
-	outline-offset: -2px;
 	-webkit-appearance: textfield;
+	outline-offset: -2px;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -225,8 +221,8 @@ textarea {
 }
 
 ::-webkit-file-upload-button {
-	font: inherit;
 	-webkit-appearance: button;
+	font: inherit;
 }
 
 details {
@@ -297,12 +293,10 @@ html {
 
 /* Defaults
 ----------------------------------------------*/
-
 /* Typographical Elements
 --------------------------------------------- */
 html {
 	font-size: 62.5%;
-
 	/* 10px browser default */
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -560,7 +554,6 @@ textarea {
 	color: #333;
 	background-color: #fff;
 	font-size: 18px;
-	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 400;
 }
@@ -754,7 +747,6 @@ th:first-child {
 
 /* Accessibility
 --------------------------------------------- */
-
 /* Screen Reader Text
 --------------------------------------------- */
 .screen-reader-shortcut,
@@ -775,7 +767,6 @@ th:first-child {
 	display: block;
 	clip: auto !important;
 	z-index: 100000;
-
 	/* Above WP toolbar. */
 	width: auto;
 	height: auto;
@@ -818,7 +809,6 @@ th:first-child {
 
 /* Structure and Layout
 -------------------------------------- */
-
 /* Site Container
 --------------------------------------------- */
 .site-container {
@@ -844,7 +834,6 @@ th:first-child {
 }
 
 @keyframes fadein {
-
 	from {
 		opacity: 0;
 	}
@@ -855,7 +844,6 @@ th:first-child {
 }
 
 @-webkit-keyframes fadein {
-
 	from {
 		opacity: 0;
 	}
@@ -878,7 +866,6 @@ th:first-child {
 
 /* Common Classes
 ---------------------------------------*/
-
 /* Avatar
 --------------------------------------------- */
 .avatar {
@@ -1150,7 +1137,6 @@ img.alignright,
 
 /* Plugins
 --------------------------------------------- */
-
 /* Genesis eNews Extended
 --------------------------------------------- */
 .enews form + p {
@@ -1466,7 +1452,6 @@ img.alignright,
 
 /* Content Area
 --------------------------------------------- */
-
 /* Entry Content
 --------------------------------------------- */
 .entry {
@@ -1699,7 +1684,6 @@ img.alignright,
 }
 
 @media only screen and (min-width: 960px) {
-
 	.site-inner {
 		max-width: 1140px;
 		margin-top: 70px;
@@ -1720,7 +1704,6 @@ img.alignright,
 		margin-right: auto;
 		margin-left: auto;
 	}
-
 	/* Column Classes
 	--------------------------------------------- */
 	.five-sixths,
@@ -1910,9 +1893,10 @@ img.alignright,
 	.footer-widget-area {
 		float: left;
 		width: 33.33%;
-
 		/* fallback for older browsers */
 		width: calc(100% / 3);
 		margin-bottom: 0;
 	}
 }
+
+/*# sourceMappingURL=style.css.map */

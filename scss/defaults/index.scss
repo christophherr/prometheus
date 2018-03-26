@@ -252,11 +252,10 @@ textarea {
 	width: 100%;
 	padding: 15px;
 	border: 1px solid #ddd;
-	color: #333;
-	background-color: #fff;
-	font-size: 18px;
-	font-size: 1.8rem;
-	font-weight: 400;
+	color: $forms--font-color;
+	background-color: $forms__background-color;
+	font-size: $forms__font-size;
+	font-weight: $font-weight__normal;
 }
 
 input:focus,
@@ -273,11 +272,11 @@ input[type="radio"] {
 
 ::-moz-placeholder {
 	opacity: 1;
-	color: #333;
+	color: $dark-grey;
 }
 
 ::-webkit-input-placeholder {
-	color: #333;
+	color: $dark-grey;
 }
 
 button {
