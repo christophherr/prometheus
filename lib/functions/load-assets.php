@@ -15,7 +15,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(
 		'prometheus2-fonts',
-		'//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
+		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
 		array(),
 		CHILD_THEME_VERSION
 	);
@@ -29,6 +29,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		CHILD_THEME_VERSION,
 		true
 	);
+
 	wp_localize_script(
 		'prometheus2-responsive-menu',
 		'genesis_responsive_menu',
@@ -51,5 +52,5 @@ add_action( 'wp_enqueue_scripts', function() {
  * @since 2.3.0
  */
 function responsive_menu_settings() {
-	return require_once get_stylesheet_directory() . '\config\responsive-menu-settings.php';
+	return require get_stylesheet_directory() . '\config\responsive-menu-settings.php';
 }
