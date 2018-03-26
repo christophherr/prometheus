@@ -1,4 +1,4 @@
-/* Font sizes */
+// Font sizes
 $body--font-size: 1.8rem;
 $h1--font-size: 3rem;
 $h2--font-size: 2.7rem;
@@ -20,23 +20,23 @@ $comments__font-size: 1.8rem;
 $footer-widgets__font-size: 1.8rem;
 $site-footer__font-size: 1.5rem;
 
-/* Font families */
+// Font families
 $body--font-family: "Source Sans Pro", sans-serif;
 $headings--font-family: "Source Sans Pro", sans-serif;
 
-/* Font weights */
+// Font weights
 $font-weight__normal: 400;
 $font-weight__bold: 600;
 $font-weight__bolder: 700;
 
-/* Line heights*/
+// Line heights
 $line-height__normal: 1.625;
 $line-height__medium: 1.5;
 $line-height__small: 1.2;
 $line-height__smaller: 1;
 $line-height__big: 20px;
 
-/* Font colors */
+// Font colors
 $body--font-color: #333;
 $link--font-color: #0073e5;
 $link--font-color__hover: #333;
@@ -53,7 +53,7 @@ $sub-menu-toggle--font-color: #333;
 $sub-menu-toggle--font-color-hover: #0073e5;
 $menu-highlight__link--font-color: #fff;
 
-/* Background colors */
+// Background colors
 $body--background-color: #fff;
 $site-header--background-color: #fff;
 $mark--background-color: #ddd;
