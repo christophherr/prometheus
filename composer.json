@@ -1,0 +1,17 @@
+{
+  "name": "ChristophHerr/Prometheus2",
+  "description":
+    "Modular, sassified child theme for the Genesis Framework based on the Genesis Sample Theme 2.6",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.2",
+    "wp-coding-standards/wpcs": "^0.14.1",
+    "wimg/php-compatibility": "^8.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+    "php": "^5.6|^7"
+  },
+  "license": "GPL-2.0+",
+  "require": {},
+  "scripts": {
+    "phpcs": "phpcs"
+  }
+}
