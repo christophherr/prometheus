@@ -12,7 +12,7 @@
 namespace ChristophHerr\Prometheus2;
 
 add_action( 'genesis_setup', function() {
-	//* Set Localization (do not remove)
+	// * Set Localization (do not remove)
 	load_child_theme_textdomain( 'CHILD_TEXT_DOMAIN', CHILD_THEME_DIR . '/languages' );
 
 	adds_theme_supports();
@@ -51,5 +51,5 @@ add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
 
 // Sets the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
-	$content_width = 702; // Pixels.
+	$content_width = 702; // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- Valid use case.
 }

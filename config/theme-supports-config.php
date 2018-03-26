@@ -35,8 +35,8 @@ return array(
 		'flex-width'  => true,
 	),
 	'genesis-menus'                   => array(
-		'primary'   => __( 'Header Menu', 'genesis-sample' ),
-		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
+		'primary'   => __( 'Header Menu', 'prometheus2' ),
+		'secondary' => __( 'Footer Menu', 'prometheus2' ),
 	),
 	'genesis-after-entry-widget-area' => null,
 	'genesis-footer-widgets'          => 3,

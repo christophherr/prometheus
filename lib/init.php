@@ -8,6 +8,7 @@
  * @link        https://www.christophherr.com
  * @license     GNU General Public License 2+
  */
+
 namespace ChristophHerr\Prometheus2;
 
 /**

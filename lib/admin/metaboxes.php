@@ -12,7 +12,9 @@
 namespace ChristophHerr\Prometheus2\Admin;
 
 // Removes unused admin metaboxes.
-add_action( 'genesis_theme_settings_metaboxes', function( $_genesis_admin_settings ) {
-	remove_meta_box( 'genesis-theme-settings-header', $_genesis_admin_settings, 'main' );
-	remove_meta_box( 'genesis-theme-settings-nav', $_genesis_admin_settings, 'main' );
-});
+add_action(
+	'genesis_theme_settings_metaboxes', function( $_genesis_admin_settings ) {
+		remove_meta_box( 'genesis-theme-settings-header', $_genesis_admin_settings, 'main' );
+		remove_meta_box( 'genesis-theme-settings-nav', $_genesis_admin_settings, 'main' );
+	}
+);

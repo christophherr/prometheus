@@ -2,12 +2,13 @@
 /**
  * Simple Social Icon Default Settings
  *
- * @package     ChristophHerr\Prometheus2
+ * @package     ChristophHerr\Prometheus2\Plugins
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
  * @license     GNU General Public License 2+
  */
+
 namespace ChristophHerr\Prometheus2\Plugins;
 
 add_filter( 'simple_social_default_styles', function( $defaults ) {

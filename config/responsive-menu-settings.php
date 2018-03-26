@@ -12,9 +12,9 @@
 namespace ChristophHerr\Prometheus2\Config;
 
 return array(
-	'mainMenu'         => __( 'Menu', 'genesis-sample' ),
+	'mainMenu'         => __( 'Menu', 'prometheus2' ),
 	'menuIconClass'    => 'dashicons-before dashicons-menu',
-	'subMenu'          => __( 'Submenu', 'genesis-sample' ),
+	'subMenu'          => __( 'Submenu', 'prometheus2' ),
 	'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
 	'menuClasses'      => array(
 		'combine' => array(

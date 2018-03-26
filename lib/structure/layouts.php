@@ -12,7 +12,7 @@
 namespace ChristophHerr\Prometheus2\Structure;
 
 // Removes site layouts.
-add_action('genesis_setup', function() {
+add_action( 'genesis_setup', function() {
 	genesis_unregister_layout( 'content-sidebar-sidebar' );
 	genesis_unregister_layout( 'sidebar-content-sidebar' );
 	genesis_unregister_layout( 'sidebar-sidebar-content' );

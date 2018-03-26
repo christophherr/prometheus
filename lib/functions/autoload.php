@@ -2,12 +2,13 @@
 /**
  * Autoloader for Prometheus 2
  *
- * @package     Prometheus2\Functions
+ * @package     ChristophHerr\Prometheus2\Functions
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
  * @license     GNU General Public License 2+
  */
+
 namespace ChristophHerr\Prometheus2\Functions;
 
 /**
@@ -42,15 +43,15 @@ function load_admin_files() {
  *
  * @since 1.0.0
  *
- * @param array $filenames
- * @param string $folder_root
+ * @param array  $filenames Array of filenames to load.
+ * @param string $folder_root Root of the file folder structure.
  *
  * @return void
  */
 function load_specified_files( array $filenames, $folder_root = '' ) {
 	$folder_root = $folder_root ?: CHILD_THEME_DIR . '/lib/';
 	foreach ( $filenames as $filename ) {
-		include( $folder_root . $filename );
+		include $folder_root . $filename;
 	}
 }
 

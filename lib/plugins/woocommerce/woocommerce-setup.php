@@ -64,8 +64,8 @@ add_filter( 'genesiswooc_products_per_page', function() {
 
 // Updates the next and previous arrows to the default Genesis style.
 add_filter( 'woocommerce_pagination_args', function( $args ) {
-	$args['prev_text'] = sprintf( '&laquo; %s', __( 'Previous Page', 'genesis-sample' ) );
-	$args['next_text'] = sprintf( '%s &raquo;', __( 'Next Page', 'genesis-sample' ) );
+	$args['prev_text'] = sprintf( '&laquo; %s', __( 'Previous Page', 'prometheus2' ) );
+	$args['next_text'] = sprintf( '%s &raquo;', __( 'Next Page', 'prometheus2' ) );
 
 	return $args;
 });
@@ -91,7 +91,7 @@ add_action( 'activated_plugin', function( $plugin ) {
 	}
 
 	update_woocommerce_image_dimensions();
-}, 10, 2);
+}, 10, 2 );
 
 /**
  * Updates WooCommerce image dimensions.
