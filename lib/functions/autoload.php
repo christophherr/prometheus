@@ -18,25 +18,8 @@ namespace ChristophHerr\Prometheus2\Functions;
  * @return void
  */
 function load_nonadmin_files() {
-	$filenames = array(
-		'setup.php',
-		// 'functions/formatting.php',
-		'functions/load-assets.php',
-		// 'functions/markup.php',
-		'structure/layouts.php',
-		'structure/gravatar-sizes.php',
-		'structure/footer.php',
-		'structure/header.php',
-		'structure/menu.php',
-		'structure/post.php',
-		'structure/sidebar.php',
-		'plugins/simple-social-icon-defaults.php',
-		// 'plugins/woocommerce/woocommerce-setup.php',
-		// 'plugins/woocommerce/woocommerce-output.php',
-		'customizer/css-handler.php',
-		'customizer/helpers.php',
-		'customizer/customizer.php',
-	);
+	$filenames = require CHILD_THEME_DIR . '/config/autoload-nonadmin-files.php';
+
 	load_specified_files( $filenames );
 }
 
@@ -49,9 +32,8 @@ add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
  * @return void
  */
 function load_admin_files() {
-	$filenames = array(
-		'admin/metaboxes.php',
-	);
+	$filenames = require CHILD_THEME_DIR . '/config/autoload-admin-files.php';
+
 	load_specified_files( $filenames );
 }
 
@@ -65,7 +47,7 @@ function load_admin_files() {
  *
  * @return void
  */
-function load_specified_files( array $filenames, $folder_root = '') {
+function load_specified_files( array $filenames, $folder_root = '' ) {
 	$folder_root = $folder_root ?: CHILD_THEME_DIR . '/lib/';
 	foreach ( $filenames as $filename ) {
 		include( $folder_root . $filename );
