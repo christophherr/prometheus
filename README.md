@@ -1,6 +1,7 @@
 # Prometheus 2 Theme
 
 ![Prometheus Statue](https://raw.githubusercontent.com/christophherr/prometheus/develop/screenshot.png)
+
 Modular starter child theme with Sass partials for the Genesis Framework, based on the Genesis Sample Theme version 2.6.
 
 Requires the Genesis Framework 2.6+ and PHP 5.6+
