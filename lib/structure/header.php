@@ -11,5 +11,8 @@
 
 namespace ChristophHerr\Prometheus2\Structure;
 
-// Displays custom logo.
-add_action( 'genesis_site_title', 'the_custom_logo', 0 );
+add_action( 'genesis_setup', function() {
+
+	// Displays custom logo.
+	add_action( 'genesis_site_title', 'the_custom_logo', 0 );
+});

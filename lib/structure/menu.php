@@ -11,20 +11,23 @@
 
 namespace ChristophHerr\Prometheus2\Structure;
 
-// Repositions primary navigation menu.
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'genesis_do_nav', 12 );
+add_action( 'genesis_setup', function() {
 
-// Repositions the secondary navigation menu.
-remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
+	// Repositions primary navigation menu.
+	remove_action( 'genesis_after_header', 'genesis_do_nav' );
+	add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
-add_filter( 'wp_nav_menu_args', function( $args ) {
+	// Repositions the secondary navigation menu.
+	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+	add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
 
-	if ( 'secondary' !== $args['theme_location'] ) {
+	add_filter( 'wp_nav_menu_args', function( $args ) {
+
+		if ( 'secondary' !== $args['theme_location'] ) {
+			return $args;
+		}
+
+		$args['depth'] = 1;
 		return $args;
-	}
-
-	$args['depth'] = 1;
-	return $args;
+	});
 });

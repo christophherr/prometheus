@@ -16,6 +16,13 @@ add_action( 'genesis_setup', function() {
 	load_child_theme_textdomain( 'CHILD_TEXT_DOMAIN', CHILD_THEME_DIR . '/languages' );
 
 	adds_theme_supports();
+
+	add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
+		$config = require_once get_stylesheet_directory() . '\config\theme-settings-defaults.php';
+
+		$defaults = wp_parse_args( $config, $defaults );
+		return $defaults;
+	});
 });
 
 /**

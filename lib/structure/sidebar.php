@@ -11,8 +11,3 @@
 
 namespace ChristophHerr\Prometheus2\Structure;
 
-// Removes header right widget area.
-unregister_sidebar( 'header-right' );
-
-// Removes secondary sidebar.
-unregister_sidebar( 'sidebar-alt' );

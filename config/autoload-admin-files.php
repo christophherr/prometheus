@@ -15,4 +15,6 @@ namespace ChristophHerr\Prometheus2\Config;
 
 return array(
 	'admin/metaboxes.php',
+	'admin/remove-adsense.php',
+	'admin/layout-settings.php',
 );
