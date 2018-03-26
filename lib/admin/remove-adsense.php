@@ -1,6 +1,8 @@
 <?php
 /**
- * Remove adsense settings.
+ * Remove AdSense settings.
+ *
+ * Removal from Customizer is happening in 'customizer/customizer.php'
  *
  * @package     ChristophHerr\Prometheus2\Admin
  * @since       1.0.0
@@ -18,3 +20,5 @@ add_filter( 'genesis_pre_get_option_adsense_id', '__return_empty_string' );
 add_action( 'genesis_theme_settings_metaboxes', function () {
 	remove_meta_box( 'genesis-theme-settings-adsense', 'toplevel_page_genesis', 'main' );
 });
+
+// Removal from Customizer is in 'customizer/customizer.php.
