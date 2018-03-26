@@ -14,7 +14,10 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
 4.  The autoloader is 'fed' from two config files found in `config/autoload-admin-files.php` and `config/autoload-nonadmin-files.php`.
 5.  Woocommerce and additional Customizer functionality are deactivated but can easily be activated by uncommenting the files in the autoloader config.
 6.  Sass partials are located in `scss`. I might change the folder structure to just use partials.
-7.  Some basic Gulp commands are available to compile Sass and minify the stylesheet. I might add functionality (e.g. JavaScript processing) in the future.
+7.  Print styles are commented out in `scss/styles.scss`.
+8.  Some basic Gulp commands are available to lint and compile Sass and minify the stylesheet. I might add functionality (e.g. JavaScript processing) in the future.
+9.  Stylelint and ESlint are configured to WordPress standards and available to check CSS and JavaScript code.
+10. If you are using VS Code, you can automatically format those files with Prettier (prettier-eslint and prettier-stylelint extensions).
 
 ## Installation Instructions
 
