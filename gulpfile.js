@@ -93,19 +93,31 @@ gulp.task( 'postcss', function() {
 			)
 
 			// Change spaces to tabs.
-			.pipe(
-				stylefmt()
-			)
+			.pipe( stylefmt() )
+
 			// Create the source map.
-			.pipe(sourcemaps.write('./', {
-				includeContent: false,
-			}))
+			.pipe(
+				sourcemaps.write( './', {
+					includeContent: false
+				})
+			)
 
 			.pipe( gulp.dest( './' ) )
 	);
 });
 
-gulp.task( 'css:minify', [ 'postcss' ], function() {
+gulp.task( 'rename:map', [ 'postcss' ], function() {
+	return gulp
+		.src( 'style.css.map' )
+		.pipe( rename( 'style.min.css.map' ) )
+		.pipe( gulp.dest( './' ) );
+});
+
+gulp.task( 'clean:map', [ 'rename:map' ], function() {
+	return del( 'style.css.map' );
+});
+
+gulp.task( 'css:minify', [ 'clean:map' ], function() {
 	return (
 		gulp
 			.src( 'style.css' )
@@ -140,6 +152,7 @@ gulp.task( 'css:minify', [ 'postcss' ], function() {
 
 			.pipe( rename( 'style.min.css' ) )
 			.pipe( gulp.dest( './' ) )
+
 			.pipe(
 				notify({
 					message: 'Styles are built.'
