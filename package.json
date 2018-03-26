@@ -1,0 +1,33 @@
+{
+  "name": "prometheus2",
+  "version": "1.0.0",
+  "description": "Modular starter child theme for the Genesis Framework",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophherr/prometheus.git"
+  },
+  "author": "Christoph Herr",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/christophherr/prometheus/issues"
+  },
+  "homepage": "https://github.com/christophherr/prometheus#readme",
+  "devDependencies": {
+    "css-mqpacker": "^6.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.7",
+    "pixrem": "^4.0.1"
+  }
+}
