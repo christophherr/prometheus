@@ -22,7 +22,7 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
     You can either just type `gulp` in a terminal window or take a look at the available commands in `gulpfile.js`.
 
     More functionality (e.g. JavaScript processing, Browsersync) may be added in the future.
-    If you want more advanced Gulp features, take a look at Craig Simps' [Gulp WP Toolkit](https://github.com/craigsimps/gulp-wp-toolkit/) or Lee Anthony's [gulpfile.js](https://github.com/seothemes/genesis-starter/blob/master/gulpfile.js).
+    If you want more advanced Gulp features, take a look at Craig Simpson's [Gulp WP Toolkit](https://github.com/craigsimps/gulp-wp-toolkit/) or Lee Anthony's [gulpfile.js](https://github.com/seothemes/genesis-starter/blob/master/gulpfile.js).
 
 10. Stylelint and ESlint are configured to follow WordPress standards and available to check CSS and JavaScript.
 11. If you are using VS Code, you can automatically format CSS and JavaScript files with Prettier (e.g. using the `prettier-eslint` and `prettier-stylelint` extensions).
