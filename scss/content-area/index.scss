@@ -39,8 +39,8 @@
 
 	.caption {
 		margin-top: -20px;
-		font-size: $entry-content-caption__font-size;
-		font-weight: $font-weight__bold;
+		font-size: $entry-content__caption--font-size;
+		font-weight: $font-weight--bold;
 		text-align: center;
 	}
 }
@@ -125,7 +125,7 @@
 
 .entry-comments {
 	margin-bottom: 40px;
-	font-size: $comments__font-size;
+	font-size: $comments--font-size;
 
 	@media only screen and (min-width: 960px) {
 		margin-bottom: 60px;
@@ -161,7 +161,7 @@
 
 .comment-respond {
 	margin-bottom: 40px;
-	font-size: $comments__font-size;
+	font-size: $comments--font-size;
 
 	@media only screen and (min-width: 960px) {
 		margin-bottom: 60px;
@@ -185,7 +185,7 @@
 
 .entry-pings {
 	margin-bottom: 40px;
-	font-size: $comments__font-size;
+	font-size: $comments--font-size;
 
 	@media only screen and (min-width: 960px) {
 		margin-bottom: 60px;

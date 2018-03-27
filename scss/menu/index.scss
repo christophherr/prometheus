@@ -33,7 +33,7 @@
 	> .menu-bold > a {
 
 		@media only screen and (min-width: 960px) {
-			font-weight: $font-weight__bolder;
+			font-weight: $font-weight--bolder;
 		}
 	}
 
@@ -45,8 +45,8 @@
 			padding-left: 20px;
 			border-radius: 3px;
 			color: $menu-highlight__link--font-color;
-			background-color: $menu-highlight--link__background-color;
-			font-weight: $font-weight__bold;
+			background-color: $menu-highlight__link--background-color;
+			font-weight: $font-weight--bold;
 		}
 	}
 
@@ -54,7 +54,7 @@
 	> .menu-highlight > a:focus {
 
 		@media only screen and (min-width: 960px) {
-			background-color: $menu-highlight--link__background-color;
+			background-color: $menu-highlight__link--background-color-hover;
 		}
 	}
 
@@ -64,8 +64,8 @@
 		padding-bottom: 12px;
 		outline-offset: -1px;
 		color: $genesis-nav-menu--font-color;
-		font-size: $genesis-nav-menu__font-size;
-		font-weight: $font-weight__normal;
+		font-size: $genesis-nav-menu--font-size;
+		font-weight: $font-weight--normal;
 		text-decoration: none;
 	}
 
@@ -100,8 +100,8 @@
 		a {
 			position: relative;
 			width: 100%;
-			background-color: $genesis-nav-menu-sub-menu--link__background-color;
-			font-size: $genesis-nav-menu-sub-menu--link__font-size;
+			background-color: $genesis-nav-menu__sub-menu__link--background-color;
+			font-size: $genesis-nav-menu__sub-menu__link--font-size;
 			word-wrap: break-word;
 
 			@media only screen and (min-width: 960px) {
@@ -176,7 +176,7 @@
 	border-width: 0;
 	color: $menu-toggle--font-color;
 	background-color: transparent;
-	line-height: $line-height__big;
+	line-height: $line-height--big;
 	text-align: center;
 
 	@media only screen and (min-width: 960px) {
@@ -279,7 +279,7 @@
 	margin-top: 10px;
 
 	.genesis-nav-menu {
-		line-height: $line-height__medium;
+		line-height: $line-height--medium;
 	}
 
 	.menu-item {

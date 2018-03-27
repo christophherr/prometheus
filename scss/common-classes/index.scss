@@ -61,8 +61,8 @@
 
 	.entry-title {
 		margin-bottom: 10px;
-		font-size: $archive-author-box__entry-title;
-		font-weight: $font-weight__bold;
+		font-size: $archive-author-box__entry-title--font-size;
+		font-weight: $font-weight--bold;
 	}
 }
 
@@ -113,13 +113,13 @@
 .archive-title,
 .author-box-title {
 	margin-bottom: 10px;
-	font-size: $archive-author-box__entry-title;
-	font-weight: $font-weight__bold;
+	font-size: $archive-author-box__entry-title--font-size;
+	font-weight: $font-weight--bold;
 }
 
 .entry-title {
 	margin-bottom: 10px;
-	font-size: $entry-title__font-size;
+	font-size: $entry-title--font-size;
 
 	a {
 		color: $entry-title__link--font-color;

@@ -21,8 +21,8 @@ body {
 	background-color: $body--background-color;
 	font-family: $body--font-family;
 	font-size: $body--font-size;
-	font-weight: $font-weight__normal;
-	line-height: $line-height__normal;
+	font-weight: $font-weight--normal;
+	line-height: $line-height--normal;
 }
 
 button,
@@ -44,7 +44,7 @@ a {
 
 a:focus,
 a:hover {
-	color: $link--font-color__hover;
+	color: $link--font-color-hover;
 	text-decoration: none;
 }
 
@@ -73,7 +73,7 @@ hr {
 
 b,
 strong {
-	font-weight: $font-weight__bolder;
+	font-weight: $font-weight--bolder;
 }
 
 blockquote,
@@ -113,8 +113,8 @@ h5,
 h6 {
 	margin: 0 0 20px;
 	font-family: $headings--font-family;
-	font-weight: $font-weight__normal;
-	line-height: $line-height__small;
+	font-weight: $font-weight--normal;
+	line-height: $line-height--small;
 }
 
 h1 {
@@ -127,7 +127,7 @@ h2 {
 
 .entry-content h3,
 .entry-content h4 {
-	font-weight: $font-weight__bold;
+	font-weight: $font-weight--bold;
 }
 
 h3 {
@@ -254,8 +254,8 @@ textarea {
 	border: 1px solid #ddd;
 	color: $forms--font-color;
 	background-color: $forms__background-color;
-	font-size: $forms__font-size;
-	font-weight: $font-weight__normal;
+	font-size: $forms--font-size;
+	font-weight: $font-weight--normal;
 }
 
 input:focus,
@@ -286,15 +286,15 @@ button {
 	color: $button--font-color;
 	background-color: $button--background-color;
 	font-size: $button--font-size;
-	font-weight: $font-weight__bold;
+	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:focus,
 	&:hover {
-		color: $button--font-color__hover;
-		background-color: $button--background-color__hover;
+		color: $button--font-color-hover;
+		background-color: $button--background-color-hover;
 	}
 
 	&.small {
@@ -309,15 +309,15 @@ input[type="button"] {
 	color: $button--font-color;
 	background-color: $button--background-color;
 	font-size: $button--font-size;
-	font-weight: $font-weight__bold;
+	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:focus,
 	&:hover {
-		color: $button--font-color__hover;
-		background-color: $button--background-color__hover;
+		color: $button--font-color-hover;
+		background-color: $button--background-color-hover;
 	}
 
 	&.small {
@@ -332,15 +332,15 @@ input[type="reset"] {
 	color: $button--font-color;
 	background-color: $button--background-color;
 	font-size: $button--font-size;
-	font-weight: $font-weight__bold;
+	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:focus,
 	&:hover {
-		color: $button--font-color__hover;
-		background-color: $button--background-color__hover;
+		color: $button--font-color-hover;
+		background-color: $button--background-color-hover;
 	}
 
 	&.small {
@@ -355,15 +355,15 @@ input[type="submit"] {
 	color: $button--font-color;
 	background-color: $button--background-color;
 	font-size: $button--font-size;
-	font-weight: $font-weight__bold;
+	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:focus,
 	&:hover {
-		color: $button--font-color__hover;
-		background-color: $button--background-color__hover;
+		color: $button--font-color-hover;
+		background-color: $button--background-color-hover;
 	}
 
 	&.small {
@@ -379,20 +379,20 @@ input[type="submit"] {
 	color: $button--font-color;
 	background-color: $button--background-color;
 	font-size: $button--font-size;
-	font-weight: $font-weight__bold;
+	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:focus,
 	&:hover {
-		color: $button--font-color__hover;
-		background-color: $button--background-color__hover;
+		color: $button--font-color-hover;
+		background-color: $button--background-color-hover;
 	}
 
 	.entry-content &:focus,
 	.entry-content &:hover {
-		color: $button--font-color__hover;
+		color: $button--font-color-hover;
 	}
 }
 
@@ -472,7 +472,7 @@ th {
 	background: $body--background-color;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	font-size: 1em;
-	font-weight: $font-weight__bolder;
+	font-weight: $font-weight--bolder;
 	text-decoration: none;
 }
 

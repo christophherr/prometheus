@@ -4,8 +4,8 @@
 	clear: both;
 	padding: 60px 0;
 	border-top: 1px solid #eee;
-	background-color: $footer-widgets__background-color;
-	font-size: $footer-widgets__font-size;
+	background-color: $footer-widgets--background-color;
+	font-size: $footer-widgets--font-size;
 
 	.wrap {
 		margin-right: auto;
@@ -45,8 +45,8 @@
 	padding: 30px;
 	border-top: 1px solid #eee;
 	background-color: #fff;
-	font-size: $site-footer__font-size;
-	line-height: $line-height__medium;
+	font-size: $site-footer--font-size;
+	line-height: $line-height--medium;
 	text-align: center;
 
 	p {
