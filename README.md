@@ -15,7 +15,7 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
 3.  The child theme uses a simple autoloader (see `/lib/functions/autoload.php`).
 4.  The autoloader is 'fed' from two config files found in `config/autoload-admin-files.php` and `config/autoload-nonadmin-files.php`.
 5.  Woocommerce and additional Customizer functionality are deactivated but can easily be activated by uncommenting the files in the autoloader config.
-6.  AdSense settings are deactivated in `admin/remove-adsense.php` and in `customizer/customizer.php`.
+6.  AdSense settings are deactivated in `admin/remove-adsense.php` and in `customizer/remove-adsense.php`.
 7.  Sass partials are located in `scss`. I might remove the folder structure and just use partials.
 8.  Print styles are commented out in `scss/styles.scss`.
 9.  Basic Gulp commands are available to lint and compile Sass and minify the stylesheet.

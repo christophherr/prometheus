@@ -32,4 +32,5 @@ return array(
 	// 'customizer/helpers.php',
 	// 'customizer/register-customizer-settings.php',
 	'customizer/customizer.php',
+	'customizer/remove-adsense.php',
 );

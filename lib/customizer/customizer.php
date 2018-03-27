@@ -1,23 +1,20 @@
 <?php
 /**
- * This file adds changes to the Customizer.
+ * This file makes changes to the Customizer.
  *
- * @package     ChristophHerr\Prometheus2\Customizer
+ * @package     ChristophHerr\Prometheus2\Admin
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
  * @license     GNU General Public License 2+
  */
 
-namespace ChristophHerr\Prometheus2\Customizer;
+namespace ChristophHerr\Prometheus2\Admin;
 
 // Remove header settings and AdSense ID setting from Customizer.
-add_action( 'genesis_setup', function() {
-	add_filter( 'genesis_customizer_theme_settings_config', function( $config ) {
-		unset( $config['genesis']['sections']['genesis_header'] );
-		unset( $config['genesis']['sections']['genesis_adsense'] );
-		return $config;
-	});
+add_filter( 'genesis_customizer_theme_settings_config', function( $config ) {
+	unset( $config['genesis']['sections']['genesis_header'] );
+	return $config;
 });
 
 
