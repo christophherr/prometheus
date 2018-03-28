@@ -12,21 +12,25 @@
 namespace ChristophHerr\Prometheus2;
 
 add_action( 'genesis_setup', function() {
-	// * Set Localization (do not remove)
+	// Sets Localization (do not remove).
 	load_child_theme_textdomain( 'CHILD_TEXT_DOMAIN', CHILD_THEME_DIR . '/languages' );
 
 	adds_theme_supports();
 
+	// Sets theme defaults.
 	add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
 		$config = require_once get_stylesheet_directory() . '\config\theme-settings-defaults.php';
 
 		$defaults = wp_parse_args( $config, $defaults );
 		return $defaults;
 	});
+
+	// Don't load deprecated functions.
+	add_filter( 'genesis_load_deprecated', '__return_false' );
 });
 
 /**
- * Adds theme support to the child theme
+ * Adds theme supports to the child theme.
  *
  * @since 1.0.0
  *
@@ -47,13 +51,6 @@ add_action( 'after_switch_theme', function () {
 		genesis_update_settings( $config );
 	}
 	update_option( 'posts_per_page', $config['blog_cat_num'] );
-});
-
-add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
-	$config = require_once get_stylesheet_directory() . '\config\theme-settings-defaults.php';
-
-	$defaults = wp_parse_args( $config, $defaults );
-	return $defaults;
 });
 
 // Sets the content width based on the theme's design and stylesheet.
