@@ -6,7 +6,7 @@
  * @license GPL-2.0+
  */
 
-const prometheus2 = ( function( $ ) {
+const prometheus2 = ( function() {
 	'use strict';
 
 	/**
@@ -16,14 +16,13 @@ const prometheus2 = ( function( $ ) {
 	 */
 	const moveContentBelowFixedHeader = function() {
 			let siteInnerMarginTop = 0;
-			const siteHeader = $( document.getElementsByClassName( 'site-header' ) );
-			const siteInner = $( document.getElementsByClassName( 'site-inner' ) );
+			const siteHeader = document.getElementsByClassName( 'site-header' )[0];
+			const siteInner = document.getElementsByClassName( 'site-inner' )[0];
 
-			if ( 'fixed' === siteHeader.css( 'position' ) ) {
-				siteInnerMarginTop = siteHeader.outerHeight();
+			if ( 'fixed' === window.getComputedStyle( siteHeader ).position ) {
+				siteInnerMarginTop = siteHeader.offsetHeight;
+				siteInner.style.marginTop = siteInnerMarginTop + 'px';
 			}
-
-			siteInner.css( 'margin-top', siteInnerMarginTop );
 		},
 
 		/**
@@ -39,8 +38,9 @@ const prometheus2 = ( function( $ ) {
 			moveContentBelowFixedHeader();
 
 			// Run after window resize.
-			$( window ).resize( () => {
+			window.addEventListener( 'resize', () => {
 				moveContentBelowFixedHeader();
+				console.log( 'resized' );
 			});
 
 			// Run after the Customizer updates.
@@ -58,6 +58,6 @@ const prometheus2 = ( function( $ ) {
 	return {
 		init
 	};
-}( jQuery ) );
+}() );
 
-jQuery( window ).on( 'load', prometheus2.init );
+window.onload = prometheus2.init();
