@@ -6,15 +6,15 @@
  * @license GPL-2.0+
  */
 
-const prometheus2 = ( function() {
+const prometheus2 = ( () => {
 	'use strict';
 
 	/**
 	 * Adjust site inner margin top to compensate for sticky header height.
 	 *
-	 * @since 2.6.0
+	 * @since 1.0.0
 	 */
-	const moveContentBelowFixedHeader = function() {
+	const moveContentBelowFixedHeader = () => {
 			let siteInnerMarginTop = 0;
 			const siteHeader = document.getElementsByClassName( 'site-header' )[0];
 			const siteInner = document.getElementsByClassName( 'site-inner' )[0];
@@ -30,7 +30,7 @@ const prometheus2 = ( function() {
 		 *
 		 * Internal functions to execute on document load can be called here.
 		 *
-		 * @since 2.6.0
+		 * @since 1.0.0
 		 */
 		init = () => {
 
@@ -40,7 +40,6 @@ const prometheus2 = ( function() {
 			// Run after window resize.
 			window.addEventListener( 'resize', () => {
 				moveContentBelowFixedHeader();
-				console.log( 'resized' );
 			});
 
 			// Run after the Customizer updates.
@@ -58,6 +57,6 @@ const prometheus2 = ( function() {
 	return {
 		init
 	};
-}() );
+})();
 
 window.onload = prometheus2.init();
