@@ -21,8 +21,8 @@ const prometheus2 = ( function() {
 
 			if ( 'fixed' === window.getComputedStyle( siteHeader ).position ) {
 				siteInnerMarginTop = siteHeader.offsetHeight;
-				siteInner.style.marginTop = siteInnerMarginTop + 'px';
 			}
+			siteInner.style.marginTop = siteInnerMarginTop + 'px';
 		},
 
 		/**
