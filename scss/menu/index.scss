@@ -92,7 +92,7 @@
 		@media only screen and (min-width: 960px) {
 			position: absolute;
 			padding-left: 0;
-			border-top: 1px solid #eee;
+			border-top: $border-width $border-style $border-color;
 			opacity: 0;
 			transition: opacity 0.4s ease-in-out;
 		}
@@ -107,7 +107,7 @@
 			@media only screen and (min-width: 960px) {
 				padding-top: 15px;
 				padding-bottom: 15px;
-				border: 1px solid #eee;
+				border: $border-width $border-style $border-color;
 				border-top: 0;
 			}
 		}

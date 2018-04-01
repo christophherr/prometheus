@@ -67,7 +67,7 @@
 
 	.entry-footer & {
 		padding-top: 20px;
-		border-top: 1px solid #eee;
+		border-top: $border-width $border-style $border-color;
 	}
 }
 

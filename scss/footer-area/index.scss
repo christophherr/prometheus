@@ -3,7 +3,7 @@
 .footer-widgets {
 	clear: both;
 	padding: 60px 0;
-	border-top: 1px solid #eee;
+	border-top: $border-width $border-style $border-color;
 	background-color: $footer-widgets--background-color;
 	font-size: $footer-widgets--font-size;
 
@@ -43,7 +43,7 @@
 
 .site-footer {
 	padding: 30px;
-	border-top: 1px solid #eee;
+	border-top: $border-width $border-style $border-color;
 	background-color: #fff;
 	font-size: $site-footer--font-size;
 	line-height: $line-height--medium;

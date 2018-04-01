@@ -42,7 +42,7 @@
 	.breadcrumb {
 		margin-bottom: 40px;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #eee;
+		border-bottom: $border-width $border-style $border-color;
 		font-size: 16px;
 		font-size: 1.6rem;
 	}

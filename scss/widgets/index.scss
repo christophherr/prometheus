@@ -50,7 +50,7 @@
 
 	.entry {
 		margin-bottom: 20px;
-		border-bottom: 1px solid #eee;
+		border-bottom: $border-width $border-style $border-color;
 	}
 
 	.entry:last-of-type {

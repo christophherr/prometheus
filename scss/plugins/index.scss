@@ -49,7 +49,7 @@
 .gs-faq__question {
 	padding-right: 0;
 	padding-left: 0;
-	border-bottom: 1px solid #eee;
+	border-bottom: $border-width $border-style $border-color;
 	color: #333;
 	background: transparent;
 
