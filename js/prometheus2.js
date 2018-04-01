@@ -6,24 +6,23 @@
  * @license GPL-2.0+
  */
 
-const prometheus2 = ( function( $ ) {
+const prometheus2 = ( () => {
 	'use strict';
 
 	/**
 	 * Adjust site inner margin top to compensate for sticky header height.
 	 *
-	 * @since 2.6.0
+	 * @since 1.0.0
 	 */
-	const moveContentBelowFixedHeader = function() {
+	const moveContentBelowFixedHeader = () => {
 			let siteInnerMarginTop = 0;
-			const siteHeader = $( document.getElementsByClassName( 'site-header' ) );
-			const siteInner = $( document.getElementsByClassName( 'site-inner' ) );
+			const siteHeader = document.getElementsByClassName( 'site-header' )[0];
+			const siteInner = document.getElementsByClassName( 'site-inner' )[0];
 
-			if ( 'fixed' === siteHeader.css( 'position' ) ) {
-				siteInnerMarginTop = siteHeader.outerHeight();
+			if ( 'fixed' === window.getComputedStyle( siteHeader ).position ) {
+				siteInnerMarginTop = siteHeader.offsetHeight;
 			}
-
-			siteInner.css( 'margin-top', siteInnerMarginTop );
+			siteInner.style.marginTop = siteInnerMarginTop + 'px';
 		},
 
 		/**
@@ -31,7 +30,7 @@ const prometheus2 = ( function( $ ) {
 		 *
 		 * Internal functions to execute on document load can be called here.
 		 *
-		 * @since 2.6.0
+		 * @since 1.0.0
 		 */
 		init = () => {
 
@@ -39,7 +38,7 @@ const prometheus2 = ( function( $ ) {
 			moveContentBelowFixedHeader();
 
 			// Run after window resize.
-			$( window ).resize( () => {
+			window.addEventListener( 'resize', () => {
 				moveContentBelowFixedHeader();
 			});
 
@@ -58,6 +57,6 @@ const prometheus2 = ( function( $ ) {
 	return {
 		init
 	};
-}( jQuery ) );
+})();
 
-jQuery( window ).on( 'load', prometheus2.init );
+window.onload = prometheus2.init();

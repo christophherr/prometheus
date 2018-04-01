@@ -38,7 +38,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	wp_enqueue_script(
 		'prometheus2',
-		get_stylesheet_directory_uri() . '/js/prometheus2.js',
+		get_stylesheet_directory_uri() . "/js/prometheus2{$suffix}.js",
 		array( 'jquery' ),
 		CHILD_THEME_VERSION,
 		true
