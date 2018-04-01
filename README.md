@@ -24,9 +24,10 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
     More functionality (e.g. JavaScript processing, Browsersync) may be added in the future.
     If you want more advanced Gulp features, take a look at Craig Simpson's [Gulp WP Toolkit](https://github.com/craigsimps/gulp-wp-toolkit/) or Lee Anthony's [gulpfile.js](https://github.com/seothemes/genesis-starter/blob/master/gulpfile.js).
 
-10. Stylelint and ESlint are configured to follow WordPress standards and available to check CSS and JavaScript.
-11. If you are using VS Code, you can automatically format CSS and JavaScript files with Prettier (e.g. using the `prettier-eslint` and `prettier-stylelint` extensions).
-12. Gulp outputs the message `postcss-sorting: Invalid "order" option value`. This is caused by an incompatibility between postcss-sorting and the Stylelint Order plugin. It does not affect the CSS output.
+10. The minified stylesheet is loaded from `functions/load-minified-css.php`. Please uncomment the file in the (nonadmin) config to use style.min.css.
+11. Stylelint and ESlint are configured to follow WordPress standards and available to check CSS and JavaScript.
+12. If you are using VS Code, you can automatically format CSS and JavaScript files with Prettier (e.g. using the `prettier-eslint` and `prettier-stylelint` extensions).
+13. Gulp outputs the message `postcss-sorting: Invalid "order" option value`. This is caused by an incompatibility between postcss-sorting and the Stylelint Order plugin. It does not affect the CSS output.
 
 ## Installation Instructions
 
