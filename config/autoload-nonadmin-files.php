@@ -17,6 +17,7 @@ return array(
 	'setup.php',
 	// 'functions/formatting.php',
 	'functions/load-assets.php',
+	//'functions/load-minified-css.php',
 	// 'functions/markup.php',
 	// 'structure/layouts.php',
 	'structure/gravatar-sizes.php',

@@ -18,7 +18,11 @@
 		'undefined' === typeof genesis_responsive_menu ?
 			'' :
 			genesis_responsive_menu;
+<<<<<<< HEAD
 	let genesisMenusUnchecked = genesisMenuParams.menuClasses;
+=======
+	const genesisMenusUnchecked = genesisMenuParams.menuClasses;
+>>>>>>> develop
 	let genesisMenus = {};
 	let menusToCombine = [];
 
@@ -53,7 +57,7 @@
 						menusToCombine.push( newString );
 					}
 				});
-			} else if ( 1 == $menu.length ) {
+			} else if ( 1 === $menu.length ) {
 				genesisMenus[group].push( menuString );
 
 				if ( 'combine' === group ) {
@@ -64,12 +68,12 @@
 	});
 
 	// Make sure there is something to use for the 'others' array.
-	if ( 'undefined' == typeof genesisMenus.others ) {
+	if ( 'undefined' === typeof genesisMenus.others ) {
 		genesisMenus.others = [];
 	}
 
 	// If there's only one menu on the page for combining, push it to the 'others' array and nullify our 'combine' variable.
-	if ( 1 == menusToCombine.length ) {
+	if ( 1 === menusToCombine.length ) {
 		genesisMenus.others.push( menusToCombine[0]);
 		genesisMenus.combine = null;
 		menusToCombine = null;
@@ -84,19 +88,19 @@
 	genesisMenu.init = function() {
 
 		// Exit early if there are no menus to do anything.
-		if ( 0 == $( _getAllMenusArray() ).length ) {
+		if ( 0 === $( _getAllMenusArray() ).length ) {
 			return;
 		}
 
-		let menuIconClass =
+		const menuIconClass =
 			'undefined' !== typeof genesisMenuParams.menuIconClass ?
 				genesisMenuParams.menuIconClass :
 				'dashicons-before dashicons-menu';
-		let subMenuIconClass =
+		const subMenuIconClass =
 			'undefined' !== typeof genesisMenuParams.subMenuIconClass ?
 				genesisMenuParams.subMenuIconClass :
 				'dashicons-before dashicons-arrow-down-alt2';
-		let toggleButtons = {
+		const toggleButtons = {
 			menu: $( '<button />', {
 				class: mainMenuButtonClass,
 				'aria-expanded': false,
@@ -206,7 +210,7 @@
 	function _combineMenus( buttons ) {
 
 		// Exit early if there are no menus to combine.
-		if ( null == menusToCombine ) {
+		if ( null === menusToCombine ) {
 			return;
 		}
 
@@ -308,7 +312,7 @@
 			let startLink = 'genesis-' + newValue;
 			let endLink = 'genesis-mobile-' + newValue;
 
-			if ( 'none' == _getDisplayValue( buttons ) ) {
+			if ( 'none' === _getDisplayValue( buttons ) ) {
 				startLink = 'genesis-mobile-' + newValue;
 				endLink = 'genesis-' + newValue;
 			}

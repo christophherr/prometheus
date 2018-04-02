@@ -2,10 +2,16 @@
 $dark-grey: #333;
 $grey: #ddd;
 $blue: #0073e5;
+$darker-white: #eee;
 $white: #fff;
 
 // Base Fonts
 $base-font: "Source Sans Pro", sans-serif;
+
+// Border styles
+$border-width: 1px;
+$border-style: solid;
+$border-color: $darker-white;
 
 // Font sizes
 $body--font-size: 1.8rem;
