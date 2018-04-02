@@ -14,6 +14,7 @@ const fs = require( 'fs' );
 const gulp = require( 'gulp' );
 const cleancss = require( 'gulp-clean-css' );
 const cssnano = require( 'gulp-cssnano' );
+const minify = require( 'gulp-minify' );
 const notify = require( 'gulp-notify' );
 const pixrem = require( 'gulp-pixrem' );
 const plumber = require( 'gulp-plumber' );
@@ -168,6 +169,34 @@ gulp.task( 'sass:lint', [ 'css:minify' ], () => {
 		.pipe( sassLint.failOnError() );
 });
 
+/*******************
+ * JavaScript Tasks
+ *******************/
+
+gulp.task( 'js:minify', () => {
+	gulp
+		.src([ 'js/prometheus2.js', 'js/responsive-menus.js' ])
+
+		// Error handling
+		.pipe(
+			plumber({
+				errorHandler: handleErrors
+			})
+		)
+
+		// Minify JavaScript
+		.pipe(
+			minify({
+				ext: {
+					src: '.js',
+					min: '.min.js'
+				},
+				noSource: true
+			})
+		)
+		.pipe( gulp.dest( 'js' ) );
+});
+
 /********************
  * All Tasks Listeners
  *******************/
@@ -179,7 +208,7 @@ gulp.task( 'watch', () => {
 /**
  * Individual tasks.
  */
-// gulp.task('scripts', [''])
+gulp.task( 'scripts', [ 'js:minify' ]);
 gulp.task( 'styles', [ 'sass:lint' ]);
 
-gulp.task( 'default', [ 'styles' ]);
+gulp.task( 'default', [ 'styles', 'scripts' ]);
