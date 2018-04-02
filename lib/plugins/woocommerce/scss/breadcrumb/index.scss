@@ -1,0 +1,21 @@
+/* WooCommerce Breadcrumb
+------------------------------------------------------------- */
+
+.woocommerce .woocommerce-breadcrumb {
+	margin-bottom: 40px;
+	font-size: $breadcrumb-breadcrumb-fontsize;
+}
+
+.woocommerce .woocommerce-breadcrumb,
+.woocommerce .woocommerce-breadcrumb a {
+	color: $black;
+}
+
+.woocommerce .woocommerce-breadcrumb a {
+	text-decoration: none;
+}
+
+.woocommerce .woocommerce-breadcrumb a:focus,
+.woocommerce .woocommerce-breadcrumb a:hover {
+	color: $blue;
+}

@@ -18,11 +18,7 @@
 		'undefined' === typeof genesis_responsive_menu ?
 			'' :
 			genesis_responsive_menu;
-<<<<<<< HEAD
-	let genesisMenusUnchecked = genesisMenuParams.menuClasses;
-=======
 	const genesisMenusUnchecked = genesisMenuParams.menuClasses;
->>>>>>> develop
 	let genesisMenus = {};
 	let menusToCombine = [];
 

@@ -1,0 +1,97 @@
+/* WooCommerce Shop Page
+-------------------------------------------------- */
+
+.woocommerce {
+
+	.content {
+
+		.entry {
+			border-bottom: 0;
+		}
+	}
+
+	a.added_to_cart {
+		line-height: $line-height--smaller;
+	}
+
+	a.button.loading:after,
+	button.button.loading:after,
+	input.button.loading:after,
+	#respond input#submit.loading:after {
+		top: 1em;
+	}
+
+	ul {
+
+		&.products {
+
+			li {
+
+				&.product {
+
+					h3 {
+						color: $black;
+					}
+
+					h3:hover {
+						color: $blue;
+					}
+
+					.price {
+						color: $blue;
+
+						.from {
+							color: $black;
+						}
+					}
+
+					/* MS Edge Bug Fix */
+					a {
+						-webkit-transition: color 0.1s ease-in-out,
+							background 0.1s ease-in-out;
+						-ms-transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
+						transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
+					}
+				}
+			}
+		}
+	}
+
+	nav {
+
+		&.woocommerce-pagination {
+			clear: both;
+			margin: 40px 0;
+
+			ul {
+				border: none;
+
+				li {
+					margin-right: 2px;
+					margin-left: 2px;
+					border: none;
+
+					a,
+					span {
+						display: inline-block;
+						padding: 8px 12px;
+						color: $dark-grey;
+						background-color: $off-white;
+						font-size: $shop-page-navigation-link--font-size;
+						font-weight: $font-weight--bold;
+						line-height: $line-height--normal;
+						text-decoration: none;
+						cursor: pointer;
+					}
+
+					a:focus,
+					a:hover,
+					span.current {
+						color: $white;
+						background-color: $dark-grey;
+					}
+				}
+			}
+		}
+	}
+}
