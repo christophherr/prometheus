@@ -71,7 +71,7 @@ Loaded on WooCommerce pages */
 	.woocommerce-tabs
 	ul.tabs
 	li:last-child {
-		border-bottom: $boder-width $border-style $border-color;
+		border-bottom: $border-width $border-style $border-color;
 	}
 
 	.content-sidebar.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
@@ -118,7 +118,7 @@ Loaded on WooCommerce pages */
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li:last-child {
-		border-bottom: $boder-width $border-style $border-color;
+		border-bottom: $border-width $border-style $border-color;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active {

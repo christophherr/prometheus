@@ -56,7 +56,7 @@ gulp.task( 'postcss', () => {
 	gulp
 		.src( 'scss/style.scss' )
 
-		// Error handling
+		// Error handling.
 		.pipe(
 			plumber({
 				errorHandler: handleErrors
@@ -123,7 +123,7 @@ gulp.task( 'css:minify', [ 'clean:map' ], () => {
 	gulp
 		.src( 'style.css' )
 
-		// Error handling
+		// Error handling.
 		.pipe(
 			plumber({
 				errorHandler: handleErrors
@@ -141,7 +141,7 @@ gulp.task( 'css:minify', [ 'clean:map' ], () => {
 			})
 		)
 
-		// Minify and optimize style.css again.
+		// Minify and optimize style.css.
 		.pipe(
 			cssnano({
 				safe: false,
@@ -169,6 +169,112 @@ gulp.task( 'sass:lint', [ 'css:minify' ], () => {
 		.pipe( sassLint.failOnError() );
 });
 
+gulp.task( 'wc:lint', [ 'wc:minify' ], () => {
+	gulp
+		.src( 'lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
+		.pipe( sassLint() )
+		.pipe( sassLint.format() )
+		.pipe( sassLint.failOnError() );
+});
+
+gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
+	gulp
+		.src( 'lib/plugins/woocommerce/prometheus2-woocommerce.css' )
+
+		// Error handling.
+		.pipe(
+			plumber({
+				errorHandler: handleErrors
+			})
+		)
+
+		// Combine similar rules.
+		.pipe(
+			cleancss({
+				level: {
+					2: {
+						all: true
+					}
+				}
+			})
+		)
+
+		// Minify and optimize style.css.
+		.pipe(
+			cssnano({
+				safe: false,
+				discardComments: {
+					removeAll: true
+				}
+			})
+		)
+
+		.pipe( rename( 'prometheus2-woocommerce.min.css' ) )
+		.pipe( gulp.dest( 'lib/plugins/woocommerce/' ) )
+
+		.pipe(
+			notify({
+				message: 'Styles are built.'
+			})
+		);
+});
+
+gulp.task( 'woocommerce', () => {
+	gulp
+		.src( 'lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
+
+		// Error handling.
+		.pipe(
+			plumber({
+				errorHandler: handleErrors
+			})
+		)
+
+		// Wrap tasks in a sourcemap.
+		.pipe( sourcemaps.init() )
+
+		// Sass magic.
+		.pipe(
+			sass({
+				errLogToConsole: true,
+				outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
+			})
+		)
+
+		// Pixel fallbacks for rem units.
+		.pipe( pixrem() )
+
+		// PostCSS magic.
+		.pipe(
+			postcss([
+				autoprefixer({
+					browsers: [ 'last 2 versions' ]
+				}),
+				mqpacker({
+					sort: true
+				})
+			])
+		)
+
+		// Change spaces to tabs and other fixes.
+		.pipe( stylefmt() )
+
+		// Additional WordPress style fixes.
+		.pipe(
+			styleLint({
+				fix: true
+			})
+		)
+
+		// Create the source map.
+		.pipe(
+			sourcemaps.write( './', {
+				includeContent: false
+			})
+		)
+		.pipe( gulp.dest( 'lib/plugins/woocommerce/' ) );
+});
+
 /*******************
  * JavaScript Tasks
  *******************/
@@ -177,14 +283,14 @@ gulp.task( 'js:minify', () => {
 	gulp
 		.src([ 'js/prometheus2.js', 'js/responsive-menus.js' ])
 
-		// Error handling
+		// Error handling.
 		.pipe(
 			plumber({
 				errorHandler: handleErrors
 			})
 		)
 
-		// Minify JavaScript
+		// Minify JavaScript.
 		.pipe(
 			minify({
 				ext: {
@@ -210,5 +316,6 @@ gulp.task( 'watch', () => {
  */
 gulp.task( 'scripts', [ 'js:minify' ]);
 gulp.task( 'styles', [ 'sass:lint' ]);
+gulp.task( 'wc-styles', [ 'wc:lint' ]);
 
 gulp.task( 'default', [ 'styles', 'scripts' ]);
