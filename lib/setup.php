@@ -19,7 +19,7 @@ add_action( 'genesis_setup', function() {
 
 	// Sets theme defaults.
 	add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
-		$config = require_once get_stylesheet_directory() . '\config\theme-settings-defaults.php';
+		$config = require_once get_stylesheet_directory() . '/config/theme-settings-defaults.php';
 
 		$defaults = wp_parse_args( $config, $defaults );
 		return $defaults;
@@ -37,7 +37,7 @@ add_action( 'genesis_setup', function() {
  * @return void
  */
 function adds_theme_supports() {
-	$config = require_once get_stylesheet_directory() . '\config\theme-supports-config.php';
+	$config = require_once get_stylesheet_directory() . '/config/theme-supports-config.php';
 
 	foreach ( $config as $feature => $args ) {
 		add_theme_support( $feature, $args );
@@ -45,7 +45,7 @@ function adds_theme_supports() {
 }
 
 add_action( 'after_switch_theme', function () {
-	$config = require_once get_stylesheet_directory() . '\config\theme-settings-defaults.php';
+	$config = require_once get_stylesheet_directory() . '/config/theme-settings-defaults.php';
 
 	if ( function_exists( 'genesis_update_settings' ) ) {
 		genesis_update_settings( $config );
