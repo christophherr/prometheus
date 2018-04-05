@@ -13,11 +13,11 @@
 
 namespace ChristophHerr\Prometheus2\Config;
 
-return array(
+return [
 	'setup.php',
 	// 'functions/formatting.php',
 	'functions/load-assets.php',
-	//'functions/load-minified-css.php',
+	// 'functions/load-minified-css.php',
 	// 'functions/markup.php',
 	// 'structure/layouts.php',
 	'structure/gravatar-sizes.php',
@@ -34,4 +34,4 @@ return array(
 	// 'customizer/register-customizer-settings.php',
 	'customizer/customizer.php',
 	'customizer/remove-adsense.php',
-);
+];

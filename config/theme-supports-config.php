@@ -11,7 +11,7 @@
 
 namespace ChristophHerr\Prometheus2\Config;
 
-return array(
+return [
 	'html5'                           => array(
 		'caption',
 		'comment-form',
@@ -40,5 +40,5 @@ return array(
 	),
 	'genesis-after-entry-widget-area' => null,
 	'genesis-footer-widgets'          => 3,
-);
+];
 
