@@ -18,9 +18,3 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 // Removes output of primary navigation right extras.
 remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
 remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
-
-// Removes header right widget area.
-unregister_sidebar( 'header-right' );
-
-// Removes secondary sidebar.
-unregister_sidebar( 'sidebar-alt' );

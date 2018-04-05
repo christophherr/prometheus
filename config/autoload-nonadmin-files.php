@@ -17,6 +17,7 @@ return [
 	'setup.php',
 	// 'functions/formatting.php',
 	'functions/load-assets.php',
+	'functions/layout-settings.php',
 	// 'functions/load-minified-css.php',
 	// 'functions/markup.php',
 	// 'structure/layouts.php',
