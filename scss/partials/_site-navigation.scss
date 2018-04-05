@@ -5,13 +5,13 @@
 	clear: both;
 	width: 100%;
 	line-height: 1;
-
+	
 	.menu-item {
 		display: block;
 		float: none;
 		position: relative;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			display: inline-block;
 		}
 	}
@@ -20,7 +20,7 @@
 	.menu-item:hover {
 		position: relative;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			position: relative;
 		}
 	}
@@ -32,14 +32,14 @@
 
 	> .menu-bold > a {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			font-weight: $font-weight--bolder;
 		}
 	}
 
 	> .menu-highlight > a {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			margin-left: 15px;
 			padding-right: 20px;
 			padding-left: 20px;
@@ -53,7 +53,7 @@
 	> .menu-highlight > a:hover,
 	> .menu-highlight > a:focus {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			background-color: $menu-highlight__link--background-color-hover;
 		}
 	}
@@ -64,7 +64,7 @@
 		padding-bottom: 12px;
 		outline-offset: -1px;
 		color: $genesis-nav-menu--font-color;
-		font-size: $genesis-nav-menu--font-size;
+		@include font-size($genesis-nav-menu--font-size);
 		font-weight: $font-weight--normal;
 		text-decoration: none;
 	}
@@ -89,7 +89,7 @@
 		padding-left: 15px;
 		opacity: 1;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			position: absolute;
 			padding-left: 0;
 			border-top: $border-width $border-style $border-color;
@@ -101,10 +101,10 @@
 			position: relative;
 			width: 100%;
 			background-color: $genesis-nav-menu__sub-menu__link--background-color;
-			font-size: $genesis-nav-menu__sub-menu__link--font-size;
+			@include font-size($genesis-nav-menu__sub-menu__link--font-size);
 			word-wrap: break-word;
 
-			@media only screen and (min-width: 960px) {
+			@media only screen and (min-width: $standard-screen-width) {
 				padding-top: 15px;
 				padding-bottom: 15px;
 				border: $border-width $border-style $border-color;
@@ -114,27 +114,8 @@
 
 		.submenu {
 
-			@media only screen and (min-width: 960px) {
+			@media only screen and (min-width: $standard-screen-width) {
 				margin: -46px 0 0 179px;
-			}
-		}
-	}
-}
-
-.genesis-responsive-menu {
-
-	@media only screen and (min-width: 960px) {
-		display: block;
-		padding-top: 15px;
-	}
-
-	.genesis-nav-menu {
-
-		.submenu,
-		.submenu a {
-
-			@media only screen and (min-width: 960px) {
-				width: 180px;
 			}
 		}
 	}
@@ -160,6 +141,18 @@
 	display: none;
 	position: relative;
 	padding-bottom: 15px;
+	@media only screen and (min-width: $standard-screen-width) {
+		display: block;
+		padding-top: 15px;
+	}
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu,
+.genesis-responsive-menu .genesis-nav-menu .sub-menu a {
+	width: inherit;
+	@media only screen and (min-width: $standard-screen-width) {
+		width: 180px;
+	}
 }
 
 .menu-toggle {
@@ -179,8 +172,9 @@
 	line-height: $line-height--big;
 	text-align: center;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		display: none;
+		visibility: hidden;
 	}
 
 	&:focus,
@@ -219,8 +213,9 @@
 	background-color: transparent;
 	text-align: center;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		display: none;
+		visibility: hidden;
 	}
 
 	&:focus,
@@ -257,7 +252,7 @@
 	clear: left;
 	width: 100%;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		float: right;
 		clear: none;
 		width: auto;
@@ -265,7 +260,7 @@
 
 	.genesis-nav-menu a {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			padding-right: 15px;
 			padding-left: 15px;
 		}

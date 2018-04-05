@@ -63,16 +63,23 @@
 - Print Styles
 */
 
-@import "utilities/index.scss";
-@import "resets/index.scss";
-@import "defaults/index.scss";
-@import "structure/index.scss";
-@import "common-classes/index.scss";
-@import "widgets/index.scss";
-@import "plugins/index.scss";
-@import "header/index.scss";
-@import "menu/index.scss";
-@import "content-area/index.scss";
-@import "sidebar/index.scss";
-@import "footer-area/index.scss";
-//@import "print/index.scss";
+// @import "bourbon";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/table-of-contents";
+@import "partials/reset";
+@import "partials/defaults";
+@import "partials/structure-layout";
+@import "partials/common-classes";
+@import "partials/widgets";
+@import "partials/plugins";
+// @import "partials/skip-links";
+@import "partials/site-header";
+@import "partials/site-navigation";
+@import "partials/content-area";
+@import "partials/sidebar";
+@import "partials/footer-widgets";
+@import "partials/site-footer";
+// @import "partials/media-queries";
+@import "partials/print-styles";
+

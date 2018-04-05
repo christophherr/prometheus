@@ -2,17 +2,17 @@
 ------------------------------------------------ */
 
 .sidebar {
-	font-size: $sidebar--font-size;
+	@include font-size($sidebar--font-size);
 	line-height: $line-height--medium;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		float: right;
 		width: 30%;
 	}
 
 	.sidebar-content & {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			float: left;
 		}
 	}
