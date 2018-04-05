@@ -52,5 +52,11 @@ add_action( 'wp_enqueue_scripts', function() {
  * @since 2.3.0
  */
 function responsive_menu_settings() {
-	return require get_stylesheet_directory() . '/config/responsive-menu-settings.php';
+	$config = get_stylesheet_directory() . '/config/responsive-menu-settings.php';
+
+	if ( ! is_readable( $config ) ) {
+		return;
+	}
+
+	return require $config;
 }

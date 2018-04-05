@@ -19,8 +19,14 @@ namespace ChristophHerr\Prometheus2\Functions;
  * @return void
  */
 function load_nonadmin_files() {
-	$filenames = require CHILD_THEME_DIR . '/config/autoload-nonadmin-files.php';
+	$config = get_stylesheet_directory() . '/config/autoload-nonadmin-files.php';
 
+	if ( ! is_readable( $config ) ) {
+		\ChristophHerr\Prometheus2\config_unavailable_message();
+		return;
+	}
+
+	$filenames = require $config;
 	load_specified_files( $filenames );
 }
 
@@ -33,8 +39,14 @@ add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
  * @return void
  */
 function load_admin_files() {
-	$filenames = require CHILD_THEME_DIR . '/config/autoload-admin-files.php';
+	$config = get_stylesheet_directory() . '/config/autoload-admin-files.php';
 
+	if ( ! is_readable( $config ) ) {
+		\ChristophHerr\Prometheus2\config_unavailable_message();
+		return;
+	}
+
+	$filenames = require $config;
 	load_specified_files( $filenames );
 }
 
@@ -49,7 +61,7 @@ function load_admin_files() {
  * @return void
  */
 function load_specified_files( array $filenames, $folder_root = '' ) {
-	$folder_root = $folder_root ?: CHILD_THEME_DIR . '/lib/';
+	$folder_root = $folder_root ?: get_stylesheet_directory() . '/lib/';
 	foreach ( $filenames as $filename ) {
 		include $folder_root . $filename;
 	}
