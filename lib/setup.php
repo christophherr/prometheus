@@ -13,13 +13,20 @@ namespace ChristophHerr\Prometheus2;
 
 add_action( 'genesis_setup', function() {
 	// Sets Localization (do not remove).
-	load_child_theme_textdomain( 'prometheus-2', CHILD_THEME_DIR . '/languages' );
+	load_child_theme_textdomain( 'prometheus-2', get_stylesheet_directory() . '/languages' );
 
 	adds_theme_supports();
 
-	// Sets theme defaults.
+	// Sets theme defaults on reset.
 	add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
-		$config = require_once get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+		$file = get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+
+		if ( ! is_readable( $file ) ) {
+			config_unavailable_message();
+			$config = [];
+		} else {
+			$config = require $file;
+		}
 
 		$defaults = wp_parse_args( $config, $defaults );
 		return $defaults;
@@ -37,7 +44,14 @@ add_action( 'genesis_setup', function() {
  * @return void
  */
 function adds_theme_supports() {
-	$config = require_once get_stylesheet_directory() . '/config/theme-supports-config.php';
+	$file = get_stylesheet_directory() . '/config/theme-supports-config.php';
+
+	if ( ! is_readable( $file ) ) {
+		config_unavailable_message();
+		return;
+	}
+
+	$config = require_once $file;
 
 	foreach ( $config as $feature => $args ) {
 		add_theme_support( $feature, $args );
@@ -45,7 +59,14 @@ function adds_theme_supports() {
 }
 
 add_action( 'after_switch_theme', function () {
-	$config = require_once get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+	$file = get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+
+	if ( ! is_readable( $file ) ) {
+		config_unavailable_message();
+		return;
+	}
+
+	$config = require $file;
 
 	if ( function_exists( 'genesis_update_settings' ) ) {
 		genesis_update_settings( $config );
