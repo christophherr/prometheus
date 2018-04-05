@@ -8,7 +8,7 @@
  * @author StudioPress
  * @link https://github.com/copyblogger/responsive-menus/
  * @license GPL-2.0+
- * @package GenesisSample
+ * @package ChristophHerr\Prometheus2\JS
  */
 
 ( function( document, $, undefined ) {
