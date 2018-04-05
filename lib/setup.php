@@ -13,7 +13,7 @@ namespace ChristophHerr\Prometheus2;
 
 add_action( 'genesis_setup', function() {
 	// Sets Localization (do not remove).
-	load_child_theme_textdomain( 'CHILD_TEXT_DOMAIN', CHILD_THEME_DIR . '/languages' );
+	load_child_theme_textdomain( 'prometheus-2', CHILD_THEME_DIR . '/languages' );
 
 	adds_theme_supports();
 
