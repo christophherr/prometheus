@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Prometheus 2 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/christophherr/prometheus/issues\n"
-"POT-Creation-Date: 2018-04-05 17:59:02+00:00\n"
+"POT-Creation-Date: 2018-04-06 03:31:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,6 +54,12 @@ msgstr ""
 msgid "The maximum width of the logo in pixels."
 msgstr ""
 
+#: lib/error-messages.php:21
+msgid ""
+"Sorry, something went wrong loading one of the config files. Please check "
+"your paths and filenames."
+msgstr ""
+
 #: lib/plugins/woocommerce/woocommerce-setup.php:67
 msgid "Previous Page"
 msgstr ""
@@ -74,9 +80,7 @@ msgid "https://www.christophherr.com/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"This is the developer friendly, modular, sassified version of the Genesis "
-"sample theme."
+msgid "This is the developer friendly, modular, slightly config-based, sassified version of the Genesis sample theme."
 msgstr ""
 
 #. Author of the plugin/theme
