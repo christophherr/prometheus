@@ -1,17 +1,26 @@
 // Base Colors
 $dark-grey: #333;
-$grey: #ddd;
+$mid-grey: #777;
+$light-grey: #ddd;
 $blue: #0073e5;
-$darker-white: #eee;
+$lighter-grey: #eee;
+$lightest-grey: #f5f5f5;
 $white: #fff;
 
 // Base Fonts
 $base-font: "Source Sans Pro", sans-serif;
 
+// Screen widths / Media queries
+$standard-screen-width: 960px;
+
 // Border styles
 $border-width: 1px;
 $border-style: solid;
-$border-color: $darker-white;
+$border-color: $lighter-grey;
+
+// Box Shadow
+$box-shadow-blur-radius: 20px;
+$box-shadow-opacity: 0.05;
 
 // Font sizes
 $body--font-size: 1.8rem;
@@ -31,10 +40,15 @@ $genesis-nav-menu--font-size: 1.5rem;
 $genesis-nav-menu__sub-menu__link--font-size: 1.4rem;
 $sidebar--font-size: 1.6rem;
 $entry-content__caption--font-size: 1.4rem;
+$entry-meta--font-size: 1.6rem;
 $comments--font-size: 1.8rem;
 $footer-widgets--font-size: 1.8rem;
 $site-footer--font-size: 1.5rem;
 $forms--font-size: 1.8rem;
+$widget-title--font-size: 1.8rem;
+$archive-pagination--font-size: 1.6rem;
+$blockquote__before--font-size: 3rem;
+$after-entry__breadcrumb--font-size: 1.6rem;
 
 // Font families
 $body--font-family: $base-font;
@@ -68,12 +82,18 @@ $menu-toggle--font-color-hover: $blue;
 $sub-menu-toggle--font-color: $dark-grey;
 $sub-menu-toggle--font-color-hover: $blue;
 $menu-highlight__link--font-color: $white;
+$sidebar__widget-title--font-color: $dark-grey;
 $forms--font-color: $dark-grey;
+$archive-pagination--font-color: $dark-grey;
+$archive-pagination--font-color-hover: $white;
+$gs-faq__question--font-color: $dark-grey;
+$gs-faq__question--font-color-hover: $blue;
+$disabled--font-color: $mid-grey;
 
 // Background colors
 $body--background-color: $white;
 $site-header--background-color: $white;
-$mark--background-color: $grey;
+$mark--background-color: $light-grey;
 $button--background-color: $dark-grey;
 $button--background-color-hover: $blue;
 $genesis-nav-menu__sub-menu__link--background-color: $white;
@@ -81,3 +101,10 @@ $footer-widgets--background-color: $white;
 $menu-highlight__link--background-color: $dark-grey;
 $menu-highlight__link--background-color-hover: $blue;
 $forms__background-color: $white;
+$sticky--background-color: $lightest-grey;
+$author-box--background-color: $lightest-grey;
+$code--background-color: $lightest-grey;
+$archive-pagination--background-color: $lightest-grey;
+$archive-pagination--background-color-hover: $dark-grey;
+$enews__sidebar--background-color: $lightest-grey;
+$disabled--background-color: $lighter-grey;

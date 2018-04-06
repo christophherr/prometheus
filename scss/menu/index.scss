@@ -11,7 +11,7 @@
 		float: none;
 		position: relative;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			display: inline-block;
 		}
 	}
@@ -20,7 +20,7 @@
 	.menu-item:hover {
 		position: relative;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			position: relative;
 		}
 	}
@@ -32,14 +32,14 @@
 
 	> .menu-bold > a {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			font-weight: $font-weight--bolder;
 		}
 	}
 
 	> .menu-highlight > a {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			margin-left: 15px;
 			padding-right: 20px;
 			padding-left: 20px;
@@ -53,7 +53,7 @@
 	> .menu-highlight > a:hover,
 	> .menu-highlight > a:focus {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			background-color: $menu-highlight__link--background-color-hover;
 		}
 	}
@@ -89,7 +89,7 @@
 		padding-left: 15px;
 		opacity: 1;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			position: absolute;
 			padding-left: 0;
 			border-top: $border-width $border-style $border-color;
@@ -104,7 +104,7 @@
 			font-size: $genesis-nav-menu__sub-menu__link--font-size;
 			word-wrap: break-word;
 
-			@media only screen and (min-width: 960px) {
+			@media only screen and (min-width: $standard-screen-width) {
 				padding-top: 15px;
 				padding-bottom: 15px;
 				border: $border-width $border-style $border-color;
@@ -114,7 +114,7 @@
 
 		.submenu {
 
-			@media only screen and (min-width: 960px) {
+			@media only screen and (min-width: $standard-screen-width) {
 				margin: -46px 0 0 179px;
 			}
 		}
@@ -123,7 +123,7 @@
 
 .genesis-responsive-menu {
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		display: block;
 		padding-top: 15px;
 	}
@@ -133,7 +133,7 @@
 		.submenu,
 		.submenu a {
 
-			@media only screen and (min-width: 960px) {
+			@media only screen and (min-width: $standard-screen-width) {
 				width: 180px;
 			}
 		}
@@ -179,7 +179,7 @@
 	line-height: $line-height--big;
 	text-align: center;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		display: none;
 	}
 
@@ -219,7 +219,7 @@
 	background-color: transparent;
 	text-align: center;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		display: none;
 	}
 
@@ -257,7 +257,7 @@
 	clear: left;
 	width: 100%;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		float: right;
 		clear: none;
 		width: auto;
@@ -265,7 +265,7 @@
 
 	.genesis-nav-menu a {
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			padding-right: 15px;
 			padding-left: 15px;
 		}

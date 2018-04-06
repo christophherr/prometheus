@@ -7,7 +7,7 @@
 .entry {
 	margin-bottom: 40px;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 	}
 }
@@ -34,7 +34,7 @@
 	}
 
 	code {
-		background-color: #f5f5f5;
+		background-color: $code--background-color;
 	}
 
 	.caption {
@@ -47,7 +47,7 @@
 
 .content .sticky {
 	padding: 30px;
-	background-color: #f5f5f5;
+	background-color: $sticky--background-color;
 }
 
 /* Entry Meta
@@ -57,8 +57,7 @@
 
 	p {
 		margin-bottom: 0;
-		font-size: 16px;
-		font-size: 1.6rem;
+		font-size: $entry-meta--font-size;
 	}
 
 	.entry-header & {
@@ -103,11 +102,10 @@
 		display: inline-block;
 		margin-bottom: 4px;
 		padding: 8px 12px;
-		color: #333;
-		background-color: #f5f5f5;
-		font-size: 16px;
-		font-size: 1.6rem;
-		font-weight: 600;
+		color: $archive-pagination--font-color;
+		background-color: $archive-pagination--background-color;
+		font-size: $archive-pagination--font-size;
+		font-weight: $font-weight--bold;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -115,8 +113,8 @@
 	li a:focus,
 	li a:hover,
 	li.active a {
-		color: #fff;
-		background-color: #333;
+		color: $archive-pagination--font-color-hover;
+		background-color: $archive-pagination--background-color-hover;
 	}
 }
 
@@ -127,7 +125,7 @@
 	margin-bottom: 40px;
 	font-size: $comments--font-size;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 	}
 }
@@ -163,7 +161,7 @@
 	margin-bottom: 40px;
 	font-size: $comments--font-size;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 	}
 
@@ -187,7 +185,7 @@
 	margin-bottom: 40px;
 	font-size: $comments--font-size;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 	}
 
