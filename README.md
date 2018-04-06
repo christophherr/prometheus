@@ -6,6 +6,8 @@ Modular starter child theme with Sass partials for the Genesis Framework, based 
 
 Requires the Genesis Framework 2.6+ and PHP 5.6+
 
+[![Build Status](https://travis-ci.org/christophherr/prometheus.svg?branch=develop)](https://travis-ci.org/christophherr/prometheus)
+
 ## Usage Notes - Please read
 
 1.  The child theme files are loading before the Genesis Framework.
