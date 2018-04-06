@@ -12,7 +12,7 @@
 namespace ChristophHerr\Prometheus2\Plugins;
 
 add_filter( 'simple_social_default_styles', function( $defaults ) {
-	$args = array(
+	$args = [
 		'alignment'              => 'alignleft',
 		'background_color'       => '#f5f5f5',
 		'background_color_hover' => '#333333',
@@ -21,7 +21,7 @@ add_filter( 'simple_social_default_styles', function( $defaults ) {
 		'icon_color'             => '#333333',
 		'icon_color_hover'       => '#ffffff',
 		'size'                   => 40,
-	);
+	];
 
 	$args = wp_parse_args( $args, $defaults );
 	return $args;

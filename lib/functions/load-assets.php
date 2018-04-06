@@ -16,7 +16,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style(
 		'prometheus2-fonts',
 		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
-		array(),
+		[],
 		CHILD_THEME_VERSION
 	);
 	wp_enqueue_style( 'dashicons' );
@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script(
 		'prometheus2-responsive-menu',
 		get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js",
-		array( 'jquery' ),
+		[ 'jquery' ],
 		CHILD_THEME_VERSION,
 		true
 	);
@@ -39,7 +39,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script(
 		'prometheus2',
 		get_stylesheet_directory_uri() . "/js/prometheus2{$suffix}.js",
-		array( 'jquery' ),
+		[ 'jquery' ],
 		CHILD_THEME_VERSION,
 		true
 	);
