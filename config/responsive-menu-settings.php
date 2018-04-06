@@ -16,10 +16,10 @@ return [
 	'menuIconClass'    => 'dashicons-before dashicons-menu',
 	'subMenu'          => __( 'Submenu', 'prometheus2' ),
 	'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
-	'menuClasses'      => array(
-		'combine' => array(
+	'menuClasses'      => [
+		'combine' => [
 			'.nav-primary',
-		),
-		'others'  => array(),
-	),
+		],
+		'others'  => [],
+	],
 ];
