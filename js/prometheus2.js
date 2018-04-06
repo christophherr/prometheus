@@ -26,7 +26,7 @@ const prometheus2 = ( () => {
 		},
 
 		/**
-		 * Initialize Genesis Sample.
+		 * Initialize Promethues 2.
 		 *
 		 * Internal functions to execute on document load can be called here.
 		 *
@@ -44,7 +44,7 @@ const prometheus2 = ( () => {
 
 			// Run after the Customizer updates.
 			// 1.5s delay is to allow logo area reflow.
-			if ( 'undefined' !== typeof wp.customize ) {
+			if ( 'undefined' !== typeof wp && 'undefined' !== typeof wp.customize ) {
 				wp.customize.bind( 'change', setting => {
 					setTimeout( () => {
 						moveContentBelowFixedHeader();
