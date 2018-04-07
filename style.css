@@ -1,5 +1,5 @@
 /*!
- Theme Name: Prometheus 2
+	Theme Name: Prometheus 2
 	Theme URI: https://www.christophherr.com/
 	Description: This is the developer friendly, modular,
 	             sassified version of the Genesis sample theme.
@@ -216,8 +216,8 @@ textarea {
 }
 
 [type="search"] {
-	outline-offset: -2px;
 	-webkit-appearance: textfield;
+	outline-offset: -2px;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -225,8 +225,8 @@ textarea {
 }
 
 ::-webkit-file-upload-button {
-	font: inherit;
 	-webkit-appearance: button;
+	font: inherit;
 }
 
 details {
@@ -599,8 +599,7 @@ button {
 	cursor: pointer;
 }
 
-button:focus,
-button:hover {
+button:focus, button:hover {
 	color: #fff;
 	background-color: #0073e5;
 }
@@ -623,8 +622,7 @@ input[type="button"] {
 	cursor: pointer;
 }
 
-input[type="button"]:focus,
-input[type="button"]:hover {
+input[type="button"]:focus, input[type="button"]:hover {
 	color: #fff;
 	background-color: #0073e5;
 }
@@ -647,8 +645,7 @@ input[type="reset"] {
 	cursor: pointer;
 }
 
-input[type="reset"]:focus,
-input[type="reset"]:hover {
+input[type="reset"]:focus, input[type="reset"]:hover {
 	color: #fff;
 	background-color: #0073e5;
 }
@@ -671,8 +668,7 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-input[type="submit"]:focus,
-input[type="submit"]:hover {
+input[type="submit"]:focus, input[type="submit"]:hover {
 	color: #fff;
 	background-color: #0073e5;
 }
@@ -696,8 +692,7 @@ input[type="submit"].small {
 	cursor: pointer;
 }
 
-.button:focus,
-.button:hover {
+.button:focus, .button:hover {
 	color: #fff;
 	background-color: #0073e5;
 }
@@ -1191,8 +1186,7 @@ img.alignright,
 	background: transparent;
 }
 
-.gs-faq__question:focus,
-.gs-faq__question:hover {
+.gs-faq__question:focus, .gs-faq__question:hover {
 	color: #0073e5;
 	background: transparent;
 }
@@ -1373,8 +1367,7 @@ img.alignright,
 	text-align: center;
 }
 
-.menu-toggle:focus,
-.menu-toggle:hover {
+.menu-toggle:focus, .menu-toggle:hover {
 	border-width: 0;
 	color: #0073e5;
 	background-color: transparent;
@@ -1409,8 +1402,7 @@ img.alignright,
 	text-align: center;
 }
 
-.sub-menu-toggle:focus,
-.sub-menu-toggle:hover {
+.sub-menu-toggle:focus, .sub-menu-toggle:hover {
 	border-width: 0;
 	color: #0073e5;
 	background-color: transparent;
