@@ -25,6 +25,9 @@ namespace ChristophHerr\Prometheus2\Utilities;
 function maybe_require_files( $file ) {
 	try {
 		if ( ! is_readable( $file ) ) {
+			// Only load class when it's needed.
+			require_once 'class-file-exception.php';
+
 			throw File_Exception::config_is_not_readable( $file );
 		}
 		return require $file;
