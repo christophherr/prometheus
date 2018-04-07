@@ -11,6 +11,8 @@
 
 namespace ChristophHerr\Prometheus2\Functions;
 
+use ChristophHerr\Prometheus2\Utilities;
+
 /**
  * Loads nonadmin files
  *
@@ -19,15 +21,14 @@ namespace ChristophHerr\Prometheus2\Functions;
  * @return void
  */
 function load_nonadmin_files() {
-	$config = get_stylesheet_directory() . '/config/autoload-nonadmin-files.php';
+	$file   = get_stylesheet_directory() . '/config/autoload-nonadmin-files.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	if ( ! is_readable( $config ) ) {
-		\ChristophHerr\Prometheus2\config_unavailable_message();
+	if ( ! $config ) {
 		return;
 	}
 
-	$filenames = require $config;
-	load_specified_files( $filenames );
+	load_specified_files( $config );
 }
 
 add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
@@ -39,15 +40,14 @@ add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
  * @return void
  */
 function load_admin_files() {
-	$config = get_stylesheet_directory() . '/config/autoload-admin-files.php';
+	$file   = get_stylesheet_directory() . '/config/autoload-admin-files.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	if ( ! is_readable( $config ) ) {
-		\ChristophHerr\Prometheus2\config_unavailable_message();
+	if ( ! $config ) {
 		return;
 	}
 
-	$filenames = require $config;
-	load_specified_files( $filenames );
+	load_specified_files( $config );
 }
 
 /**

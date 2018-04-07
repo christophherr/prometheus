@@ -11,6 +11,8 @@
 
 namespace ChristophHerr\Prometheus2\Functions;
 
+use ChristophHerr\Prometheus2\Utilities;
+
 add_action( 'wp_enqueue_scripts', function() {
 
 	wp_enqueue_style(
@@ -50,13 +52,14 @@ add_action( 'wp_enqueue_scripts', function() {
  * Defines responsive menu settings.
  *
  * @since 2.3.0
+ *
+ * @return array
  */
 function responsive_menu_settings() {
-	$config = get_stylesheet_directory() . '/config/responsive-menu-settings.php';
+	$file   = get_stylesheet_directory() . '/config/responsive-menu-settings.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	if ( ! is_readable( $config ) ) {
-		return;
+	if ( $config ) {
+		return $config;
 	}
-
-	return require $config;
 }

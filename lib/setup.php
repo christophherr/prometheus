@@ -11,6 +11,8 @@
 
 namespace ChristophHerr\Prometheus2;
 
+use ChristophHerr\Prometheus2\Utilities;
+
 add_action( 'genesis_setup', function() {
 	// Sets Localization (do not remove).
 	load_child_theme_textdomain( 'prometheus-2', get_stylesheet_directory() . '/languages' );
@@ -19,13 +21,11 @@ add_action( 'genesis_setup', function() {
 
 	// Sets theme defaults on reset.
 	add_filter( 'genesis_theme_settings_defaults', function( array $defaults ) {
-		$file = get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+		$file   = get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+		$config = Utilities\maybe_require_files( $file );
 
-		if ( ! is_readable( $file ) ) {
-			config_unavailable_message();
-			$config = [];
-		} else {
-			$config = require $file;
+		if ( ! $config ) {
+			return $defaults;
 		}
 
 		$defaults = wp_parse_args( $config, $defaults );
@@ -44,14 +44,12 @@ add_action( 'genesis_setup', function() {
  * @return void
  */
 function adds_theme_supports() {
-	$file = get_stylesheet_directory() . '/config/theme-supports-config.php';
+	$file   = get_stylesheet_directory() . '/config/theme-supports-config.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	if ( ! is_readable( $file ) ) {
-		config_unavailable_message();
+	if ( ! $config ) {
 		return;
 	}
-
-	$config = require_once $file;
 
 	foreach ( $config as $feature => $args ) {
 		add_theme_support( $feature, $args );
@@ -59,17 +57,15 @@ function adds_theme_supports() {
 }
 
 add_action( 'after_switch_theme', function () {
-	$file = get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+	$file   = get_stylesheet_directory() . '/config/theme-settings-defaults.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	if ( ! is_readable( $file ) ) {
-		config_unavailable_message();
+	if ( ! $config ) {
 		return;
 	}
 
-	$config = require $file;
-
 	if ( function_exists( 'genesis_update_settings' ) ) {
-		genesis_update_settings( $config );
+			genesis_update_settings( $config );
 	}
 	update_option( 'posts_per_page', $config['blog_cat_num'] );
 });

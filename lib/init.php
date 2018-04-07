@@ -29,3 +29,7 @@ function init_constants() {
 }
 
 init_constants();
+
+// Load utilities.
+require_once 'utilities/class-file-exception.php';
+require_once 'utilities/maybe-require-files.php';
