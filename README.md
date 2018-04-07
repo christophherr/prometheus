@@ -20,18 +20,18 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
 6.  AdSense settings are deactivated in `admin/remove-adsense.php` and in `customizer/remove-adsense.php`.
 7.  Sass partials are located in `scss`. I might remove the folder structure and just use partials.
 8.  Print styles are commented out in `scss/styles.scss`.
-9.  Basic Gulp commands are available to lint and compile Sass, minify the stylesheet and minify the JavaScript files.
+9.  Basic Gulp commands are available to lint and compile Sass, minify the stylesheet, lint and minify the JavaScript files.
     You can either just type `gulp` in a terminal window or take a look at the available commands in `gulpfile.js`.
     Please be aware that the Javascript minifier expects ES2016+ syntax.
 
-    More functionality (e.g. JavaScript linting, Browsersync) may be added in the future.
+    More functionality (e.g. Browsersync) may be added in the future.
     If you want more advanced Gulp features, take a look at Craig Simpson's [Gulp WP Toolkit](https://github.com/craigsimps/gulp-wp-toolkit/) or Lee Anthony's [gulpfile.js](https://github.com/seothemes/genesis-starter/blob/master/gulpfile.js).
 
 10. The minified stylesheet is loaded from `functions/load-minified-css.php`. Please uncomment the file in the (nonadmin) config to use style.min.css. Unminified JavaScript files are loaded if `SCRIPT_DEBUG` is set to true in `wp-config.php`.
 11. Stylelint and ESlint are configured to follow WordPress standards and available to check CSS and JavaScript.
+    Four Stylelint rules were changed to allow including the HTML resets and the Genesis structure; one additional rule was changed because Stylelint can't autofix it, yet.
 12. If you are using VS Code, you can automatically format CSS and JavaScript files with Prettier (e.g. using the `prettier-eslint` and `prettier-stylelint` extensions).
-13. Gulp outputs the message `postcss-sorting: Invalid "order" option value`. This is caused by an incompatibility between postcss-sorting and the Stylelint Order plugin. It does not affect the CSS output.
-14. If Javascript ES5 style is required, please replace the files with copies from Genesis Sample.
+13. If Javascript ES5 style is required, please replace the files with copies from Genesis Sample.
 
 ## Installation Instructions
 

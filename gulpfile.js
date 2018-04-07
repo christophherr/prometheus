@@ -1,7 +1,7 @@
 /**
  * Prometheus 2.
  *
- * This file adds gulp tasks to the Prometheus 2 theme.
+ * This file adds Gulp tasks to the Prometheus 2 theme.
  *
  * @author Christoph Herr
  */
@@ -19,11 +19,11 @@ const notify = require( 'gulp-notify' );
 const pixrem = require( 'gulp-pixrem' );
 const plumber = require( 'gulp-plumber' );
 const postcss = require( 'gulp-postcss' );
+const prettierEslint = require( 'gulp-prettier-eslint' );
 const rename = require( 'gulp-rename' );
 const sass = require( 'gulp-sass' );
 const sassLint = require( 'gulp-sass-lint' );
 const sourcemaps = require( 'gulp-sourcemaps' );
-const stylefmt = require( 'gulp-stylefmt' );
 const styleLint = require( 'gulp-stylelint' );
 
 /**
@@ -89,10 +89,7 @@ gulp.task( 'postcss', () => {
 			])
 		)
 
-		// Change spaces to tabs and other fixes.
-		.pipe( stylefmt() )
-
-		// Additional WordPress style fixes.
+		// WordPress style fixes.
 		.pipe(
 			styleLint({
 				fix: true
@@ -108,18 +105,10 @@ gulp.task( 'postcss', () => {
 		.pipe( gulp.dest( './' ) );
 });
 
-gulp.task( 'rename:map', [ 'postcss' ], () => {
-	gulp
-		.src( 'style.css.map' )
-		.pipe( rename( 'style.min.css.map' ) )
-		.pipe( gulp.dest( './' ) );
-});
-
-gulp.task( 'clean:map', [ 'rename:map' ], () => {
-	return del( 'style.css.map' );
-});
-
-gulp.task( 'css:minify', [ 'clean:map' ], () => {
+/**
+ * Minify style.css
+ */
+gulp.task( 'css:minify', [ 'postcss' ], () => {
 	gulp
 		.src( 'style.css' )
 
@@ -141,7 +130,7 @@ gulp.task( 'css:minify', [ 'clean:map' ], () => {
 			})
 		)
 
-		// Minify and optimize style.css again.
+		// Minify and optimize style.css.
 		.pipe(
 			cssnano({
 				safe: false,
@@ -152,6 +141,7 @@ gulp.task( 'css:minify', [ 'clean:map' ], () => {
 		)
 
 		.pipe( rename( 'style.min.css' ) )
+
 		.pipe( gulp.dest( './' ) )
 
 		.pipe(
@@ -161,6 +151,9 @@ gulp.task( 'css:minify', [ 'clean:map' ], () => {
 		);
 });
 
+/**
+ * Lint Scss files.
+ */
 gulp.task( 'sass:lint', [ 'css:minify' ], () => {
 	gulp
 		.src([ '/scss/style.scss', '!/scss/resets/index.scss' ])
@@ -173,18 +166,24 @@ gulp.task( 'sass:lint', [ 'css:minify' ], () => {
  * JavaScript Tasks
  *******************/
 
-gulp.task( 'js:minify', () => {
+/**
+ * JavaScript Task Handler.
+ */
+gulp.task( 'js', () => {
 	gulp
 		.src([ 'js/prometheus2.js', 'js/responsive-menus.js' ])
 
-		// Error handling
+		// Error handling.
 		.pipe(
 			plumber({
 				errorHandler: handleErrors
 			})
 		)
 
-		// Minify JavaScript
+		// Linting and Pretty Printing.
+		.pipe( prettierEslint() )
+
+		// Minify JavaScript.
 		.pipe(
 			minify({
 				ext: {
@@ -208,7 +207,7 @@ gulp.task( 'watch', () => {
 /**
  * Individual tasks.
  */
-gulp.task( 'scripts', [ 'js:minify' ]);
+gulp.task( 'scripts', [ 'js' ]);
 gulp.task( 'styles', [ 'sass:lint' ]);
 
 gulp.task( 'default', [ 'styles', 'scripts' ]);
