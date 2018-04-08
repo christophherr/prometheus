@@ -66,6 +66,6 @@
 	.entry-title {
 		margin-top: 10px;
 		margin-bottom: 5px;
-		font-size: $featured-content__entry-title--font-size;
+		@include font-size($featured-content__entry-title--font-size);
 	}
 }

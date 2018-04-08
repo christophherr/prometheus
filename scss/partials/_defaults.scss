@@ -5,14 +5,15 @@
 --------------------------------------------- */
 
 html {
-	font-size: 62.5%; /* 10px browser default */
+	font-size: 62.5%;
+	/* 10px browser default */
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
 
 /* Chrome fix */
 body > div {
-	font-size: $body--font-size;
+	@include font-size($body--font-size);
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 	color: $body--font-color;
 	background-color: $body--background-color;
 	font-family: $body--font-family;
-	font-size: $body--font-size;
+	@include font-size($body--font-size);
 	font-weight: $font-weight--normal;
 	line-height: $line-height--normal;
 }
@@ -84,6 +85,7 @@ i {
 }
 
 mark {
+	color: $mark--font-color;
 	background: $mark--background-color;
 }
 
@@ -96,8 +98,7 @@ blockquote {
 		top: -10px;
 		left: -20px;
 		height: 0;
-		font-size: 30px;
-		font-size: 3rem;
+		@include font-size($blockquote__before--font-size);
 		content: "\201C";
 	}
 }
@@ -118,11 +119,11 @@ h6 {
 }
 
 h1 {
-	font-size: $h1--font-size;
+	@include font-size($h1--font-size);
 }
 
 h2 {
-	font-size: $h2--font-size;
+	@include font-size($h2--font-size);
 }
 
 .entry-content h3,
@@ -131,11 +132,11 @@ h2 {
 }
 
 h3 {
-	font-size: $h3--font-size;
+	@include font-size($h3--font-size);
 }
 
 h4 {
-	font-size: $h4--font-size;
+	@include font-size($h4--font-size);
 }
 
 .entry-content h4 {
@@ -143,11 +144,11 @@ h4 {
 }
 
 h5 {
-	font-size: $h5--font-size;
+	@include font-size($h5--font-size);
 }
 
 h6 {
-	font-size: $h6--font-size;
+	@include font-size($h6--font-size);
 }
 
 /* Objects
@@ -254,7 +255,7 @@ textarea {
 	border: 1px solid #ddd;
 	color: $forms--font-color;
 	background-color: $forms__background-color;
-	font-size: $forms--font-size;
+	@include font-size($forms--font-size);
 	font-weight: $font-weight--normal;
 }
 
@@ -285,7 +286,7 @@ button {
 	border: 0;
 	color: $button--font-color;
 	background-color: $button--background-color;
-	font-size: $button--font-size;
+	@include font-size($button--font-size);
 	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
@@ -308,7 +309,7 @@ input[type="button"] {
 	border: 0;
 	color: $button--font-color;
 	background-color: $button--background-color;
-	font-size: $button--font-size;
+	@include font-size($button--font-size);
 	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
@@ -331,7 +332,7 @@ input[type="reset"] {
 	border: 0;
 	color: $button--font-color;
 	background-color: $button--background-color;
-	font-size: $button--font-size;
+	@include font-size($button--font-size);
 	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
@@ -354,7 +355,7 @@ input[type="submit"] {
 	border: 0;
 	color: $button--font-color;
 	background-color: $button--background-color;
-	font-size: $button--font-size;
+	@include font-size($button--font-size);
 	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
@@ -378,7 +379,7 @@ input[type="submit"] {
 	border: 0;
 	color: $button--font-color;
 	background-color: $button--background-color;
-	font-size: $button--font-size;
+	@include font-size($button--font-size);
 	font-weight: $font-weight--bold;
 	white-space: normal;
 	text-decoration: none;
@@ -433,7 +434,7 @@ td {
 
 th {
 	padding: 0 6px;
-	font-weight: 400;
+	font-weight: $font-weight--normal;
 	text-align: left;
 
 	&:first-child {
