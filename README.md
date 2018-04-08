@@ -8,6 +8,14 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
 
 [![Build Status](https://travis-ci.org/christophherr/prometheus.svg?branch=develop)](https://travis-ci.org/christophherr/prometheus)
 
+## Converkit 3 compatible Sass partials
+
+Brian Johnson, @themustardseed, has done outstanding work converting the Sass partials to be compatible with Convertkit 3.
+He also improved the partials for this repo, which can be seen in PR #20.
+You can find Brian's Repo here: [https://github.com/themustardseed/prometheus](https://github.com/themustardseed/prometheus).
+
+Thank you, Brian!
+
 ## Usage Notes - Please read
 
 1.  The child theme files are loading before the Genesis Framework.
