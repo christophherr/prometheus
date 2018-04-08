@@ -44,6 +44,14 @@ add_action( 'wp_enqueue_scripts', function() {
 		true
 	);
 
+	wp_enqueue_script(
+		'prometheus2NoJs',
+		get_stylesheet_directory_uri() . "/js/prometheus2-nojs{$suffix}.js",
+		[],
+		CHILD_THEME_VERSION,
+		false
+	);
+
 });
 
 /**
