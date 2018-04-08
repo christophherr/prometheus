@@ -59,3 +59,11 @@ Thank you, Brian!
 ## Contributions
 
 Feedback, bug reports, and pull requests are welcome.
+
+## Contributors
+
+Thank you to everyone contributing to this project.
+
+### Hall of Fame
+
+@polishedwp @GaryJones @themustardseed @mjsdiaz
