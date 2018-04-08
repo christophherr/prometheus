@@ -59,6 +59,7 @@ Thank you, Brian!
 ## Contributions
 
 Feedback, bug reports, and pull requests are welcome.
+Please refer to CONTRIBUTING.md for details.
 
 ## Contributors
 
