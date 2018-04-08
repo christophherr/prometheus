@@ -28,6 +28,10 @@
 	.menu-item:hover > .sub-menu {
 		left: auto;
 		opacity: 1;
+
+		@media only screen and (min-width: 960px) {
+			display: block;
+		}
 	}
 
 	> .menu-bold > a {
@@ -112,7 +116,7 @@
 			}
 		}
 
-		.submenu {
+		.sub-menu {
 
 			@media only screen and (min-width: 960px) {
 				margin: -46px 0 0 179px;
@@ -125,17 +129,16 @@
 
 	@media only screen and (min-width: 960px) {
 		display: block;
-		padding-top: 15px;
 	}
+}
 
-	.genesis-nav-menu {
+.genesis-nav-menu {
 
-		.submenu,
-		.submenu a {
+	.sub-menu,
+	.sub-menu a {
 
-			@media only screen and (min-width: 960px) {
-				width: 180px;
-			}
+		@media only screen and (min-width: 960px) {
+			width: 180px;
 		}
 	}
 }
@@ -261,6 +264,7 @@
 		float: right;
 		clear: none;
 		width: auto;
+		padding-top: 15px;
 	}
 
 	.genesis-nav-menu a {
