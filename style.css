@@ -1284,7 +1284,9 @@ img.alignright,
 	position: relative;
 }
 
+.genesis-nav-menu .menu-item:focus > .sub-menu,
 .genesis-nav-menu .menu-item:hover > .sub-menu {
+	display: block;
 	left: auto;
 	opacity: 1;
 }
@@ -1311,11 +1313,10 @@ img.alignright,
 }
 
 .genesis-nav-menu .sub-menu {
-	display: none;
+	display: block;
 	clear: both;
 	position: static;
 	z-index: 99;
-	left: -9999px;
 	width: 100%;
 	margin: 0;
 	padding-left: 15px;
@@ -1329,6 +1330,10 @@ img.alignright,
 	font-size: 14px;
 	font-size: 1.4rem;
 	word-wrap: break-word;
+}
+
+.genesis-nav-menu .sub-menu:focus-within {
+	opacity: 1;
 }
 
 /* Responsive Menu
@@ -1347,6 +1352,23 @@ img.alignright,
 	display: none;
 	position: relative;
 	padding-bottom: 15px;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu,
+.genesis-responsive-menu .genesis-nav-menu .menu-item:focus > .sub-menu {
+	display: none;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+	display: none;
+	clear: both;
+	position: static;
+	z-index: 99;
+	left: -9999px;
+	width: 100%;
+	margin: 0;
+	padding-left: 15px;
+	opacity: 1;
 }
 
 .menu-toggle {
@@ -1796,13 +1818,9 @@ img.alignright,
 		display: inline-block;
 	}
 
-	.genesis-nav-menu .menu-item:focus,
-	.genesis-nav-menu .menu-item:hover {
-		position: relative;
-	}
-
-	.genesis-nav-menu .menu-item:hover > .sub-menu {
-		display: block;
+	.genesis-nav-menu .menu-item:focus .sub-menu:focus,
+	.genesis-nav-menu .menu-item:hover .sub-menu:hover {
+		z-index: 100;
 	}
 
 	.genesis-nav-menu > .menu-bold > a {
@@ -1826,6 +1844,7 @@ img.alignright,
 
 	.genesis-nav-menu .sub-menu {
 		position: absolute;
+		width: 180px;
 		padding-left: 0;
 		border-top: 1px solid #eee;
 		opacity: 0;
@@ -1834,6 +1853,7 @@ img.alignright,
 	}
 
 	.genesis-nav-menu .sub-menu a {
+		width: 180px;
 		padding-top: 15px;
 		padding-bottom: 15px;
 		border: 1px solid #eee;
@@ -1848,9 +1868,14 @@ img.alignright,
 		display: block;
 	}
 
-	.genesis-nav-menu .sub-menu,
-	.genesis-nav-menu .sub-menu a {
+	.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+		position: absolute;
 		width: 180px;
+		padding-left: 0;
+		border-top: 1px solid #eee;
+		opacity: 0;
+		-webkit-transition: opacity 0.4s ease-in-out;
+		transition: opacity 0.4s ease-in-out;
 	}
 
 	.menu-toggle {

@@ -19,19 +19,21 @@
 	.menu-item:focus,
 	.menu-item:hover {
 		position: relative;
+	}
 
-		@media only screen and (min-width: 960px) {
-			position: relative;
+	@media only screen and (min-width: 960px) {
+
+		.menu-item:focus .sub-menu:focus,
+		.menu-item:hover .sub-menu:hover {
+			z-index: 100;
 		}
 	}
 
+	.menu-item:focus > .sub-menu,
 	.menu-item:hover > .sub-menu {
+		display: block;
 		left: auto;
 		opacity: 1;
-
-		@media only screen and (min-width: 960px) {
-			display: block;
-		}
 	}
 
 	> .menu-bold > a {
@@ -83,11 +85,10 @@
 	}
 
 	.sub-menu {
-		display: none;
+		display: block;
 		clear: both;
 		position: static;
 		z-index: 99;
-		left: -9999px;
 		width: 100%;
 		margin: 0;
 		padding-left: 15px;
@@ -95,6 +96,7 @@
 
 		@media only screen and (min-width: 960px) {
 			position: absolute;
+			width: 180px;
 			padding-left: 0;
 			border-top: $border-width $border-style $border-color;
 			opacity: 0;
@@ -109,6 +111,7 @@
 			word-wrap: break-word;
 
 			@media only screen and (min-width: 960px) {
+				width: 180px;
 				padding-top: 15px;
 				padding-bottom: 15px;
 				border: $border-width $border-style $border-color;
@@ -123,23 +126,9 @@
 			}
 		}
 	}
-}
 
-.genesis-responsive-menu {
-
-	@media only screen and (min-width: 960px) {
-		display: block;
-	}
-}
-
-.genesis-nav-menu {
-
-	.sub-menu,
-	.sub-menu a {
-
-		@media only screen and (min-width: 960px) {
-			width: 180px;
-		}
+	.sub-menu:focus-within {
+		opacity: 1;
 	}
 }
 
@@ -163,6 +152,39 @@
 	display: none;
 	position: relative;
 	padding-bottom: 15px;
+
+	@media only screen and (min-width: 960px) {
+		display: block;
+	}
+
+	.genesis-nav-menu {
+
+		.menu-item:hover > .sub-menu,
+		.menu-item:focus > .sub-menu {
+			display: none;
+		}
+
+		.sub-menu {
+			display: none;
+			clear: both;
+			position: static;
+			z-index: 99;
+			left: -9999px;
+			width: 100%;
+			margin: 0;
+			padding-left: 15px;
+			opacity: 1;
+
+			@media only screen and (min-width: 960px) {
+				position: absolute;
+				width: 180px;
+				padding-left: 0;
+				border-top: $border-width $border-style $border-color;
+				opacity: 0;
+				transition: opacity 0.4s ease-in-out;
+			}
+		}
+	}
 }
 
 .menu-toggle {
