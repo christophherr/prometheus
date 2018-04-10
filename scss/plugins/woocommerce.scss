@@ -4,7 +4,6 @@
 ---------------------------------------------------------------------------------------------------- */
 
 @import 'utilities';
-
 .woocommerce.full-width-content,
 .woocommerce-page.full-width-content {
     .content {
@@ -86,8 +85,7 @@
     }
     ul.products li.product {
         @media only screen and (max-width: $small-screen-width) {
-            &,
-            .button {
+            &, .button {
                 margin-right: 0;
                 width: 100%;
             }
@@ -171,6 +169,9 @@
 
 .woocommerce {
     div.product .woocommerce-tabs ul.tabs {
+        @media only screen and (max-width: $standard-screen-width) {
+            padding: 0;
+        }
         &::before,
         li {
             border-color: #eee;
@@ -179,13 +180,39 @@
             background-color: #f5f5f5;
             border-radius: 0;
             padding: 0;
+            @media only screen and (max-width: $standard-screen-width) {
+                display: block;
+                margin: 0;
+                background-color: #fff;
+                border-bottom: 0;
+            }
             &::after,
             &::before {
                 display: none;
             }
+            &:last-child {
+                @media only screen and (max-width: $standard-screen-width) {
+                    border-bottom: 1px solid #eee;
+                }
+            }
+            &.active {
+                @media only screen and (max-width: $standard-screen-width) {
+                    border-bottom-color: #eee;
+                }
+                a::after {
+                    @media only screen and (max-width: $standard-screen-width) {
+                        content: "\f147";
+                        float: right;
+                        font-family: "dashicons";
+                    }
+                }
+            }
             a {
                 color: #000;
                 padding: 0.5em 1em;
+                @media only screen and (max-width: $standard-screen-width) {
+                    display: block;
+                }
                 &:focus,
                 &:hover {
                     color: #0073e5;
@@ -205,9 +232,6 @@
         @media only screen and (max-width: $large-screen-width) {
             padding: 0;
         }
-        @media only screen and (max-width: $standard-screen-width) {
-            padding: 0;
-        }
         li {
             display: block;
             margin: 0;
@@ -219,26 +243,14 @@
                 background-color: #fff;
                 border-bottom: 0;
             }
-            @media only screen and (max-width: $standard-screen-width) {
-                display: block;
-                margin: 0;
-                background-color: #fff;
-                border-bottom: 0;
-            }
             a {
                 display: block;
                 @media only screen and (max-width: $large-screen-width) {
                     display: block;
                 }
-                @media only screen and (max-width: $standard-screen-width) {
-                    display: block;
-                }
             }
             &:last-child {
                 @media only screen and (max-width: $large-screen-width) {
-                    border-bottom: 1px solid #eee;
-                }
-                @media only screen and (max-width: $standard-screen-width) {
                     border-bottom: 1px solid #eee;
                 }
             }
@@ -247,19 +259,11 @@
                 @media only screen and (max-width: $large-screen-width) {
                     border-bottom-color: #eee;
                 }
-                @media only screen and (max-width: $standard-screen-width) {
-                    border-bottom-color: #eee;
-                }
                 a::after {
                     content: "\f147";
                     float: right;
                     font-family: "dashicons";
                     @media only screen and (max-width: $large-screen-width) {
-                        content: "\f147";
-                        float: right;
-                        font-family: "dashicons";
-                    }
-                    @media only screen and (max-width: $standard-screen-width) {
                         content: "\f147";
                         float: right;
                         font-family: "dashicons";
@@ -477,8 +481,7 @@
 .woocommerce-page {
     @media only screen and (max-width: $small-screen-width) {
         form {
-            .form-row-first,
-            .form-row-last {
+            .form-row-first, .form-row-last {
                 float: none;
                 width: 100%;
             }
@@ -698,7 +701,6 @@
         }
     }
 }
-
 
 div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricted-content-message {
     width: 48%;
