@@ -998,7 +998,6 @@ th:first-child {
 .widget-title {
 	margin-bottom: 20px;
 	font-size: 18px;
-	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 600;
 }
@@ -1060,7 +1059,6 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	margin: 0;
-	font-size: 14px;
 	font-size: 14px;
 	font-size: 1.4rem;
 	font-weight: 600;
@@ -1336,6 +1334,13 @@ img.alignright,
 	opacity: 1;
 }
 
+/* Avoid flash of desktop menu on mobile devices.
+----------------------------------------------*/
+.js nav {
+	display: none;
+	position: relative;
+}
+
 /* Responsive Menu
 --------------------------------------------- */
 .menu .menu-item:focus {
@@ -1527,7 +1532,6 @@ img.alignright,
 .entry-meta p {
 	margin-bottom: 0;
 	font-size: 16px;
-	font-size: 16px;
 	font-size: 1.6rem;
 }
 
@@ -1571,7 +1575,6 @@ img.alignright,
 	padding: 8px 12px;
 	color: #333;
 	background-color: #f5f5f5;
-	font-size: 16px;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 600;
@@ -1862,6 +1865,10 @@ img.alignright,
 
 	.genesis-nav-menu .sub-menu .sub-menu {
 		margin: -46px 0 0 179px;
+	}
+
+	.js nav {
+		display: block;
 	}
 
 	.genesis-responsive-menu {

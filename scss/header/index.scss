@@ -4,15 +4,14 @@
 .site-header {
 	padding: 0 30px;
 	background-color: $site-header--background-color;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		position: fixed;
 		z-index: 9999;
 		width: 100%;
 	}
 }
-
 
 /* Title Area
 --------------------------------------------- */
@@ -62,4 +61,3 @@
 	border: 0;
 	word-wrap: normal !important;
 }
-

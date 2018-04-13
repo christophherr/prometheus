@@ -14,7 +14,7 @@
 		padding: 10px;
 		text-align: center;
 
-		@media only screen and (min-width: 960px) {
+		@media only screen and (min-width: $standard-screen-width) {
 			padding-right: 30px;
 			padding-left: 30px;
 		}
@@ -22,7 +22,7 @@
 
 	.sidebar & {
 		padding: 30px;
-		background-color: #f5f5f5;
+		background-color: $enews__sidebar--background-color;
 	}
 }
 
@@ -50,12 +50,12 @@
 	padding-right: 0;
 	padding-left: 0;
 	border-bottom: $border-width $border-style $border-color;
-	color: #333;
+	color: $gs-faq__question--font-color;
 	background: transparent;
 
 	&:focus,
 	&:hover {
-		color: #0073e5;
+		color: $gs-faq__question--font-color-hover;
 		background: transparent;
 	}
 

@@ -15,43 +15,43 @@ const prometheus2 = ( () => {
 	 * @since 1.0.0
 	 */
 	const moveContentBelowFixedHeader = () => {
-			let siteInnerMarginTop = 0;
-			const siteHeader = document.getElementsByClassName( 'site-header' )[0];
-			const siteInner = document.getElementsByClassName( 'site-inner' )[0];
+		let siteInnerMarginTop = 0;
+		const siteHeader = document.getElementsByClassName( 'site-header' )[0];
+		const siteInner = document.getElementsByClassName( 'site-inner' )[0];
 
-			if ( 'fixed' === window.getComputedStyle( siteHeader ).position ) {
-				siteInnerMarginTop = siteHeader.offsetHeight;
-			}
-			siteInner.style.marginTop = siteInnerMarginTop + 'px';
-		},
+		if ( 'fixed' === window.getComputedStyle( siteHeader ).position ) {
+			siteInnerMarginTop = siteHeader.offsetHeight;
+		}
+		siteInner.style.marginTop = siteInnerMarginTop + 'px';
+	};
 
-		/**
-		 * Initialize Promethues 2.
-		 *
-		 * Internal functions to execute on document load can be called here.
-		 *
-		 * @since 1.0.0
-		 */
-		init = () => {
+	/**
+	 * Initialize Promethues 2.
+	 *
+	 * Internal functions to execute on document load can be called here.
+	 *
+	 * @since 1.0.0
+	 */
+	const init = () => {
 
-			// Run on first load.
+		// Run on first load.
+		moveContentBelowFixedHeader();
+
+		// Run after window resize.
+		window.addEventListener( 'resize', () => {
 			moveContentBelowFixedHeader();
+		});
 
-			// Run after window resize.
-			window.addEventListener( 'resize', () => {
-				moveContentBelowFixedHeader();
+		// Run after the Customizer updates.
+		// 1.5s delay is to allow logo area reflow.
+		if ( 'undefined' !== typeof wp && 'undefined' !== typeof wp.customize ) {
+			wp.customize.bind( 'change', setting => {
+				setTimeout( () => {
+					moveContentBelowFixedHeader();
+				}, 1500 );
 			});
-
-			// Run after the Customizer updates.
-			// 1.5s delay is to allow logo area reflow.
-			if ( 'undefined' !== typeof wp && 'undefined' !== typeof wp.customize ) {
-				wp.customize.bind( 'change', setting => {
-					setTimeout( () => {
-						moveContentBelowFixedHeader();
-					}, 1500 );
-				});
-			}
-		};
+		}
+	};
 
 	// Expose the init function only.
 	return {

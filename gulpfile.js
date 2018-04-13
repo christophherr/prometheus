@@ -171,7 +171,11 @@ gulp.task( 'sass:lint', [ 'css:minify' ], () => {
  */
 gulp.task( 'js', () => {
 	gulp
-		.src([ 'js/prometheus2.js', 'js/responsive-menus.js' ])
+		.src([
+			'js/prometheus2.js',
+			'js/prometheus2-nojs.js',
+			'js/responsive-menus.js'
+		])
 
 		// Error handling.
 		.pipe(
