@@ -17,3 +17,14 @@ add_filter( 'body_class', function( array $classes ) {
 	return $classes;
 });
 
+add_action( 'wp_enqueue_scripts', function() {
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	wp_enqueue_script(
+		'prometheus2NoJs',
+		get_stylesheet_directory_uri() . "/js/prometheus2-nojs{$suffix}.js",
+		[],
+		CHILD_THEME_VERSION,
+		false
+	);
+});
