@@ -11,17 +11,15 @@
 
 namespace ChristophHerr\Prometheus2\Plugins;
 
+use ChristophHerr\Prometheus2\Utilities;
+
 add_filter( 'simple_social_default_styles', function( $defaults ) {
-	$args = [
-		'alignment'              => 'alignleft',
-		'background_color'       => '#f5f5f5',
-		'background_color_hover' => '#333333',
-		'border_radius'          => 3,
-		'border_width'           => 0,
-		'icon_color'             => '#333333',
-		'icon_color_hover'       => '#ffffff',
-		'size'                   => 40,
-	];
+	$file = get_stylesheet_directory() . '/config/simple-social-icon-settings.php';
+	$args = Utilities\maybe_require_files( $file );
+
+	if ( ! $args ) {
+		return $defaults;
+	}
 
 	$args = wp_parse_args( $args, $defaults );
 	return $args;

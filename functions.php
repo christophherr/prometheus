@@ -15,9 +15,6 @@ namespace ChristophHerr\Prometheus2;
 // Start the Child Theme.
 require_once 'lib/init.php';
 
-// Load error messages.
-require_once 'lib/error-messages.php';
-
 // Load the Child Theme files.
 require_once 'lib/functions/autoload.php';
 
