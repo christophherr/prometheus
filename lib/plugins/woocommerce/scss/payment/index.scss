@@ -6,13 +6,13 @@
 #add_payment_method #payment {
 	padding: 30px;
 	border-radius: 0;
-	background-color: $off-white;
+	background-color: $lightest-grey;
 }
 
 .woocommerce-cart #payment div.payment_box,
 .woocommerce-checkout #payment div.payment_box,
 #add_payment_method #payment div.payment_box {
-	background-color: $darker-white;
+	background-color: $lighter-grey;
 }
 
 .woocommerce-cart #payment div.payment_box:before,
@@ -24,5 +24,5 @@
 .woocommerce-cart #payment ul.payment_methods,
 .woocommerce-checkout #payment ul.payment_methods,
 #add_payment_method #payment ul.payment_methods {
-	border-color: $darker-white;
+	border-color: $lighter-grey;
 }

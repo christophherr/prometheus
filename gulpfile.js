@@ -235,7 +235,7 @@ gulp.task( 'woocommerce', () => {
 		)
 
 		// Pixel fallbacks for rem units.
-		.pipe( pixrem() )
+		.pipe( pixrem({ rootValue: '10px' }) )
 
 		// PostCSS magic.
 		.pipe(
