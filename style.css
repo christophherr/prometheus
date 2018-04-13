@@ -1331,6 +1331,13 @@ img.alignright,
 	word-wrap: break-word;
 }
 
+/* Avoid flash of desktop menu on mobile devices.
+----------------------------------------------*/
+.js nav {
+	display: none;
+	position: relative;
+}
+
 /* Responsive Menu
 --------------------------------------------- */
 .menu .menu-item:focus {
@@ -1848,6 +1855,10 @@ img.alignright,
 	.genesis-responsive-menu .genesis-nav-menu .submenu,
 	.genesis-responsive-menu .genesis-nav-menu .submenu a {
 		width: 180px;
+	}
+
+	.js nav {
+		display: block;
 	}
 
 	.menu-toggle {

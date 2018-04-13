@@ -140,6 +140,17 @@
 	}
 }
 
+/* Avoid flash of desktop menu on mobile devices.
+----------------------------------------------*/
+.js nav {
+	display: none;
+	position: relative;
+
+	@media only screen and (min-width: 960px) {
+		display: block;
+	}
+}
+
 /* Responsive Menu
 --------------------------------------------- */
 

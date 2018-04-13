@@ -2,6 +2,8 @@
 /**
  * Asset loader handler
  *
+ * The js-no-js script is enqueueud from no-js.php for easier enabling/disabling of the feature.
+ *
  * @package     ChristophHerr\Prometheus2\Functions
  * @since       1.0.0
  * @author      Christoph Herr
@@ -45,7 +47,6 @@ add_action( 'wp_enqueue_scripts', function() {
 		CHILD_THEME_VERSION,
 		true
 	);
-
 });
 
 /**
