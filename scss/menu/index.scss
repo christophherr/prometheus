@@ -19,13 +19,19 @@
 	.menu-item:focus,
 	.menu-item:hover {
 		position: relative;
+	}
 
-		@media only screen and (min-width: $standard-screen-width) {
-			position: relative;
+	@media only screen and (min-width: $standard-screen-width) {
+
+		.menu-item:focus .sub-menu:focus,
+		.menu-item:hover .sub-menu:hover {
+			z-index: 100;
 		}
 	}
 
+	.menu-item:focus > .sub-menu,
 	.menu-item:hover > .sub-menu {
+		display: block;
 		left: auto;
 		opacity: 1;
 	}
@@ -79,11 +85,10 @@
 	}
 
 	.sub-menu {
-		display: none;
+		display: block;
 		clear: both;
 		position: static;
 		z-index: 99;
-		left: -9999px;
 		width: 100%;
 		margin: 0;
 		padding-left: 15px;
@@ -91,6 +96,7 @@
 
 		@media only screen and (min-width: $standard-screen-width) {
 			position: absolute;
+			width: 180px;
 			padding-left: 0;
 			border-top: $border-width $border-style $border-color;
 			opacity: 0;
@@ -105,6 +111,7 @@
 			word-wrap: break-word;
 
 			@media only screen and (min-width: $standard-screen-width) {
+				width: 180px;
 				padding-top: 15px;
 				padding-bottom: 15px;
 				border: $border-width $border-style $border-color;
@@ -112,31 +119,16 @@
 			}
 		}
 
-		.submenu {
+		.sub-menu {
 
 			@media only screen and (min-width: $standard-screen-width) {
 				margin: -46px 0 0 179px;
 			}
 		}
 	}
-}
 
-.genesis-responsive-menu {
-
-	@media only screen and (min-width: $standard-screen-width) {
-		display: block;
-		padding-top: 15px;
-	}
-
-	.genesis-nav-menu {
-
-		.submenu,
-		.submenu a {
-
-			@media only screen and (min-width: $standard-screen-width) {
-				width: 180px;
-			}
-		}
+	.sub-menu:focus-within {
+		opacity: 1;
 	}
 }
 
@@ -146,7 +138,7 @@
 	display: none;
 	position: relative;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		display: block;
 	}
 }
@@ -171,6 +163,39 @@
 	display: none;
 	position: relative;
 	padding-bottom: 15px;
+
+	@media only screen and (min-width: $standard-screen-width) {
+		display: block;
+	}
+
+	.genesis-nav-menu {
+
+		.menu-item:hover > .sub-menu,
+		.menu-item:focus > .sub-menu {
+			display: none;
+		}
+
+		.sub-menu {
+			display: none;
+			clear: both;
+			position: static;
+			z-index: 99;
+			left: -9999px;
+			width: 100%;
+			margin: 0;
+			padding-left: 15px;
+			opacity: 1;
+
+			@media only screen and (min-width: $standard-screen-width) {
+				position: absolute;
+				width: 180px;
+				padding-left: 0;
+				border-top: $border-width $border-style $border-color;
+				opacity: 0;
+				transition: opacity 0.4s ease-in-out;
+			}
+		}
+	}
 }
 
 .menu-toggle {
@@ -272,6 +297,7 @@
 		float: right;
 		clear: none;
 		width: auto;
+		padding-top: 15px;
 	}
 
 	.genesis-nav-menu a {

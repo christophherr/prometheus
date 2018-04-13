@@ -998,7 +998,6 @@ th:first-child {
 .widget-title {
 	margin-bottom: 20px;
 	font-size: 18px;
-	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 600;
 }
@@ -1060,7 +1059,6 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	margin: 0;
-	font-size: 14px;
 	font-size: 14px;
 	font-size: 1.4rem;
 	font-weight: 600;
@@ -1284,7 +1282,9 @@ img.alignright,
 	position: relative;
 }
 
+.genesis-nav-menu .menu-item:focus > .sub-menu,
 .genesis-nav-menu .menu-item:hover > .sub-menu {
+	display: block;
 	left: auto;
 	opacity: 1;
 }
@@ -1311,11 +1311,10 @@ img.alignright,
 }
 
 .genesis-nav-menu .sub-menu {
-	display: none;
+	display: block;
 	clear: both;
 	position: static;
 	z-index: 99;
-	left: -9999px;
 	width: 100%;
 	margin: 0;
 	padding-left: 15px;
@@ -1329,6 +1328,10 @@ img.alignright,
 	font-size: 14px;
 	font-size: 1.4rem;
 	word-wrap: break-word;
+}
+
+.genesis-nav-menu .sub-menu:focus-within {
+	opacity: 1;
 }
 
 /* Avoid flash of desktop menu on mobile devices.
@@ -1354,6 +1357,23 @@ img.alignright,
 	display: none;
 	position: relative;
 	padding-bottom: 15px;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu,
+.genesis-responsive-menu .genesis-nav-menu .menu-item:focus > .sub-menu {
+	display: none;
+}
+
+.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+	display: none;
+	clear: both;
+	position: static;
+	z-index: 99;
+	left: -9999px;
+	width: 100%;
+	margin: 0;
+	padding-left: 15px;
+	opacity: 1;
 }
 
 .menu-toggle {
@@ -1512,7 +1532,6 @@ img.alignright,
 .entry-meta p {
 	margin-bottom: 0;
 	font-size: 16px;
-	font-size: 16px;
 	font-size: 1.6rem;
 }
 
@@ -1556,7 +1575,6 @@ img.alignright,
 	padding: 8px 12px;
 	color: #333;
 	background-color: #f5f5f5;
-	font-size: 16px;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 600;
@@ -1803,9 +1821,9 @@ img.alignright,
 		display: inline-block;
 	}
 
-	.genesis-nav-menu .menu-item:focus,
-	.genesis-nav-menu .menu-item:hover {
-		position: relative;
+	.genesis-nav-menu .menu-item:focus .sub-menu:focus,
+	.genesis-nav-menu .menu-item:hover .sub-menu:hover {
+		z-index: 100;
 	}
 
 	.genesis-nav-menu > .menu-bold > a {
@@ -1829,6 +1847,7 @@ img.alignright,
 
 	.genesis-nav-menu .sub-menu {
 		position: absolute;
+		width: 180px;
 		padding-left: 0;
 		border-top: 1px solid #eee;
 		opacity: 0;
@@ -1837,28 +1856,33 @@ img.alignright,
 	}
 
 	.genesis-nav-menu .sub-menu a {
+		width: 180px;
 		padding-top: 15px;
 		padding-bottom: 15px;
 		border: 1px solid #eee;
 		border-top: 0;
 	}
 
-	.genesis-nav-menu .sub-menu .submenu {
+	.genesis-nav-menu .sub-menu .sub-menu {
 		margin: -46px 0 0 179px;
-	}
-
-	.genesis-responsive-menu {
-		display: block;
-		padding-top: 15px;
-	}
-
-	.genesis-responsive-menu .genesis-nav-menu .submenu,
-	.genesis-responsive-menu .genesis-nav-menu .submenu a {
-		width: 180px;
 	}
 
 	.js nav {
 		display: block;
+	}
+
+	.genesis-responsive-menu {
+		display: block;
+	}
+
+	.genesis-responsive-menu .genesis-nav-menu .sub-menu {
+		position: absolute;
+		width: 180px;
+		padding-left: 0;
+		border-top: 1px solid #eee;
+		opacity: 0;
+		-webkit-transition: opacity 0.4s ease-in-out;
+		transition: opacity 0.4s ease-in-out;
 	}
 
 	.menu-toggle {
@@ -1873,6 +1897,7 @@ img.alignright,
 		float: right;
 		clear: none;
 		width: auto;
+		padding-top: 15px;
 	}
 
 	.nav-primary .genesis-nav-menu a {
