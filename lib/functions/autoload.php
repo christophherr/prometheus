@@ -11,6 +11,8 @@
 
 namespace ChristophHerr\Prometheus2\Functions;
 
+use ChristophHerr\Prometheus2\Utilities;
+
 /**
  * Loads nonadmin files
  *
@@ -19,9 +21,14 @@ namespace ChristophHerr\Prometheus2\Functions;
  * @return void
  */
 function load_nonadmin_files() {
-	$filenames = require CHILD_THEME_DIR . '/config/autoload-nonadmin-files.php';
+	$file   = get_stylesheet_directory() . '/config/autoload-nonadmin-files.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	load_specified_files( $filenames );
+	if ( ! $config ) {
+		return;
+	}
+
+	load_specified_files( $config );
 }
 
 add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
@@ -33,9 +40,14 @@ add_action( 'admin_init', __NAMESPACE__ . '\load_admin_files' );
  * @return void
  */
 function load_admin_files() {
-	$filenames = require CHILD_THEME_DIR . '/config/autoload-admin-files.php';
+	$file   = get_stylesheet_directory() . '/config/autoload-admin-files.php';
+	$config = Utilities\maybe_require_files( $file );
 
-	load_specified_files( $filenames );
+	if ( ! $config ) {
+		return;
+	}
+
+	load_specified_files( $config );
 }
 
 /**
@@ -49,7 +61,7 @@ function load_admin_files() {
  * @return void
  */
 function load_specified_files( array $filenames, $folder_root = '' ) {
-	$folder_root = $folder_root ?: CHILD_THEME_DIR . '/lib/';
+	$folder_root = $folder_root ?: get_stylesheet_directory() . '/lib/';
 	foreach ( $filenames as $filename ) {
 		include $folder_root . $filename;
 	}

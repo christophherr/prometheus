@@ -11,34 +11,34 @@
 
 namespace ChristophHerr\Prometheus2\Config;
 
-return array(
-	'html5'                           => array(
+return [
+	'html5'                           => [
 		'caption',
 		'comment-form',
 		'comment-list',
 		'gallery',
 		'search-form',
-	),
-	'genesis-accessibility'           => array(
+	],
+	'genesis-accessibility'           => [
 		'404-page',
 		'drop-down-menu',
 		'headings',
 		'rems',
 		'search-form',
 		'skip-links',
-	),
+	],
 	'genesis-responsive-viewport'     => null,
-	'custom-logo'                     => array(
+	'custom-logo'                     => [
 		'height'      => 120,
 		'width'       => 700,
 		'flex-height' => true,
 		'flex-width'  => true,
-	),
-	'genesis-menus'                   => array(
+	],
+	'genesis-menus'                   => [
 		'primary'   => __( 'Header Menu', 'prometheus2' ),
 		'secondary' => __( 'Footer Menu', 'prometheus2' ),
-	),
+	],
 	'genesis-after-entry-widget-area' => null,
 	'genesis-footer-widgets'          => 3,
-);
+];
 

@@ -11,15 +11,15 @@
 
 namespace ChristophHerr\Prometheus2\Config;
 
-return array(
+return [
 	'mainMenu'         => __( 'Menu', 'prometheus2' ),
 	'menuIconClass'    => 'dashicons-before dashicons-menu',
 	'subMenu'          => __( 'Submenu', 'prometheus2' ),
 	'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
-	'menuClasses'      => array(
-		'combine' => array(
+	'menuClasses'      => [
+		'combine' => [
 			'.nav-primary',
-		),
-		'others'  => array(),
-	),
-);
+		],
+		'others'  => [],
+	],
+];

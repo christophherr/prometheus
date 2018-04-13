@@ -5,3 +5,4 @@ composer.lock
 
 .vs-code/
 .idea/
+.atom/

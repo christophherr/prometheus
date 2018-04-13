@@ -28,9 +28,9 @@
 .after-entry {
 	margin-bottom: 40px;
 	padding: 20px 30px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 		padding: 40px 60px;
 	}
@@ -51,7 +51,7 @@
 .archive-description {
 	margin-bottom: 40px;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 	}
 
@@ -69,10 +69,10 @@
 .author-box {
 	margin-bottom: 40px;
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $standard-screen-width) {
 		margin-bottom: 60px;
 		padding: 30px;
-		background-color: #f5f5f5;
+		background-color: $author-box--background-color;
 	}
 
 	p:last-child {
@@ -133,15 +133,14 @@
 }
 
 .sidebar .widget-title a {
-	color: #333;
+	color: $sidebar__widget-title--font-color;
 	text-decoration: none;
 }
 
 .widget-title {
 	margin-bottom: 20px;
-	font-size: 18px;
-	font-size: 1.8rem;
-	font-weight: 600;
+	font-size: $widget-title--font-size;
+	font-weight: $font-weight--bold;
 }
 
 /* WordPress
@@ -202,9 +201,8 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	margin: 0;
-	font-size: 14px;
-	font-size: 1.4rem;
-	font-weight: 600;
+	font-size: $entry-content__caption--font-size;
+	font-weight: $font-weight--bold;
 	text-align: center;
 }
 
