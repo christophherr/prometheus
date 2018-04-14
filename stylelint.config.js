@@ -5,9 +5,17 @@ module.exports = {
 	plugins: 'stylelint-order',
 	rules: {
 		'font-family-no-missing-generic-family-keyword': null,
+		'max-line-length': 150,
 		'no-duplicate-selectors': null,
 		'no-descending-specificity': null,
-		'selector-list-comma-newline-after': 'always-multi-line',
+		'selector-list-comma-newline-after': [
+			'always-multi-line',
+			{
+				message:
+					'Expected newline after "," in a multi-line list. Stylelint can\'t automatically correct this at the moment.',
+				severity: 'warning'
+			}
+		],
 		'selector-pseudo-element-colon-notation': 'single',
 		'order/order': [
 			'at-variables',

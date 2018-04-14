@@ -37,8 +37,8 @@ function handleErrors() {
 
 	notify
 		.onError({
-			title: 'Task Failed [<%= error.message %>',
-			message: 'See console.'
+			title: 'Task Failed [<%= error.message %>]',
+			message: '<%= error %> - See console or enable logging in the plugin.'
 		})
 		.apply( this, args );
 
