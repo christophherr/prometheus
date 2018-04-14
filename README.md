@@ -26,7 +26,8 @@ Thank you, Brian!
 4.  The autoloader is 'fed' from two config files found in `config/autoload-admin-files.php` and `config/autoload-nonadmin-files.php`.
 5.  Woocommerce and additional Customizer functionality are deactivated but can easily be activated by uncommenting the files in the autoloader config.
 6.  AdSense settings are deactivated in `admin/remove-adsense.php` and in `customizer/remove-adsense.php`.
-7.  Sass partials are located in `scss`. I might remove the folder structure and just use partials.
+7.  The Sass partials for the theme are located in `scss`.
+    The Sass partials for Woocommerce are located in `/lib/plugins/woocommerce/scss`.
 8.  Print styles are commented out in `scss/styles.scss`.
 9.  Basic Gulp commands are available to lint and compile Sass, minify the stylesheet, lint and minify the JavaScript files.
     You can either just type `gulp` in a terminal window or take a look at the available commands in `gulpfile.js`.
@@ -40,6 +41,9 @@ Thank you, Brian!
     Four Stylelint rules were changed to allow including the HTML resets and the Genesis structure; one additional rule was changed because Stylelint can't autofix it, yet.
 12. If you are using VS Code, you can automatically format CSS and JavaScript files with Prettier (e.g. using the `prettier-eslint` and `prettier-stylelint` extensions).
 13. If Javascript ES5 style is required, please replace the files with copies from Genesis Sample.
+14. The functionality of Gary Jones' [genesis-js-no-js](https://github.com/GaryJones/genesis-js-no-js) has been added/enqueued to the theme in order to help prevent a flash of the desktop menu on mobile devices.
+    It can be deactivated by commenting out the line `functions/no-js.php` in the nonadmin files autoloader.
+    If you need ES5 JavaScript syntax, please deactivate the feature and use Gary's plugin.
 
 ## Installation Instructions
 
@@ -67,4 +71,4 @@ Thank you to everyone contributing to this project.
 
 ### Hall of Fame
 
-@polishedwp @GaryJones @themustardseed @mjsdiaz
+[@polishedwp](https://github.com/polishedwp), [@GaryJones](https://github.com/GaryJones), [@themustardseed](https://github.com/themustardseed), [@mjsdiaz](https://github.com/mjsdiaz), [@seothemes](https://github.com/seothemes)
