@@ -1,0 +1,29 @@
+/* WooCommerce Disabled Buttons
+------------------------------------------------------------- */
+
+.woocommerce {
+
+	a.button,
+	button.button,
+	input.button,
+	#respond input#submit {
+
+		&.disabled,
+		&:disabled,
+		&:disabled[disabled] {
+			padding: 16px 24px;
+			color: $white;
+			background-color: $black;
+		}
+
+		&.alt.disabled,
+		&.alt.disabled:hover,
+		&.alt:disabled,
+		&.alt:disabled:hover,
+		&.alt[disabled]:disabled,
+		&.alt[disabled]:disabled:hover {
+			color: $black;
+			background-color: $lighter-grey;
+		}
+	}
+}

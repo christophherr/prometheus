@@ -1,0 +1,136 @@
+/* WooCommerce Product Tabs
+------------------------------------------------------------- */
+
+.woocommerce {
+
+	div {
+
+		&.product {
+
+			.woocommerce-tabs {
+
+				ul {
+
+					&.tabs {
+
+						@media only screen and (max-width: $standard-screen-width) {
+							padding: 0;
+						}
+
+						&:before {
+							border-color: $border-color;
+						}
+
+						li {
+							padding: 0;
+							border-color: $border-color;
+							border-radius: 0;
+							background-color: $lightest-grey;
+
+							@media only screen and (max-width: $standard-screen-width) {
+								display: block;
+								margin: 0;
+								border-bottom: 0;
+								background-color: $white;
+							}
+
+							a {
+								padding: 0.5em 1em;
+								color: $black;
+							}
+
+							a:focus,
+							a:hover {
+								color: $blue;
+							}
+						}
+
+						li:last-child {
+
+							@media only screen and (max-width: $standard-screen-width) {
+								border-bottom: $border-width $border-style $border-color;
+							}
+						}
+
+						li:after,
+						li:before {
+							display: none;
+						}
+
+						li.active {
+
+							@media only screen and (max-width: $standard-screen-width) {
+								border-bottom-color: $border-color;
+							}
+
+							a:after {
+
+								@media only screen and (max-width: $standard-screen-width) {
+									float: right;
+									font-family: dashicons;
+									content: "\f147";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Two Sidebar Layouts */
+.content-sidebar-sidebar,
+.sidebar-content-sidebar,
+.sidebar-sidebar-content {
+
+	&.woocommerce {
+
+		div {
+
+			&.product {
+
+				.woocommerce-tabs {
+
+					ul {
+
+						&.tabs {
+							padding: 0;
+
+							li {
+								padding: 0;
+								border-radius: 0;
+								background-color: $lightest-grey;
+
+								@media only screen and (max-width: $standard-screen-width) {
+									display: block;
+									margin: 0;
+									border-bottom: 0;
+									background-color: $white;
+								}
+
+								a {
+									display: block;
+								}
+
+								&.active {
+									border-bottom-color: $border-color;
+
+									a:after {
+										float: right;
+										font-family: dashicons;
+										content: "\f147";
+									}
+								}
+							}
+						}
+					}
+
+					li:last-child {
+						border-bottom: $border-width $border-style $border-color;
+					}
+				}
+			}
+		}
+	}
+}

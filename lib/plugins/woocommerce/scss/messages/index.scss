@@ -1,0 +1,27 @@
+/* WooCommerce Misc
+------------------------------------------------------------- */
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border-top-color: $blue;
+	background-color: $lightest-grey;
+
+	@media only screen and (max-width: $small-screen-width) {
+
+		button.wc-forward {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.woocommerce-error:before,
+.woocommerce-info:before,
+.woocommerce-message:before {
+	color: $blue;
+}
+
+div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricted-content-message {
+	width: 48%;
+}

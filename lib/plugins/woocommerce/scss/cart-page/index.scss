@@ -1,0 +1,104 @@
+/* WooCommerce Cart Page
+------------------------------------------------------------- */
+
+.woocommerce {
+
+	table {
+
+		&.shop_table {
+			border-color: $border-color;
+			border-radius: 0;
+			line-height: $line-height--large;
+			word-break: normal;
+
+			td {
+				border-color: $border-color;
+				border-radius: 0;
+				line-height: $line-height--large;
+				word-break: normal;
+
+				&.actions {
+					padding-top: 15px;
+				}
+			}
+
+			.order-number {
+				min-width: 75px;
+			}
+		}
+	}
+}
+
+.woocommerce-cart {
+
+	table {
+
+		&.cart {
+			line-height: $line-height--large;
+
+			td {
+				padding: 10px 12px;
+				font-size: $cart-table-td--font-size;
+
+				&.actions {
+
+					.coupon {
+
+						.input-text {
+							font-size: $cart-table-td--font-size;
+
+							@media only screen and (max-width: $small-screen-width) {
+								width: 100% !important;
+								margin-bottom: 10px;
+								background-color: $white;
+							}
+						}
+					}
+				}
+			}
+
+			.product-thumbnail {
+				min-width: 56px;
+			}
+
+			th {
+
+				&.product-name {
+					min-width: 140px;
+				}
+
+				&.product-price,
+				&.product-quantity,
+				&.product-subtotal {
+					min-width: 110px;
+				}
+			}
+		}
+	}
+
+	td {
+
+		&.product-name {
+
+			dl {
+
+				&.variation {
+
+					dd {
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-checkout-review-order-table {
+
+	th {
+
+		&.product-total {
+			min-width: 110px;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+/* WooCommerce Product
+-------------------------------------------------------- */
+
+.woocommerce {
+
+	div {
+
+		&.product {
+
+			p {
+
+				&.price {
+					color: $blue;
+					line-height: $line-height--medium;
+				}
+			}
+
+			span {
+
+				&.price {
+					color: $blue;
+					line-height: $line-height--medium;
+				}
+			}
+
+			form {
+
+				&.cart {
+
+					.button {
+						line-height: $line-height--medium;
+					}
+
+					.variations {
+						table-layout: fixed;
+					}
+				}
+			}
+		}
+	}
+
+	.woocommerce-variation-price {
+		margin-bottom: 20px;
+	}
+}

@@ -1,0 +1,173 @@
+/* WooCommerce Widgets
+------------------------------------------------------------- */
+
+/* Woo Search
+-------------------------------------------------- */
+
+.woocommerce-product-search {
+	overflow: hidden;
+	width: 100%;
+
+	input[type="submit"] {
+		clip: rect(0, 0, 0, 0);
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+	}
+}
+
+/* Woo Shopping Cart
+-------------------------------------------------- */
+
+.woocommerce {
+
+	.widget_shopping_cart,
+	&.widget_shopping_cart {
+
+		ul {
+
+			&.cart_list {
+
+				li {
+					padding-top: 15px;
+
+					a.remove {
+						top: 15px;
+					}
+				}
+			}
+		}
+
+		.buttons {
+
+			a {
+				margin-bottom: 5px;
+			}
+		}
+
+		.cart_list {
+
+			li.empty {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&.widget_shopping_cart {
+
+		.total {
+			border-top: $border-width $border-style $border-color;
+		}
+	}
+}
+
+/* Woo Product Lists
+-------------------------------------------------- */
+
+.woocommerce {
+
+	ul {
+
+		&.cart_list li img,
+		&.product_list_widget li img {
+			width: 60px;
+		}
+	}
+}
+
+.sidebar {
+
+	ul {
+
+		&.product_list_widget {
+
+			li {
+				margin-bottom: 15px;
+				padding: 15px 0 0;
+				line-height: $line-height--medium-small;
+			}
+
+			li:last-child {
+				margin-bottom: 0;
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+
+/* Woo Filter
+-------------------------------------------------- */
+
+.woocommerce {
+
+	&.widget_price_filter {
+
+		.price_slider_wrapper {
+
+			.ui-widget-content {
+				background-color: $lighter-grey;
+			}
+		}
+
+		.price-slider-amount {
+
+			.button {
+				font-size: $widgets-price-filter-price-slider-amount-button--font-size;
+			}
+		}
+
+		.ui-slider {
+
+			.ui-slider-handle {
+				top: -0.28em;
+				background-color: $blue;
+			}
+
+			.ui-slider-range {
+				background-color: $blue;
+			}
+		}
+	}
+
+	.widget_price_filter {
+
+		.ui-slider {
+
+			.ui-slider-handle {
+				top: -0.28em;
+			}
+		}
+
+		.price_slider_amount {
+
+			.button {
+				font-size: $widgets-price-filter-price-slider-amount-button--font-size;
+			}
+		}
+	}
+
+	.widget_layered_nav ul li.chosen a:before,
+	.widget_layered_nav_filters ul li a:before,
+	.widget_rating_filter ul li.chosen a:before {
+		color: $blue;
+	}
+}
+
+/* Woo Active Filters
+-------------------------------------------------- */
+
+.woocommerce.widget_layered_nav_filters ul li {
+	margin: 0 20px 20px 0;
+}
+
+/* Woo Recent Reviews
+-------------------------------------------------- */
+
+.woocommerce.widget_recent_reviews .reviewer {
+	font-size: $widgets-recent-reviews-reviewer--font-size;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

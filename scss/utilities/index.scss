@@ -1,4 +1,5 @@
 // Base Colors
+$black: #000;
 $dark-grey: #333;
 $mid-grey: #777;
 $light-grey: #ddd;
@@ -10,10 +11,8 @@ $white: #fff;
 // Base Fonts
 $base-font: "Source Sans Pro", sans-serif;
 
-// Screen widths / Media queries
-$small-screen-width: 600px;
+// Screen widths, Media queries - WC widths in WC variables
 $standard-screen-width: 960px;
-$large-screen-width: 1140px;
 
 // Border styles
 $border-width: 1px;
@@ -63,8 +62,10 @@ $font-weight--bolder: 700;
 
 // Line heights
 $line-height--big: 20px;
+$line-height--large: 1.75;
 $line-height--normal: 1.625;
 $line-height--medium: 1.5;
+$line-height--medium-small: 1.4;
 $line-height--small: 1.2;
 $line-height--smaller: 1;
 

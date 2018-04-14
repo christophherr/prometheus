@@ -1,0 +1,53 @@
+/* WooCommerce Checkout
+---------------------------------------------------- */
+
+.woocommerce-cart,
+.woocommerce-checkout,
+#add_payment_method {
+
+	#payment {
+
+		ul {
+
+			&.payment_methods {
+
+				li {
+					list-style-type: none;
+				}
+			}
+		}
+
+		div {
+
+			&.form-row {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	table {
+
+		&.cart {
+
+			img {
+				vertical-align: middle;
+			}
+
+			td {
+
+				&.actions {
+
+					.coupon {
+
+						input {
+
+							&.input-text {
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
