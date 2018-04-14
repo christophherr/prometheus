@@ -6,6 +6,14 @@
 .woocommerce-message {
 	border-top-color: $blue;
 	background-color: $lightest-grey;
+
+	@media only screen and (max-width: $small-screen-width) {
+
+		button.wc-forward {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
 }
 
 .woocommerce-error:before,

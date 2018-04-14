@@ -24,6 +24,7 @@ const rename = require( 'gulp-rename' );
 const sass = require( 'gulp-sass' );
 const sassLint = require( 'gulp-sass-lint' );
 const sourcemaps = require( 'gulp-sourcemaps' );
+const sortCSSmq = require( 'sort-css-media-queries' );
 const styleLint = require( 'gulp-stylelint' );
 
 /**
@@ -162,12 +163,57 @@ gulp.task( 'sass:lint', [ 'css:minify' ], () => {
 		.pipe( sassLint.failOnError() );
 });
 
-gulp.task( 'wc:lint', [ 'wc:minify' ], () => {
+gulp.task( 'woocommerce', () => {
 	gulp
 		.src( 'lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
-		.pipe( sassLint() )
-		.pipe( sassLint.format() )
-		.pipe( sassLint.failOnError() );
+
+		// Error handling.
+		.pipe(
+			plumber({
+				errorHandler: handleErrors
+			})
+		)
+
+		// Wrap tasks in a sourcemap.
+		.pipe( sourcemaps.init() )
+
+		// Sass magic.
+		.pipe(
+			sass({
+				errLogToConsole: true,
+				outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
+			})
+		)
+
+		// Pixel fallbacks for rem units.
+		.pipe( pixrem({ rootValue: '10px' }) )
+
+		// PostCSS magic.
+		.pipe(
+			postcss([
+				autoprefixer({
+					browsers: [ 'last 2 versions' ]
+				}),
+				mqpacker({
+					sort: sortCSSmq.desktopFirst
+				})
+			])
+		)
+
+		// Additional WordPress style fixes.
+		.pipe(
+			styleLint({
+				fix: true
+			})
+		)
+
+		// Create the source map.
+		.pipe(
+			sourcemaps.write( './', {
+				includeContent: false
+			})
+		)
+		.pipe( gulp.dest( 'lib/plugins/woocommerce/' ) );
 });
 
 gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
@@ -212,57 +258,12 @@ gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
 		);
 });
 
-gulp.task( 'woocommerce', () => {
+gulp.task( 'wc:lint', [ 'wc:minify' ], () => {
 	gulp
-		.src( 'lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
-
-		// Error handling.
-		.pipe(
-			plumber({
-				errorHandler: handleErrors
-			})
-		)
-
-		// Wrap tasks in a sourcemap.
-		.pipe( sourcemaps.init() )
-
-		// Sass magic.
-		.pipe(
-			sass({
-				errLogToConsole: true,
-				outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
-			})
-		)
-
-		// Pixel fallbacks for rem units.
-		.pipe( pixrem({ rootValue: '10px' }) )
-
-		// PostCSS magic.
-		.pipe(
-			postcss([
-				autoprefixer({
-					browsers: [ 'last 2 versions' ]
-				}),
-				mqpacker({
-					sort: true
-				})
-			])
-		)
-
-		// Additional WordPress style fixes.
-		.pipe(
-			styleLint({
-				fix: true
-			})
-		)
-
-		// Create the source map.
-		.pipe(
-			sourcemaps.write( './', {
-				includeContent: false
-			})
-		)
-		.pipe( gulp.dest( 'lib/plugins/woocommerce/' ) );
+		.src( '/lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
+		.pipe( sassLint() )
+		.pipe( sassLint.format() )
+		.pipe( sassLint.failOnError() );
 });
 
 /*******************

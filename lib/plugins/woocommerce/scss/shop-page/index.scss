@@ -14,11 +14,14 @@
 		line-height: $line-height--smaller;
 	}
 
-	a.button.loading:after,
-	button.button.loading:after,
-	input.button.loading:after,
-	#respond input#submit.loading:after {
-		top: 1em;
+	a.button,
+	button.button,
+	input.button,
+	#respond input#submit {
+
+		&.loading:after {
+			top: 1em;
+		}
 	}
 
 	ul {
@@ -28,6 +31,19 @@
 			li {
 
 				&.product {
+
+					@media only screen and (max-width: $small-screen-width) {
+						width: 100%;
+						margin-right: 0;
+					}
+
+					.button {
+
+						@media only screen and (max-width: $small-screen-width) {
+							width: 100%;
+							margin-right: 0;
+						}
+					}
 
 					h3 {
 						color: $black;

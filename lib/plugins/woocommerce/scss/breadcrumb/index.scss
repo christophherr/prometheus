@@ -1,21 +1,21 @@
 /* WooCommerce Breadcrumb
 ------------------------------------------------------------- */
 
-.woocommerce .woocommerce-breadcrumb {
-	margin-bottom: 40px;
-	font-size: $breadcrumb-breadcrumb--font-size;
-}
+.woocommerce {
 
-.woocommerce .woocommerce-breadcrumb,
-.woocommerce .woocommerce-breadcrumb a {
-	color: $black;
-}
+	.woocommerce-breadcrumb {
+		margin-bottom: 40px;
+		color: $black;
+		font-size: $breadcrumb-breadcrumb--font-size;
 
-.woocommerce .woocommerce-breadcrumb a {
-	text-decoration: none;
-}
+		a {
+			color: $black;
+			text-decoration: none;
+		}
 
-.woocommerce .woocommerce-breadcrumb a:focus,
-.woocommerce .woocommerce-breadcrumb a:hover {
-	color: $blue;
+		a:focus,
+		a:hover {
+			color: $blue;
+		}
+	}
 }

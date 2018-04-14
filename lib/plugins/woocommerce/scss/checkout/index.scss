@@ -1,20 +1,53 @@
 /* WooCommerce Checkout
 ---------------------------------------------------- */
 
-.woocommerce-cart #payment ul.payment_methods li,
-.woocommerce-checkout #payment ul.payment_methods li,
-#add_payment_method #payment ul.payment_methods li {
-	list-style-type: none;
-}
+.woocommerce-cart,
+.woocommerce-checkout,
+#add_payment_method {
 
-.woocommerce-cart table.cart td.actions .coupon input.input-text,
-.woocommerce-checkout table.cart td.actions .coupon input.input-text,
-#add_payment_method table.cart td.actions .coupon input.input-text {
-	width: auto;
-}
+	#payment {
 
-.woocommerce-cart #payment div.form-row,
-.woocommerce-checkout #payment div.form-row,
-#add_payment_method #payment div.form-row {
-	margin-bottom: 0;
+		ul {
+
+			&.payment_methods {
+
+				li {
+					list-style-type: none;
+				}
+			}
+		}
+
+		div {
+
+			&.form-row {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	table {
+
+		&.cart {
+
+			img {
+				vertical-align: middle;
+			}
+
+			td {
+
+				&.actions {
+
+					.coupon {
+
+						input {
+
+							&.input-text {
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

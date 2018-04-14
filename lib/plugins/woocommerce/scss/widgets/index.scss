@@ -7,90 +7,153 @@
 .woocommerce-product-search {
 	overflow: hidden;
 	width: 100%;
-}
 
-.woocommerce-product-search input[type="submit"] {
-	clip: rect(0, 0, 0, 0);
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
+	input[type="submit"] {
+		clip: rect(0, 0, 0, 0);
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+	}
 }
 
 /* Woo Shopping Cart
 -------------------------------------------------- */
 
-.woocommerce .widget_shopping_cart ul.cart_list li,
-.woocommerce.widget_shopping_cart ul.cart_list li {
-	padding-top: 15px;
-}
+.woocommerce {
 
-.woocommerce .widget_shopping_cart .cart_list li a.remove,
-.woocommerce.widget_shopping_cart .cart_list li a.remove {
-	top: 15px;
-}
+	.widget_shopping_cart,
+	&.widget_shopping_cart {
 
-.woocommerce.widget_shopping_cart .total {
-	border-top: $border-width $border-style $border-color;
-}
+		ul {
 
-.woocommerce .widget_shopping_cart .buttons a,
-.woocommerce.widget_shopping_cart .buttons a {
-	margin-bottom: 5px;
-}
+			&.cart_list {
 
-.woocommerce .widget_shopping_cart .cart_list li.empty,
-.woocommerce.widget_shopping_cart .cart_list li.empty {
-	padding-left: 0;
+				li {
+					padding-top: 15px;
+
+					a.remove {
+						top: 15px;
+					}
+				}
+			}
+		}
+
+		.buttons {
+
+			a {
+				margin-bottom: 5px;
+			}
+		}
+
+		.cart_list {
+
+			li.empty {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&.widget_shopping_cart {
+
+		.total {
+			border-top: $border-width $border-style $border-color;
+		}
+	}
 }
 
 /* Woo Product Lists
 -------------------------------------------------- */
 
-.woocommerce ul.cart_list li img,
-.woocommerce ul.product_list_widget li img {
-	width: 60px;
+.woocommerce {
+
+	ul {
+
+		&.cart_list li img,
+		&.product_list_widget li img {
+			width: 60px;
+		}
+	}
 }
 
-.sidebar ul.product_list_widget li {
-	margin-bottom: 15px;
-	padding: 15px 0 0;
-	line-height: $line-height--medium-small;
-}
+.sidebar {
 
-.sidebar ul.product_list_widget li:last-child {
-	margin-bottom: 0;
-	padding-bottom: 15px;
+	ul {
+
+		&.product_list_widget {
+
+			li {
+				margin-bottom: 15px;
+				padding: 15px 0 0;
+				line-height: $line-height--medium-small;
+			}
+
+			li:last-child {
+				margin-bottom: 0;
+				padding-bottom: 15px;
+			}
+		}
+	}
 }
 
 /* Woo Filter
 -------------------------------------------------- */
 
-.woocommerce.widget_price_filter .price_slider_wrapper .ui-widget-content {
-	background-color: $lighter-grey;
-}
+.woocommerce {
 
-.woocommerce.widget_price_filter .ui-slider .ui-slider-handle,
-.woocommerce.widget_price_filter .ui-slider .ui-slider-range {
-	background-color: $blue;
-}
+	&.widget_price_filter {
 
-.woocommerce .widget_layered_nav ul li.chosen a:before,
-.woocommerce .widget_layered_nav_filters ul li a:before,
-.woocommerce .widget_rating_filter ul li.chosen a:before {
-	color: $blue;
-}
+		.price_slider_wrapper {
 
-.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
-.woocommerce.widget_price_filter .ui-slider .ui-slider-handle {
-	top: -0.28em;
-}
+			.ui-widget-content {
+				background-color: $lighter-grey;
+			}
+		}
 
-.woocommerce .widget_price_filter .price_slider_amount .button,
-.woocommerce.widget_price_filter .price_slider_amount .button {
-	font-size: $widgets-price-filter-price-slider-amount-button--font-size;
+		.price-slider-amount {
+
+			.button {
+				font-size: $widgets-price-filter-price-slider-amount-button--font-size;
+			}
+		}
+
+		.ui-slider {
+
+			.ui-slider-handle {
+				top: -0.28em;
+				background-color: $blue;
+			}
+
+			.ui-slider-range {
+				background-color: $blue;
+			}
+		}
+	}
+
+	.widget_price_filter {
+
+		.ui-slider {
+
+			.ui-slider-handle {
+				top: -0.28em;
+			}
+		}
+
+		.price_slider_amount {
+
+			.button {
+				font-size: $widgets-price-filter-price-slider-amount-button--font-size;
+			}
+		}
+	}
+
+	.widget_layered_nav ul li.chosen a:before,
+	.widget_layered_nav_filters ul li a:before,
+	.widget_rating_filter ul li.chosen a:before {
+		color: $blue;
+	}
 }
 
 /* Woo Active Filters
