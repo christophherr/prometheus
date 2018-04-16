@@ -39,7 +39,7 @@
 	> .menu-bold > a {
 
 		@media only screen and (min-width: $standard-screen-width) {
-			font-weight: $font-weight--bolder;
+			font-weight: $font-weight--bold;
 		}
 	}
 
@@ -52,7 +52,7 @@
 			border-radius: 3px;
 			color: $menu-highlight__link--font-color;
 			background-color: $menu-highlight__link--background-color;
-			font-weight: $font-weight--bold;
+			font-weight: $font-weight--semibold;
 		}
 	}
 
@@ -71,7 +71,7 @@
 		outline-offset: -1px;
 		color: $genesis-nav-menu--font-color;
 		font-size: $genesis-nav-menu--font-size;
-		font-weight: $font-weight--normal;
+		font-weight: $font-weight--regular;
 		text-decoration: none;
 	}
 
