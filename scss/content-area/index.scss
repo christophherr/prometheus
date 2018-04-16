@@ -40,7 +40,7 @@
 	.caption {
 		margin-top: -20px;
 		font-size: $entry-content__caption--font-size;
-		font-weight: $font-weight--bold;
+		font-weight: $font-weight--semibold;
 		text-align: center;
 	}
 }
@@ -105,7 +105,7 @@
 		color: $archive-pagination--font-color;
 		background-color: $archive-pagination--background-color;
 		font-size: $archive-pagination--font-size;
-		font-weight: $font-weight--bold;
+		font-weight: $font-weight--semibold;
 		text-decoration: none;
 		cursor: pointer;
 	}

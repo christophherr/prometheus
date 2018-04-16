@@ -62,7 +62,7 @@
 	.entry-title {
 		margin-bottom: 10px;
 		font-size: $archive-author-box__entry-title--font-size;
-		font-weight: $font-weight--bold;
+		font-weight: $font-weight--semibold;
 	}
 }
 
@@ -114,7 +114,7 @@
 .author-box-title {
 	margin-bottom: 10px;
 	font-size: $archive-author-box__entry-title--font-size;
-	font-weight: $font-weight--bold;
+	font-weight: $font-weight--semibold;
 }
 
 .entry-title {
@@ -140,7 +140,7 @@
 .widget-title {
 	margin-bottom: 20px;
 	font-size: $widget-title--font-size;
-	font-weight: $font-weight--bold;
+	font-weight: $font-weight--semibold;
 }
 
 /* WordPress
@@ -202,7 +202,7 @@ img.alignright,
 .wp-caption-text {
 	margin: 0;
 	font-size: $entry-content__caption--font-size;
-	font-weight: $font-weight--bold;
+	font-weight: $font-weight--semibold;
 	text-align: center;
 }
 
