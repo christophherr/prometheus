@@ -1,11 +1,16 @@
 'use strict';
 
 module.exports = {
-	extends: [ 'stylelint-config-wordpress', 'prettier-stylelint\\index.js' ],
+	extends: [ 'stylelint-config-wordpress', 'prettier-stylelint/config.js' ],
 	plugins: 'stylelint-order',
+	ignoreFiles: [
+		'style.min.css',
+		'lib/plugins/woocommerce/prometheus2-woocommerce.min.css',
+		'vendor/squizlabs/php_codesniffer/src/Standards/*/Tests/*/*.css'
+	],
 	rules: {
 		'font-family-no-missing-generic-family-keyword': null,
-		'max-line-length': 150,
+		'max-line-length': 255,
 		'no-duplicate-selectors': null,
 		'no-descending-specificity': null,
 		'selector-list-comma-newline-after': [

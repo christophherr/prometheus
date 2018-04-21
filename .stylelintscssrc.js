@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	extends: [ 'stylelint-config-wordpress/scss', 'prettier-stylelint\\index.js' ],
+	extends: [ 'stylelint-config-wordpress/scss', 'prettier-stylelint/index.js' ],
 	plugins: 'stylelint-order',
 	rules: {
 		'font-family-no-missing-generic-family-keyword': null,
