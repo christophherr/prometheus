@@ -8,6 +8,7 @@
 
 // Set up dependencies.
 const autoprefixer = require( 'autoprefixer' );
+const browsersync = require( 'browser-sync' );
 const del = require( 'del' );
 const mqpacker = require( 'css-mqpacker' );
 const fs = require( 'fs' );
@@ -55,7 +56,7 @@ function handleErrors() {
  */
 gulp.task( 'postcss', () => {
 	gulp
-		.src( 'scss/style.scss' )
+		.src( './scss/style.scss' )
 
 		// Error handling.
 		.pipe(
@@ -103,7 +104,12 @@ gulp.task( 'postcss', () => {
 				includeContent: false
 			})
 		)
-		.pipe( gulp.dest( './' ) );
+
+		// Write the CSS file.
+		.pipe( gulp.dest( './' ) )
+
+		// Inject CSS into Browser.
+		.pipe( browsersync.stream() );
 });
 
 /**
@@ -111,7 +117,7 @@ gulp.task( 'postcss', () => {
  */
 gulp.task( 'css:minify', [ 'postcss' ], () => {
 	gulp
-		.src( 'style.css' )
+		.src( './style.css' )
 
 		// Error handling.
 		.pipe(
@@ -141,9 +147,14 @@ gulp.task( 'css:minify', [ 'postcss' ], () => {
 			})
 		)
 
+		// Rename the file.
 		.pipe( rename( 'style.min.css' ) )
 
+		// Write the file.
 		.pipe( gulp.dest( './' ) )
+
+		// Inject the CSS into the browser.
+		.pipe( browsersync.stream() )
 
 		.pipe(
 			notify({
@@ -157,15 +168,23 @@ gulp.task( 'css:minify', [ 'postcss' ], () => {
  */
 gulp.task( 'sass:lint', [ 'css:minify' ], () => {
 	gulp
-		.src([ '/scss/style.scss', '!/scss/resets/index.scss' ])
-		.pipe( sassLint() )
+		.src([ './scss/style.scss', '!./scss/resets/index.scss' ])
+		.pipe(
+			sassLint({
+				rules: {
+					quotes: {
+						style: 'double'
+					}
+				}
+			})
+		)
 		.pipe( sassLint.format() )
 		.pipe( sassLint.failOnError() );
 });
 
 gulp.task( 'woocommerce', () => {
 	gulp
-		.src( 'lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
+		.src( './lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
 
 		// Error handling.
 		.pipe(
@@ -213,12 +232,13 @@ gulp.task( 'woocommerce', () => {
 				includeContent: false
 			})
 		)
-		.pipe( gulp.dest( 'lib/plugins/woocommerce/' ) );
+
+		.pipe( gulp.dest( './lib/plugins/woocommerce/' ) );
 });
 
 gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
 	gulp
-		.src( 'lib/plugins/woocommerce/prometheus2-woocommerce.css' )
+		.src( './lib/plugins/woocommerce/prometheus2-woocommerce.css' )
 
 		// Error handling.
 		.pipe(
@@ -249,7 +269,8 @@ gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
 		)
 
 		.pipe( rename( 'prometheus2-woocommerce.min.css' ) )
-		.pipe( gulp.dest( 'lib/plugins/woocommerce/' ) )
+
+		.pipe( gulp.dest( './lib/plugins/woocommerce/' ) )
 
 		.pipe(
 			notify({
@@ -260,8 +281,16 @@ gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
 
 gulp.task( 'wc:lint', [ 'wc:minify' ], () => {
 	gulp
-		.src( '/lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
-		.pipe( sassLint() )
+		.src( './lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
+		.pipe(
+			sassLint({
+				rules: {
+					quotes: {
+						style: 'double'
+					}
+				}
+			})
+		)
 		.pipe( sassLint.format() )
 		.pipe( sassLint.failOnError() );
 });
@@ -275,11 +304,7 @@ gulp.task( 'wc:lint', [ 'wc:minify' ], () => {
  */
 gulp.task( 'js', () => {
 	gulp
-		.src([
-			'js/prometheus2.js',
-			'js/prometheus2-nojs.js',
-			'js/responsive-menus.js'
-		])
+		.src([ '!./js/*.min.js', './js/*.js' ])
 
 		// Error handling.
 		.pipe(
@@ -309,7 +334,39 @@ gulp.task( 'js', () => {
  *******************/
 
 gulp.task( 'watch', () => {
-	gulp.watch( 'scss/**/*.scss', [ 'styles' ]);
+
+	// HTTPS (optional).
+	browsersync({
+		proxy: 'https://genesis.test',
+		port: 8000,
+		notify: false,
+		open: 'local',
+		browser: 'chrome'
+
+		// https: {
+		// 	key: 'path/to/your/key/file/genesis.key',
+		// 	cert: 'path/to/your/cert/file/genesis.test.crt'
+		// }
+	});
+
+	// Watch Scss files. Changes are injected into the Browser in the task.
+	gulp.watch( './scss/**/*.scss', [ 'styles' ]);
+
+	// Watch JavaScript files and reload the browser if there is a change.
+	gulp
+		.watch([ './js/*.js', '!./js/*.min.js' ], [ 'scripts' ])
+		.on( 'change', browsersync.reload );
+
+	// Watch PHP files and reload the browser if there is a change. Add directories if needed.
+	gulp
+		.watch([
+			'./*.php',
+			'./config/*.php',
+			'./lib/*.php',
+			'./lib/**/*.php',
+			'./lib/**/**/*.php'
+		])
+		.on( 'change', browsersync.reload );
 });
 
 /**
@@ -319,4 +376,6 @@ gulp.task( 'scripts', [ 'js' ]);
 gulp.task( 'styles', [ 'sass:lint' ]);
 gulp.task( 'wc-styles', [ 'wc:lint' ]);
 
-gulp.task( 'default', [ 'styles', 'scripts' ]);
+gulp.task( 'default', [ 'watch' ], () => {
+	gulp.start( 'styles', 'scripts' );
+});
