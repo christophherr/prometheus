@@ -337,7 +337,7 @@ gulp.task( 'watch', () => {
 
 	// HTTPS (optional).
 	browsersync({
-		proxy: 'https://genesis.test',
+		proxy: 'http://genesis.test',
 		port: 8000,
 		notify: false,
 		open: 'local',

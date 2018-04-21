@@ -3,15 +3,29 @@
   "description":
     "Modular, sassified child theme for the Genesis Framework based on the Genesis Sample Theme 2.6",
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.2",
-    "wp-coding-standards/wpcs": "^0.14.1",
-    "wimg/php-compatibility": "^8.1",
+    "brain/monkey": "^2.2",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-    "php": "^5.6|^7"
+    "php": "^5.6|^7",
+    "phpunit/phpunit": "^6.5.8",
+    "roave/security-advisories": "dev-master",
+    "sirbrillig/phpcs-variable-analysis": "^2.0",
+    "squizlabs/php_codesniffer": "^3.2",
+    "wimg/php-compatibility": "^8.1",
+    "wp-coding-standards/wpcs": "^0.14.1"
   },
   "license": "GPL-2.0-or-later",
-  "require": {},
   "scripts": {
-    "phpcs": "phpcs"
+		"phpcs-src": "phpcs --runtime-set testVersion 5.6",
+    "phpcs-tests": "phpcs --runtime-set testVersion 7.0 tests/phpunit/",
+    "run-phpcs": [
+      "@phpcs-src",
+      "@phpcs-tests"
+    ],
+    "test-unit": "phpunit --testsuite unit --color=always",
+    "test-integration": "phpunit --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
+    "run-tests": [
+      "@test-unit",
+      "@test-integration"
+    ]
   }
 }

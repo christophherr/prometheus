@@ -54,4 +54,6 @@
 			<property name="is_theme" value="true"/>
 		</properties>
 	</rule>
+	<!-- Plugin for PHP_CodeSniffer static analysis tool that adds analysis of problematic variable use. -->
+	<!-- <rule ref="VariableAnalysis"/> -->
 </ruleset>
