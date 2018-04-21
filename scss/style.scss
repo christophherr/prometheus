@@ -16,7 +16,7 @@
 	Text Domain: prometheus-2
 */
 
-/* Table of Contents
+/*! Table of Contents
 - HTML5 Reset
 	- Baseline Normalize
 	- Box Sizing
@@ -63,16 +63,16 @@
 - Print Styles
 */
 
-@import "utilities/index.scss";
-@import "resets/index.scss";
-@import "defaults/index.scss";
-@import "structure/index.scss";
-@import "common-classes/index.scss";
-@import "widgets/index.scss";
-@import "plugins/index.scss";
-@import "header/index.scss";
-@import "menu/index.scss";
-@import "content-area/index.scss";
-@import "sidebar/index.scss";
-@import "footer-area/index.scss";
-//@import "print/index.scss";
+@import "utilities/index";
+@import "resets/index";
+@import "defaults/index";
+@import "structure/index";
+@import "common-classes/index";
+@import "widgets/index";
+@import "plugins/index";
+@import "header/index";
+@import "menu/index";
+@import "content-area/index";
+@import "sidebar/index";
+@import "footer-area/index";
+//@import 'print/index';
