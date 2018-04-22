@@ -7,8 +7,10 @@
  */
 
 // Set up dependencies.
+const arg = require( './js/tooling/gulp-fetch-cl-arguments' ).arg;
 const autoprefixer = require( 'autoprefixer' );
 const browserSync = require( 'browser-sync' );
+const bump = require( 'gulp-bump' );
 const del = require( 'del' );
 const mqpacker = require( 'css-mqpacker' );
 const fs = require( 'fs' );
@@ -336,9 +338,9 @@ gulp.task( 'js', () => {
 		);
 });
 
-/********************
+/**********************
  * All Tasks Listeners
- *******************/
+ *********************/
 
 const siteName = 'genesis.test';
 
@@ -377,9 +379,54 @@ gulp.task( 'watch', () => {
 		.on( 'change', browserSync.reload );
 });
 
-/**
+/********************************************
+ * Bump theme version.
+ *
+ * Usage:
+ *  gulp bump --major -> from 1.0.0 to 2.0.0
+ *  gulp bump --minor -> from 1.0.0 to 1.1.0
+ *  gulp bump --patch -> from 1.0.0 to 1.0.1
+ *
+ * The theme version in PHP is updated
+ * automatically from the stylesheet.
+ *******************************************/
+gulp.task( 'bump', () => {
+	let versionbump;
+
+	if ( arg.major ) {
+		versionBump = 'major';
+	}
+
+	if ( arg.minor ) {
+		versionBump = 'minor';
+	}
+
+	if ( arg.patch ) {
+		versionBump = 'patch';
+	}
+
+	gulp
+		.src([ './package.json', './composer.json', './style.css' ])
+		.pipe(
+			bump({
+				type: versionBump
+			})
+		)
+		.pipe( gulp.dest( './' ) );
+
+	gulp
+		.src( './scss/style.scss' )
+		.pipe(
+			bump({
+				type: versionBump
+			})
+		)
+		.pipe( gulp.dest( './scss/' ) );
+});
+
+/********************
  * Individual tasks.
- */
+ *******************/
 gulp.task( 'scripts', [ 'js' ]);
 gulp.task( 'styles', [ 'sass:lint' ]);
 gulp.task( 'wc-styles', [ 'wc:lint' ]);
