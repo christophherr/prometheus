@@ -11,13 +11,15 @@ const arg = require( './js/tooling/gulp-fetch-cl-arguments' ).arg;
 const autoprefixer = require( 'autoprefixer' );
 const browserSync = require( 'browser-sync' );
 const bump = require( 'gulp-bump' );
-const del = require( 'del' );
-const mqpacker = require( 'css-mqpacker' );
-const fs = require( 'fs' );
-const gulp = require( 'gulp' );
+const cache = require( 'gulp-cached' );
 const cleancss = require( 'gulp-clean-css' );
 const cssnano = require( 'gulp-cssnano' );
+const del = require( 'del' );
+const fs = require( 'fs' );
+const gulp = require( 'gulp' );
+const imagemin = require( 'gulp-imagemin' );
 const minify = require( 'gulp-minify' );
+const mqpacker = require( 'css-mqpacker' );
 const notify = require( 'gulp-notify' );
 const pixrem = require( 'gulp-pixrem' );
 const plumber = require( 'gulp-plumber' );
@@ -26,8 +28,8 @@ const prettierEslint = require( 'gulp-prettier-eslint' );
 const rename = require( 'gulp-rename' );
 const sass = require( 'gulp-sass' );
 const sassLint = require( 'gulp-sass-lint' );
-const sourcemaps = require( 'gulp-sourcemaps' );
 const sortCSSmq = require( 'sort-css-media-queries' );
+const sourcemaps = require( 'gulp-sourcemaps' );
 const styleLint = require( 'gulp-stylelint' );
 
 /**
@@ -335,48 +337,61 @@ gulp.task( 'js', () => {
 			browserSync.reload({
 				stream: true
 			})
+		)
+
+		.pipe(
+			notify({
+				message: 'Scripts are minified.'
+			})
 		);
 });
 
-/**********************
- * All Tasks Listeners
- *********************/
+/************************
+ * Optimize theme images
+ ***********************/
+gulp.task( 'images', () => {
+	return (
+		gulp
+			.src( './images/*' )
 
-const siteName = 'genesis.test';
+			// Error handling.
+			.pipe(
+				plumber({
+					errorHandler: handleErrors
+				})
+			)
 
-gulp.task( 'watch', () => {
+			// Cache files to avoid processing files that haven't changed.
+			.pipe( cache( 'images' ) )
 
-	// HTTPS (optional).
-	browserSync({
-		proxy: `http://${siteName}`,
-		host: siteName,
-		port: 8000,
-		notify: false,
-		open: 'external',
-		browser: 'chrome'
+			// Optimize images.
+			.pipe(
+				imagemin([
+					imagemin.gifsicle({ interlaced: true }),
+					imagemin.jpegtran({ progressive: true }),
+					imagemin.optipng({ optimizationLevel: 5 }),
+					imagemin.svgo({
+						plugins: [ { removeViewBox: true }, { cleanupIDs: false } ]
+					})
+				])
+			)
 
-		// https: {
-		// 	key: 'path/to/your/key/file/genesis.key',
-		// 	cert: `path/to/your/cert/file/${siteName}.crt`
-		// }
-	});
+			// Output the optimized images to this directory.
+			.pipe( gulp.dest( './images/' ) )
 
-	// Watch Scss files. Changes are injected into the browser from within the task.
-	gulp.watch( './scss/**/*.scss', [ 'styles' ]);
+			// Inject changes via browsersync.
+			.pipe(
+				browserSync.reload({
+					stream: true
+				})
+			)
 
-	// Watch JavaScript files. Changes are injected into the browser from within the task.
-	gulp.watch([ './js/*.js', '!./js/*.min.js' ], [ 'scripts' ]);
-
-	// Watch PHP files and reload the browser if there is a change. Add directories if needed.
-	gulp
-		.watch([
-			'./*.php',
-			'./config/*.php',
-			'./lib/*.php',
-			'./lib/**/*.php',
-			'./lib/**/**/*.php'
-		])
-		.on( 'change', browserSync.reload );
+			.pipe(
+				notify({
+					message: 'Images are optimized.'
+				})
+			)
+	);
 });
 
 /********************************************
@@ -424,6 +439,50 @@ gulp.task( 'bump', () => {
 		.pipe( gulp.dest( './scss/' ) );
 });
 
+/**********************
+ * All Tasks Listeners
+ *********************/
+
+const siteName = 'genesis.test';
+
+gulp.task( 'watch', () => {
+
+	// HTTPS (optional).
+	browserSync({
+		proxy: `http://${siteName}`,
+		host: siteName,
+		port: 8000,
+		notify: false,
+		open: 'external',
+		browser: 'chrome'
+
+		// https: {
+		// 	key: 'path/to/your/key/file/genesis.key',
+		// 	cert: `path/to/your/cert/file/${siteName}.crt`
+		// }
+	});
+
+	// Watch Scss files. Changes are injected into the browser from within the task.
+	gulp.watch( './scss/**/*.scss', [ 'styles' ]);
+
+	// Watch JavaScript files. Changes are injected into the browser from within the task.
+	gulp.watch([ './js/*.js', '!./js/*.min.js' ], [ 'scripts' ]);
+
+	// Watch Image files. Changes are injected into the browser from within the task.
+	gulp.watch( './images/*', [ 'images' ]);
+
+	// Watch PHP files and reload the browser if there is a change. Add directories if needed.
+	gulp
+		.watch([
+			'./*.php',
+			'./config/*.php',
+			'./lib/*.php',
+			'./lib/**/*.php',
+			'./lib/**/**/*.php'
+		])
+		.on( 'change', browserSync.reload );
+});
+
 /********************
  * Individual tasks.
  *******************/
@@ -432,5 +491,5 @@ gulp.task( 'styles', [ 'sass:lint' ]);
 gulp.task( 'wc-styles', [ 'wc:lint' ]);
 
 gulp.task( 'default', [ 'watch' ], () => {
-	gulp.start( 'styles', 'scripts' );
+	gulp.start( 'styles', 'scripts', 'images' );
 });
