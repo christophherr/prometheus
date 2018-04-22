@@ -76,4 +76,4 @@ Thank you to everyone contributing to this project.
 
 ### Hall of Fame
 
-[@polishedwp](https://github.com/polishedwp), [@GaryJones](https://github.com/GaryJones), [@themustardseed](https://github.com/themustardseed), [@mjsdiaz](https://github.com/mjsdiaz), [@seothemes](https://github.com/seothemes), [@srikat](https://github.com/srikat)
+[@polishedwp](https://github.com/polishedwp), [@GaryJones](https://github.com/GaryJones), [@themustardseed](https://github.com/themustardseed), [@mjsdiaz](https://github.com/mjsdiaz), [@seothemes](https://github.com/seothemes), [@srikat](https://github.com/srikat), [@craigsimps](https://github.com/craigsimps)

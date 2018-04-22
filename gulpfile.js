@@ -8,7 +8,7 @@
 
 // Set up dependencies.
 const autoprefixer = require( 'autoprefixer' );
-const browsersync = require( 'browser-sync' );
+const browserSync = require( 'browser-sync' );
 const del = require( 'del' );
 const mqpacker = require( 'css-mqpacker' );
 const fs = require( 'fs' );
@@ -109,7 +109,7 @@ gulp.task( 'postcss', () => {
 		.pipe( gulp.dest( './' ) )
 
 		// Inject CSS into Browser.
-		.pipe( browsersync.stream() );
+		.pipe( browserSync.stream() );
 });
 
 /**
@@ -154,7 +154,7 @@ gulp.task( 'css:minify', [ 'postcss' ], () => {
 		.pipe( gulp.dest( './' ) )
 
 		// Inject the CSS into the browser.
-		.pipe( browsersync.stream() )
+		.pipe( browserSync.stream() )
 
 		.pipe(
 			notify({
@@ -326,36 +326,44 @@ gulp.task( 'js', () => {
 				noSource: true
 			})
 		)
-		.pipe( gulp.dest( 'js' ) );
+		.pipe( gulp.dest( 'js' ) )
+
+		// Inject changes via browserSync.
+		.pipe(
+			browserSync.reload({
+				stream: true
+			})
+		);
 });
 
 /********************
  * All Tasks Listeners
  *******************/
 
+const siteName = 'genesis.test';
+
 gulp.task( 'watch', () => {
 
 	// HTTPS (optional).
-	browsersync({
-		proxy: 'https://genesis.test',
+	browserSync({
+		proxy: `http://${siteName}`,
+		host: siteName,
 		port: 8000,
 		notify: false,
-		open: 'local',
+		open: 'external',
 		browser: 'chrome'
 
 		// https: {
 		// 	key: 'path/to/your/key/file/genesis.key',
-		// 	cert: 'path/to/your/cert/file/genesis.test.crt'
+		// 	cert: `path/to/your/cert/file/${siteName}.crt`
 		// }
 	});
 
-	// Watch Scss files. Changes are injected into the Browser in the task.
+	// Watch Scss files. Changes are injected into the browser from within the task.
 	gulp.watch( './scss/**/*.scss', [ 'styles' ]);
 
-	// Watch JavaScript files and reload the browser if there is a change.
-	gulp
-		.watch([ './js/*.js', '!./js/*.min.js' ], [ 'scripts' ])
-		.on( 'change', browsersync.reload );
+	// Watch JavaScript files. Changes are injected into the browser from within the task.
+	gulp.watch([ './js/*.js', '!./js/*.min.js' ], [ 'scripts' ]);
 
 	// Watch PHP files and reload the browser if there is a change. Add directories if needed.
 	gulp
@@ -366,7 +374,7 @@ gulp.task( 'watch', () => {
 			'./lib/**/*.php',
 			'./lib/**/**/*.php'
 		])
-		.on( 'change', browsersync.reload );
+		.on( 'change', browserSync.reload );
 });
 
 /**
