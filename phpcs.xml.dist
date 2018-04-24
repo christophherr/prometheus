@@ -10,6 +10,7 @@
 	<file>.</file>
 	<!-- Prevent sniffs of some directories. -->
 	<exclude-pattern>/vendor/</exclude-pattern>
+	<exclude-pattern>/node_modules/</exclude-pattern>
 	<!-- Pass flags to PHPCS:
 		 p: Show progress of the run.
 		 s: Show sniff codes in all reports.

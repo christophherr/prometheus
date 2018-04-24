@@ -2,7 +2,7 @@
 /**
  * Changes to the menus.
  *
- * @package     ChristophHerr\Prometheus2\Functions
+ * @package     ChristophHerr\Prometheus2\Structure
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com

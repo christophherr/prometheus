@@ -1004,10 +1004,6 @@ th:first-child {
 
 /* WordPress
 --------------------------------------------- */
-.aligncenter {
-	text-align: center;
-}
-
 a.aligncenter img {
 	display: block;
 	margin: 0 auto;
@@ -1223,9 +1219,14 @@ img.alignright,
 }
 
 .wp-custom-logo .title-area {
+	width: 100%;
 	max-width: 350px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+.wp-custom-logo .title-area img {
+	width: auto;
 }
 
 .site-title {
@@ -1489,6 +1490,25 @@ img.alignright,
 --------------------------------------------- */
 .entry {
 	margin-bottom: 40px;
+}
+
+.entry-content p.has-background {
+	padding: 25px 30px;
+}
+
+.entry-content p.has-background.box-shadow {
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.entry-content p.has-background.light-text a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.entry-content p.has-background.light-text a:focus,
+.entry-content p.has-background.light-text a:hover {
+	text-decoration: none;
 }
 
 .entry-content ol,
@@ -1840,8 +1860,8 @@ img.alignright,
 		font-weight: 600;
 	}
 
-	.genesis-nav-menu > .menu-highlight > a:hover,
-	.genesis-nav-menu > .menu-highlight > a:focus {
+	.genesis-nav-menu > .menu-highlight > a:focus,
+	.genesis-nav-menu > .menu-highlight > a:hover {
 		background-color: #0073e5;
 	}
 
