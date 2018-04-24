@@ -2,7 +2,7 @@
 /**
  * Theme error functions
  *
- * @package     ChristophHerr\Prometheus2
+ * @package     ChristophHerr\Prometheus2\Utilities
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com

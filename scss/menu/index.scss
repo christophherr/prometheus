@@ -56,8 +56,8 @@
 		}
 	}
 
-	> .menu-highlight > a:hover,
-	> .menu-highlight > a:focus {
+	> .menu-highlight > a:focus,
+	> .menu-highlight > a:hover {
 
 		@media only screen and (min-width: $standard-screen-width) {
 			background-color: $menu-highlight__link--background-color-hover;
