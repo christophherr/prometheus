@@ -28,7 +28,6 @@ const prettierEslint = require( 'gulp-prettier-eslint' );
 const rename = require( 'gulp-rename' );
 const sass = require( 'gulp-sass' );
 const sassLint = require( 'gulp-sass-lint' );
-const sortCSSmq = require( 'sort-css-media-queries' );
 const sourcemaps = require( 'gulp-sourcemaps' );
 const styleLint = require( 'gulp-stylelint' );
 
@@ -218,7 +217,7 @@ gulp.task( 'woocommerce', () => {
 					browsers: [ 'last 2 versions' ]
 				}),
 				mqpacker({
-					sort: sortCSSmq.desktopFirst
+					sort: true
 				})
 			])
 		)

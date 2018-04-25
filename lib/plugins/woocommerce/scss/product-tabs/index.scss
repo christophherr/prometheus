@@ -12,9 +12,10 @@
 				ul {
 
 					&.tabs {
+						padding: 0;
 
-						@media only screen and (max-width: $standard-screen-width) {
-							padding: 0;
+						@media only screen and (min-width: $large-screen-width) {
+							padding: 0 0 0 1em;
 						}
 
 						&:before {
@@ -22,19 +23,22 @@
 						}
 
 						li {
+							display: block;
+							margin: 0;
 							padding: 0;
-							border-color: $border-color;
+							border: $border-width $border-style $border-color;
+							border-bottom: 0;
 							border-radius: 0;
-							background-color: $lightest-grey;
+							background-color: $white;
 
-							@media only screen and (max-width: $standard-screen-width) {
-								display: block;
-								margin: 0;
-								border-bottom: 0;
-								background-color: $white;
+							@media only screen and (min-width: $large-screen-width) {
+								display: inline-block;
+								margin: 0 -5px;
+								background-color: $lightest-grey;
 							}
 
 							a {
+								display: block;
 								padding: 0.5em 1em;
 								color: $black;
 							}
@@ -46,10 +50,7 @@
 						}
 
 						li:last-child {
-
-							@media only screen and (max-width: $standard-screen-width) {
-								border-bottom: $border-width $border-style $border-color;
-							}
+							border-bottom: $border-width $border-style $border-color;
 						}
 
 						li:after,
@@ -58,17 +59,21 @@
 						}
 
 						li.active {
+							border-bottom-color: $border-color;
 
-							@media only screen and (max-width: $standard-screen-width) {
-								border-bottom-color: $border-color;
+							@media only screen and (min-width: $large-screen-width) {
+								border-bottom: $border-width $border-style $white;
+								background-color: $white;
 							}
 
 							a:after {
+								display: block;
+								float: right;
+								font-family: dashicons;
+								content: "\f147";
 
-								@media only screen and (max-width: $standard-screen-width) {
-									float: right;
-									font-family: dashicons;
-									content: "\f147";
+								@media only screen and (min-width: $large-screen-width) {
+									display: none;
 								}
 							}
 						}
@@ -79,10 +84,7 @@
 	}
 }
 
-/* Two Sidebar Layouts */
-.content-sidebar-sidebar,
-.sidebar-content-sidebar,
-.sidebar-sidebar-content {
+.full-width-content {
 
 	&.woocommerce {
 
@@ -95,39 +97,35 @@
 					ul {
 
 						&.tabs {
-							padding: 0;
+
+							@media only screen and (min-width: $standard-screen-width) {
+								padding: 0 0 0 1em;
+							}
 
 							li {
-								padding: 0;
-								border-radius: 0;
-								background-color: $lightest-grey;
 
-								@media only screen and (max-width: $standard-screen-width) {
-									display: block;
-									margin: 0;
-									border-bottom: 0;
+								@media only screen and (min-width: $standard-screen-width) {
+									display: inline-block;
+									margin: 0 -5px;
+									background-color: $lightest-grey;
+								}
+							}
+
+							li.active {
+
+								@media only screen and (min-width: $standard-screen-width) {
+									border-bottom: $border-width $border-style $white;
 									background-color: $white;
 								}
 
-								a {
-									display: block;
-								}
+								a:after {
 
-								&.active {
-									border-bottom-color: $border-color;
-
-									a:after {
-										float: right;
-										font-family: dashicons;
-										content: "\f147";
+									@media only screen and (min-width: $standard-screen-width) {
+										display: none;
 									}
 								}
 							}
 						}
-					}
-
-					li:last-child {
-						border-bottom: $border-width $border-style $border-color;
 					}
 				}
 			}

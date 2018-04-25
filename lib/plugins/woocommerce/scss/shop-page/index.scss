@@ -32,16 +32,13 @@
 
 				&.product {
 
-					@media only screen and (max-width: $small-screen-width) {
+					.button {
 						width: 100%;
 						margin-right: 0;
-					}
 
-					.button {
-
-						@media only screen and (max-width: $small-screen-width) {
-							width: 100%;
-							margin-right: 0;
+						@media only screen and (min-width: $small-screen-width) {
+							width: auto;
+							margin-right: auto;
 						}
 					}
 

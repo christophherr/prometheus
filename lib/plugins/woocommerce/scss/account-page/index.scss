@@ -48,31 +48,22 @@
 	}
 
 	.woocommerce-MyAccount-navigation {
-		width: 20%;
-		margin-right: 5%;
+		width: 100%;
+		margin-right: 0;
 
-		@media only screen and (max-width: $large-screen-width) {
-			width: 100%;
-			margin-right: 0;
+		ul {
+			text-align: center;
 
-			ul {
-				text-align: center;
-
-				li {
-					display: inline-block;
-					margin: 0 10px;
-				}
+			li {
+				display: inline-block;
+				margin: 0 10px;
 			}
 		}
 	}
 
 	.woocommerce-MyAccount-content {
-		width: 75%;
-
-		@media only screen and (max-width: $large-screen-width) {
-			width: 100%;
-			margin-right: 0;
-		}
+		width: 100%;
+		margin-right: 0;
 	}
 }
 

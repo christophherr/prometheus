@@ -32,43 +32,24 @@
 		}
 	}
 
-	@media only screen and (max-width: $small-screen-width) {
+	@media only screen and (min-width: $small-screen-width) {
 
 		input.button,
 		input.button[type="submit"] {
-
-			.woocommerce-cart {
-
-				table {
-
-					&.cart {
-
-						td {
-
-							&.actions {
-
-								.coupon {
-
-									.input-text {
-										width: 100% !important;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+			width: auto !important;
 		}
 	}
 
 	#reviews #comment {
 		height: 150px;
 
-		@media only screen and (max-width: $small-screen-width) {
+		.star-rating {
+			float: none;
+			width: 100%;
 
-			.star-rating {
-				float: none;
-				width: 100%;
+			@media only screen and (min-width: $small-screen-width) {
+				float: 47%;
+				width: auto;
 			}
 		}
 	}
@@ -95,12 +76,22 @@
 			}
 		}
 
-		@media only screen and (max-width: $small-screen-width) {
+		.form-row-first,
+		.form-row-last {
+			float: none;
+			width: 100%;
+		}
 
-			.form-row-first,
+		@media only screen and (min-width: $small-screen-width) {
+
+			.form-row-first {
+				float: left;
+				width: 47%;
+			}
+
 			.form-row-last {
-				float: none;
-				width: 100%;
+				float: right;
+				width: 47%;
 			}
 		}
 
@@ -125,32 +116,79 @@
 	}
 
 	.woocommerce-ordering {
+		width: 100%;
+		margin-right: 0;
 
-		@media only screen and (max-width: $small-screen-width) {
-			width: 100%;
-			margin-right: 0;
+		@media only screen and (min-width: $small-screen-width) {
+			width: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.woocommerce-cart {
+
+	table {
+
+		&.cart {
+
+			td {
+
+				&.actions {
+
+					.coupon {
+
+						.input-text {
+
+							@media only screen and (min-width: $small-screen-width) {
+								width: auto !important;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
 
 .woocommerce-page {
 
-	@media only screen and (max-width: $small-screen-width) {
+	form {
+
+		.form-row-first,
+		.form-row-last {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	ul.products li.product,
+	ul.products li.product .button,
+	.woocommerce-ordering {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	@media only screen and (min-width: $small-screen-width) {
 
 		form {
 
-			.form-row-first,
+			.form-row-first {
+				float: left;
+				width: 47%;
+			}
+
 			.form-row-last {
-				float: none;
-				width: 100%;
+				float: right;
+				width: 47%;
 			}
 		}
 
 		ul.products li.product,
 		ul.products li.product .button,
 		.woocommerce-ordering {
-			width: 100%;
-			margin-right: 0;
+			width: auto;
+			margin-right: auto;
 		}
 	}
 }

@@ -7,11 +7,13 @@
 	border-top-color: $blue;
 	background-color: $lightest-grey;
 
-	@media only screen and (max-width: $small-screen-width) {
+	button.wc-forward {
+		width: 100%;
+		margin-bottom: 20px;
 
-		button.wc-forward {
-			width: 100%;
-			margin-bottom: 20px;
+		@media only screen and (min-width: $small-screen-width) {
+			width: auto;
+			margin-bottom: 0;
 		}
 	}
 }
