@@ -14,6 +14,30 @@
 
 .entry-content {
 
+	p {
+
+		&.has-background {
+			padding: 25px 30px;
+
+			&.box-shadow {
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			}
+
+			&.light-text {
+
+				a {
+					color: #fff;
+					text-decoration: underline;
+				}
+
+				a:focus,
+				a:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
 	ol,
 	ul {
 		margin-bottom: 30px;

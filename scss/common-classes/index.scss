@@ -38,14 +38,13 @@
 	.widget:last-of-type {
 		margin-bottom: 0;
 	}
+}
 
-	.breadcrumb {
-		margin-bottom: 40px;
-		padding-bottom: 10px;
-		border-bottom: $border-width $border-style $border-color;
-		font-size: 16px;
-		font-size: 1.6rem;
-	}
+.breadcrumb {
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+	border-bottom: $border-width $border-style $border-color;
+	font-size: $breadcrumb--font-size;
 }
 
 .archive-description {
@@ -145,10 +144,6 @@
 
 /* WordPress
 --------------------------------------------- */
-
-.aligncenter {
-	text-align: center;
-}
 
 a.aligncenter img {
 	display: block;

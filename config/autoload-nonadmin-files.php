@@ -4,7 +4,7 @@
  *
  * Uncomment files to add functionality.
  *
- * @package     ChristophHerr\Prometheus2
+ * @package     ChristophHerr\Prometheus2\Config
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
@@ -21,6 +21,7 @@ return [
 	// 'functions/load-minified-css.php',
 	// 'functions/markup.php',
 	'functions/no-js.php',
+	// 'gutenberg/theme-supports.php',
 	// 'structure/footer.php',
 	'structure/gravatar-sizes.php',
 	'structure/header.php',

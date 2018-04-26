@@ -23,8 +23,8 @@ add_action( 'wp_enqueue_scripts', function() {
 		$logo_height           = absint( $logo[2] );
 		$logo_max_width        = get_theme_mod( 'logo_width', 350 );
 		$logo_width            = absint( $logo[1] );
-		$logo_ratio            = $logo_width / $logo_height;
-		$logo_effective_height = min( $logo_width, $logo_max_width ) / $logo_ratio;
+		$logo_ratio            = $logo_width / max( $logo_height, 1 );
+		$logo_effective_height = min( $logo_width, $logo_max_width ) / max( $logo_ratio, 1 );
 		$logo_padding          = max( 0, ( 60 - $logo_effective_height ) / 2 );
 	}
 
@@ -119,7 +119,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	'
 	: '';
 
-	$css .= ( has_custom_logo() && $logo_padding ) ? sprintf(
+	$css .= ( has_custom_logo() && $logo_padding && ( 1 < $logo_effective_height ) ) ? sprintf(
 		'
 	.wp-custom-logo .title-area {
 		padding-top: %spx;

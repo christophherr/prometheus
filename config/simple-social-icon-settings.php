@@ -2,7 +2,7 @@
 /**
  * Simple Social Icon Default settings.
  *
- * @package     ChristophHerr\Prometheus2
+ * @package     ChristophHerr\Prometheus2\Config
  * @since       1.0.0
  * @author      Christoph Herr
  * @link        https://www.christophherr.com
