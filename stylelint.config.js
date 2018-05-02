@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	extends: [ 'stylelint-config-wordpress', 'prettier-stylelint/config.js' ],
+	extends: [ 'stylelint-config-wordpress/scss', 'prettier-stylelint/config.js' ],
 	plugins: 'stylelint-order',
 	ignoreFiles: [
 		'style.min.css',

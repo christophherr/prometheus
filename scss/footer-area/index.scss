@@ -44,7 +44,7 @@
 .site-footer {
 	padding: 30px;
 	border-top: $border-width $border-style $border-color;
-	background-color: #fff;
+	background-color: $site-footer--background-color;
 	font-size: $site-footer--font-size;
 	line-height: $line-height--medium;
 	text-align: center;

@@ -185,7 +185,7 @@ figure {
 
 	img:focus,
 	img:hover {
-		border: 1px solid #999;
+		border: $border-width $border-style $medium-grey;
 		outline: none;
 	}
 }
@@ -251,7 +251,7 @@ select,
 textarea {
 	width: 100%;
 	padding: 15px;
-	border: 1px solid #ddd;
+	border: $border-width $border-style $light-grey;
 	color: $forms--font-color;
 	background-color: $forms__background-color;
 	font-size: $forms--font-size;
@@ -260,7 +260,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-	border: 1px solid #999;
+	border: $border-width $border-style $medium-grey;
 	outline: none;
 }
 
@@ -486,12 +486,12 @@ th {
 .genesis-skip-link {
 	margin: 0;
 
-	& .skip-link-hidden {
+	.skip-link-hidden {
 		display: none;
 		visibility: hidden;
 	}
 
-	& li {
+	li {
 		width: 0;
 		height: 0;
 		list-style: none;
