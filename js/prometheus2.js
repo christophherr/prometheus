@@ -16,8 +16,8 @@ const prometheus2 = ( () => {
 	 */
 	const moveContentBelowFixedHeader = () => {
 		let siteInnerMarginTop = 0;
-		const siteHeader = document.getElementsByClassName( 'site-header' )[0];
-		const siteInner = document.getElementsByClassName( 'site-inner' )[0];
+		const siteHeader = document.querySelector( '.site-header' );
+		const siteInner = document.querySelector( '.site-inner' );
 
 		if ( 'fixed' === window.getComputedStyle( siteHeader ).position ) {
 			siteInnerMarginTop = siteHeader.offsetHeight;
