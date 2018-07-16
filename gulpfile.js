@@ -13,7 +13,6 @@ const browserSync = require( 'browser-sync' );
 const bump = require( 'gulp-bump' );
 const cache = require( 'gulp-cached' );
 const cleancss = require( 'gulp-clean-css' );
-const cssnano = require( 'gulp-cssnano' );
 const del = require( 'del' );
 const fs = require( 'fs' );
 const gulp = require( 'gulp' );
@@ -86,20 +85,14 @@ gulp.task( 'postcss', () => {
 		// PostCSS magic.
 		.pipe(
 			postcss([
-				autoprefixer({
-					browsers: [ 'last 2 versions' ]
-				}),
+				autoprefixer(),
 				mqpacker({
 					sort: true
+				}),
+				require( 'styleLint' )({
+					fix: true
 				})
 			])
-		)
-
-		// WordPress style fixes.
-		.pipe(
-			styleLint({
-				fix: true
-			})
 		)
 
 		// Create the source map.
@@ -130,23 +123,16 @@ gulp.task( 'css:minify', [ 'postcss' ], () => {
 			})
 		)
 
-		// Combine similar rules.
+		// Combine similar rules and minify styles.
 		.pipe(
 			cleancss({
 				level: {
+					1: {
+						specialComments: 0
+					},
 					2: {
 						all: true
 					}
-				}
-			})
-		)
-
-		// Minify and optimize style.css.
-		.pipe(
-			cssnano({
-				safe: false,
-				discardComments: {
-					removeAll: true
 				}
 			})
 		)
@@ -214,20 +200,14 @@ gulp.task( 'woocommerce', () => {
 		// PostCSS magic.
 		.pipe(
 			postcss([
-				autoprefixer({
-					browsers: [ 'last 2 versions' ]
-				}),
+				autoprefixer(),
 				mqpacker({
 					sort: sortCSSmq.desktopFirst
+				}),
+				require( 'styleLint' )({
+					fix: true
 				})
 			])
-		)
-
-		// Additional WordPress style fixes.
-		.pipe(
-			styleLint({
-				fix: true
-			})
 		)
 
 		// Create the source map.
@@ -251,23 +231,16 @@ gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
 			})
 		)
 
-		// Combine similar rules.
+		// Combine similar rules and minify styles.
 		.pipe(
 			cleancss({
 				level: {
+					1: {
+						specialComments: 0
+					},
 					2: {
 						all: true
 					}
-				}
-			})
-		)
-
-		// Minify and optimize style.css.
-		.pipe(
-			cssnano({
-				safe: false,
-				discardComments: {
-					removeAll: true
 				}
 			})
 		)
