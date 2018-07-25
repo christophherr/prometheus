@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "Modular starter child theme for the Genesis Framework",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "node ./node_modules/gulp/bin/gulp.js",
+    "watch": "node ./node_modules/gulp/bin/gulp.js watch",
+    "lint": "node ./node_modules/gulp/bin/gulp.js lintStyles",
+    "minify": "node ./node_modules/gulp/bin/gulp.js minifyStyles",
+    "sass": "node ./node_modules/gulp/bin/gulp.js sass",
+    "styles": "node ./node_modules/gulp/bin/gulp.js styles",
+    "scripts": "node ./node_modules/gulp/bin/gulp.js scripts",
+    "minifyScripts": "node ./node_modules/gulp/bin/gulp.js minifyScripts",
+    "js": "node ./node_modules/gulp/bin/gulp.js js",
+    "images": "node ./node_modules/gulp/bin/gulp.js images",
+    "bump": "node ./node_modules/gulp/bin/gulp.js bump"
   },
   "repository": {
     "type": "git",
@@ -16,17 +26,31 @@
   },
   "homepage": "https://github.com/christophherr/prometheus#readme",
   "devDependencies": {
+    "ajv": "^6.5.0",
+    "autoprefixer": "^9.0.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "browser-sync": "^2.24.4",
     "css-mqpacker": "^6.0.2",
     "eslint": "^5.0.0",
+    "eslint-config-gulp": "^3.0.1",
+    "eslint-config-standard": "^11.0.0",
     "eslint-config-wordpress": "^2.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "esvalidate": "^0.1.3",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-bump": "^3.1.1",
-    "gulp-cached": "^1.1.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-minify": "^3.1.0",
+    "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
     "gulp-pixrem": "^1.0.0",
     "gulp-plumber": "^1.2.0",
@@ -40,13 +64,28 @@
     "prettier": "^1.12.1",
     "prettier-eslint": "^8.2.1",
     "prettier-stylelint": "^0.4.2",
+    "pump": "^3.0.0",
     "sort-css-media-queries": "^1.3.4",
     "stylelint": "^9.2.1",
     "stylelint-config-wordpress": "^13.0.0",
     "stylelint-order": "^0.8.1"
-	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "eslintConfig": {
+    "env": {
+      "jest": true,
+      "node": true,
+      "es6": true
+    },
+    "root": true,
+    "extends": "wordpress"
+  }
 }
