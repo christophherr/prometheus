@@ -7,11 +7,14 @@ import { reload } from './browserSync';
 
 /**********************
  * All Tasks Listeners
+ *
+ * Not working on Windows 10.
+ * Please see gulpfile.babel.js for workaround.
  *********************/
 export default function watch() {
 
 	// Watch Scss files. Changes are injected into the browser from within the task.
-	gulpWatch( paths.styles.src, series( styles, reload ) );
+	gulpWatch( paths.styles.partials, series( styles, reload ) );
 
 	// Watch JavaScript files. Changes are injected into the browser from within the task.
 	gulpWatch( paths.scripts.src, series( scripts, reload ) );

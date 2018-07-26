@@ -22,6 +22,7 @@ export const paths = {
 	},
 	styles: {
 		src: `${rootPath}/scss/*.scss`,
+		partials: `${rootPath}/scss/**/*.scss`,
 		minSrc: [ `${rootPath}/*.css`, `!${rootPath}/*.min.css` ],
 		dest: `${rootPath}/`
 	},
@@ -32,7 +33,7 @@ export const paths = {
 		dest: `${rootPath}/js/`
 	},
 	images: {
-		src: [ `${rootPath}/images/*.{jpg,JPG,png,svg}` ],
+		src: [ `${rootPath}/images/src/*.{jpg,JPG,png,svg}` ],
 		dest: `${rootPath}/images/`
 	},
 	languages: {

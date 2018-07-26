@@ -11,8 +11,7 @@ export default function minifyScripts( done ) {
 	pump(
 		[
 			src( paths.scripts.minSrc ),
-
-			gulpPlugins.newer( paths.scripts.dest ),
+			gulpPlugins.newer( paths.scripts.min ),
 			gulpPlugins.minify({
 				ext: {
 					src: '.js',

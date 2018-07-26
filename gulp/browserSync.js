@@ -26,6 +26,10 @@ export function serve( done ) {
 
 // Reload the site:
 export function reload( done ) {
+	if ( server.paused ) {
+		server.resume();
+	}
+
 	server.reload({ stream: true });
 
 	done();

@@ -5,15 +5,17 @@
   "scripts": {
     "gulp": "node ./node_modules/gulp/bin/gulp.js",
     "watch": "node ./node_modules/gulp/bin/gulp.js watch",
-    "lint": "node ./node_modules/gulp/bin/gulp.js lintStyles",
-    "minify": "node ./node_modules/gulp/bin/gulp.js minifyStyles",
+    "lintStyles": "node ./node_modules/gulp/bin/gulp.js lintStyles",
     "sass": "node ./node_modules/gulp/bin/gulp.js sass",
+    "minify": "node ./node_modules/gulp/bin/gulp.js minifyStyles",
     "styles": "node ./node_modules/gulp/bin/gulp.js styles",
-    "scripts": "node ./node_modules/gulp/bin/gulp.js scripts",
-    "minifyScripts": "node ./node_modules/gulp/bin/gulp.js minifyScripts",
     "js": "node ./node_modules/gulp/bin/gulp.js js",
+    "minifyScripts": "node ./node_modules/gulp/bin/gulp.js minifyScripts",
+    "scripts": "node ./node_modules/gulp/bin/gulp.js scripts",
     "images": "node ./node_modules/gulp/bin/gulp.js images",
-    "bump": "node ./node_modules/gulp/bin/gulp.js bump"
+    "bump": "node ./node_modules/gulp/bin/gulp.js bump",
+    "watchFiles": "node ./node_modules/gulp/bin/gulp.js watchFiles",
+    "serve": "node ./node_modules/gulp/bin/gulp.js serve"
   },
   "repository": {
     "type": "git",
@@ -72,7 +74,7 @@
   },
   "babel": {
     "presets": [
-      "es2015"
+      "env"
     ]
   },
   "browserslist": [
