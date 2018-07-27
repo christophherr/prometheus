@@ -4,7 +4,7 @@ import { src, dest } from 'gulp';
 import pump from 'pump';
 import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
-import { paths, gulpPlugins } from './config';
+import { paths, gulpPlugins } from '../config/gulpConfig';
 
 export default function sass( done ) {
 

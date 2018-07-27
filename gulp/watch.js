@@ -1,6 +1,6 @@
 'use strict';
 
-import { paths } from './config';
+import { paths } from '../config/gulpConfig';
 import { watch as gulpWatch, series } from 'gulp';
 import { styles, scripts, images } from '../gulpfile.babel';
 import { reload } from './browserSync';

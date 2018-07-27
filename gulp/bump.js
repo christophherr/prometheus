@@ -2,7 +2,7 @@
 
 import { dest, src } from 'gulp';
 import pump from 'pump';
-import { rootPath, paths, gulpPlugins } from './config';
+import { rootPath, paths, gulpPlugins } from '../config/gulpConfig';
 import { arg } from '../js/tooling/gulp-fetch-cl-arguments';
 
 /**************************************************

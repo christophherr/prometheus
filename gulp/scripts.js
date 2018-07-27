@@ -2,7 +2,7 @@
 
 import { src, dest } from 'gulp';
 import pump from 'pump';
-import { paths, gulpPlugins } from './config';
+import { paths, gulpPlugins } from '../config/gulpConfig';
 
 /**
  * JavaScript Task Handler.

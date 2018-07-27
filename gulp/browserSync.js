@@ -1,24 +1,23 @@
 'use strict';
 
 import browserSync from 'browser-sync';
+import { paths } from '../config/gulpConfig';
 
 // Create a BrowserSync instance:
 export const server = browserSync.create();
 
-const siteName = 'genesis.test';
-
 export function serve( done ) {
 	server.init({
-		proxy: `http://${siteName}`,
-		host: siteName,
-		port: 8000,
-		notify: false,
-		open: 'external',
-		browser: 'chrome'
+		proxy: `http://${paths.config.watch.siteName}`,
+		host: paths.config.watch.siteName,
+		port: paths.config.watch.port,
+		notify: paths.config.watch.notify,
+		open: paths.config.watch.open,
+		browser: paths.config.watch.browser
 
 		// https: {
-		// 	key: 'path/to/your/key/file/genesis.key',
-		// 	cert: `path/to/your/cert/file/${siteName}.crt`
+		// 	key: paths.config.watch.httpsKey,
+		// 	cert: paths.config.watch.httpsCert
 		// }
 	});
 	done();

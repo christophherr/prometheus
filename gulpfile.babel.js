@@ -18,6 +18,7 @@ import minifyStyles from './gulp/minifyStyles';
 import sass from './gulp/sass';
 import scripts from './gulp/scripts';
 import minifyScripts from './gulp/minifyScripts';
+import translation from './gulp/translation';
 // import watch from './gulp/watch';
 
 /**
@@ -78,4 +79,13 @@ export const bump = parallel(bumpRootFiles, bumpSass);
 /**
  * Export all imported functions as tasks
  */
-export { lintSass, minifyStyles, sass, images, scripts, minifyScripts, serve };
+export {
+	lintSass,
+	minifyStyles,
+	sass,
+	images,
+	scripts,
+	minifyScripts,
+	serve,
+	translation
+};

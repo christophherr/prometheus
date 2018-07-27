@@ -2,7 +2,7 @@
 
 import { dest, src } from 'gulp';
 import pump from 'pump';
-import { paths, gulpPlugins } from './config';
+import { paths, gulpPlugins } from '../config/gulpConfig';
 
 /************************
  * Optimize theme images
