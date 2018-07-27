@@ -16,7 +16,8 @@
     "bump": "node ./node_modules/gulp/bin/gulp.js bump",
     "watchFiles": "node ./node_modules/gulp/bin/gulp.js watchFiles",
     "serve": "node ./node_modules/gulp/bin/gulp.js serve",
-    "translation": "node ./node_modules/gulp/bin/gulp.js translation"
+		"translation": "node ./node_modules/gulp/bin/gulp.js translation",
+		"wc": "node ./node_modules/gulp/bin/gulp.js wc"
   },
   "repository": {
     "type": "git",

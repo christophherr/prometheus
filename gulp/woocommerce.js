@@ -1,77 +1,71 @@
-const cleancss = require( 'gulp-clean-css' );
-const autoprefixer = require( 'autoprefixer' );
-const browserSync = require( 'browser-sync' );
-const pixrem = require( 'gulp-pixrem' );
-const postcss = require( 'gulp-postcss' );
-const sass = require( 'gulp-sass' );
-const sassLint = require( 'gulp-sass-lint' );
-const sourcemaps = require( 'gulp-sourcemaps' );
-const styleLint = require( 'gulp-stylelint' );
-const rename = require( 'gulp-rename' );
-const sortCSSmq = require( 'sort-css-media-queries' );
+'use strict';
 
-gulp.task( 'woocommerce', () => {
-	gulp
-		.src( './lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
+import { src, dest, series } from 'gulp';
+import pump from 'pump';
+import autoprefixer from 'autoprefixer';
+import mqpacker from 'css-mqpacker';
+import sortCSSmq from 'sort-css-media-queries';
+import { paths, gulpPlugins } from '../config/gulpConfig';
 
-		// Error handling.
-		.pipe(
-			plumber({
-				errorHandler: handleErrors
-			})
-		)
+export function lintWC( done ) {
 
-		// Wrap tasks in a sourcemap.
-		.pipe( sourcemaps.init() )
+	/**
+	 * Lint WooCommerce Scss files.
+	 */
+	pump(
+		[
+			src( paths.wcStyles.src ),
+			gulpPlugins.sassLint({
+				rules: {
+					quotes: {
+						style: 'double'
+					}
+				}
+			}),
+			gulpPlugins.sassLint.format(),
+			gulpPlugins.sassLint.failOnError()
+		],
+		done
+	);
+}
 
-		// Sass magic.
-		.pipe(
-			sass({
+export function wcSass( done ) {
+
+	/**
+	 * PostCSS Task Handler
+	 */
+	pump(
+		[
+			src( paths.wcStyles.src, { sourcemaps: true }),
+			gulpPlugins.sass({
 				errLogToConsole: true,
 				outputStyle: 'expanded' // Options: nested, expanded, compact, compressed
-			})
-		)
-
-		// Pixel fallbacks for rem units.
-		.pipe( pixrem({ rootValue: '10px' }) )
-
-		// PostCSS magic.
-		.pipe(
-			postcss([
+			}),
+			gulpPlugins.pixrem({ rootValue: '10px' }),
+			gulpPlugins.postcss([
 				autoprefixer(),
 				mqpacker({
 					sort: sortCSSmq.desktopFirst
-				}),
-				require( 'styleLint' )({
-					fix: true
 				})
-			])
-		)
+			]),
+			gulpPlugins.stylelint({
+				fix: true
+			}),
+			dest( paths.wcStyles.dest, { sourcemaps: './' })
+		],
+		done
+	);
+}
 
-		// Create the source map.
-		.pipe(
-			sourcemaps.write( './', {
-				includeContent: false
-			})
-		)
+export function minifyWCStyles( done ) {
 
-		.pipe( gulp.dest( './lib/plugins/woocommerce/' ) );
-});
-
-gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
-	gulp
-		.src( './lib/plugins/woocommerce/prometheus2-woocommerce.css' )
-
-		// Error handling.
-		.pipe(
-			plumber({
-				errorHandler: handleErrors
-			})
-		)
-
-		// Combine similar rules and minify styles.
-		.pipe(
-			cleancss({
+	/**
+	 * Minify WooCommerce style.css
+	 */
+	pump(
+		[
+			src( paths.wcStyles.minSrc ),
+			gulpPlugins.cleanCss({
 				level: {
 					1: {
 						specialComments: 0
@@ -80,32 +74,14 @@ gulp.task( 'wc:minify', [ 'woocommerce' ], () => {
 						all: true
 					}
 				}
-			})
-		)
+			}),
+			gulpPlugins.rename({ suffix: '.min' }),
+			dest( paths.wcStyles.dest )
+		],
+		done
+	);
+}
 
-		.pipe( rename( 'prometheus2-woocommerce.min.css' ) )
+const WC = series( lintWC, wcSass, minifyWCStyles );
 
-		.pipe( gulp.dest( './lib/plugins/woocommerce/' ) )
-
-		.pipe(
-			notify({
-				message: 'Styles are built.'
-			})
-		);
-});
-
-gulp.task( 'wc:lint', [ 'wc:minify' ], () => {
-	gulp
-		.src( './lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss' )
-		.pipe(
-			sassLint({
-				rules: {
-					quotes: {
-						style: 'double'
-					}
-				}
-			})
-		)
-		.pipe( sassLint.format() )
-		.pipe( sassLint.failOnError() );
-});
+export default WC;

@@ -39,6 +39,15 @@ export const paths = {
 		minSrc: [`${rootPath}/*.css`, `!${rootPath}/*.min.css`],
 		dest: `${rootPath}/`
 	},
+	wcStyles: {
+		src: `${rootPath}/lib/plugins/woocommerce/scss/prometheus2-woocommerce.scss`,
+		partials: `${rootPath}/lib/plugins/woocommerce/scss/**/*.scss`,
+		minSrc: [
+			`${rootPath}/lib/plugins/woocommerce/*.css`,
+			`!${rootPath}/lib/plugins/woocommerce/*.min.css`
+		],
+		dest: `${rootPath}/lib/plugins/woocommerce/`
+	},
 	scripts: {
 		src: `${rootPath}/js/src/*.js`,
 		minSrc: [`${rootPath}/js/*.js`, `!${rootPath}/js/*.min.js`],

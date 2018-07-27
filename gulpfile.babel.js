@@ -19,6 +19,7 @@ import sass from './gulp/sass';
 import scripts from './gulp/scripts';
 import minifyScripts from './gulp/minifyScripts';
 import translation from './gulp/translation';
+import wc from './gulp/woocommerce';
 // import watch from './gulp/watch';
 
 /**
@@ -38,6 +39,7 @@ export const js = series(scripts, minifyScripts);
 task(
 	'watchFiles',
 	parallel(
+		// () => gulpWatch('./lib/plugins/woocommerce/scss/**/*.scss', series(wc, reload)),
 		() => gulpWatch('./js/src/*.js', series(js, reload)),
 		() => gulpWatch('./scss/**/*.scss', series(styles, reload)),
 		() => gulpWatch('./images/src/*.*', series(images, reload)),
@@ -87,5 +89,6 @@ export {
 	scripts,
 	minifyScripts,
 	serve,
-	translation
+	translation,
+	wc
 };
