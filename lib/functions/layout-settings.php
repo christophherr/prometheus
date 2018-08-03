@@ -11,6 +11,9 @@
 
 namespace ChristophHerr\Prometheus2\Functions;
 
+use function ChristophHerr\Prometheus2\Utilities\is_amp_response;
+
+
 // Needs to run before admin_init.
 add_action( 'after_setup_theme', function() {
 
@@ -19,4 +22,9 @@ add_action( 'after_setup_theme', function() {
 
 	// Removes secondary sidebar.
 	unregister_sidebar( 'sidebar-alt' );
+
+	// Adjust genesis_responsive_viewport for AMP requests.
+	add_filter( 'genesis_viewport_value', function() {
+		return 'width=device-width,initial-scale=1,minimum-scale=1';
+	});
 });

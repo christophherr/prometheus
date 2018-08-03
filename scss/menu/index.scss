@@ -134,13 +134,18 @@
 
 /* Avoid flash of desktop menu on mobile devices.
 ----------------------------------------------*/
-.js nav {
+.js nav,
+.amp-nav {
 	display: none;
 	position: relative;
 
 	@media only screen and (min-width: $standard-screen-width) {
 		display: block;
 	}
+}
+
+.menu-toggle.activated + .amp-nav {
+	display: block;
 }
 
 /* Responsive Menu

@@ -11,6 +11,9 @@
 
 namespace ChristophHerr\Prometheus2\Structure;
 
+use function ChristophHerr\Prometheus2\Utilities\is_amp_response;
+
+
 add_action( 'genesis_setup', function() {
 
 	// Repositions primary navigation menu.
@@ -29,5 +32,29 @@ add_action( 'genesis_setup', function() {
 
 		$args['depth'] = 1;
 		return $args;
+	});
+});
+
+// Add mobile-responsive menu for AMP requests.
+// Does not work for sub menus right now.
+add_action( 'wp_head', function() {
+
+	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! is_amp_response() ) {
+		return;
+	}
+
+	add_filter( 'genesis_markup_title-area_close', function( $close_html, $args ) {
+		if ( $close_html ) {
+			$close_html .= '<amp-state id="siteNavigationMenu"><script type="application/json">{"expanded": false}</script></amp-state>';
+			$close_html .= '<button id="genesis-mobile-nav-primary" class="menu-toggle dashicons-before dashicons-menu" aria-expanded="false" aria-pressed="false" on="tap:AMP.setState( { siteNavigationMenu: { expanded: ! siteNavigationMenu.expanded } } )"
+			[class]="siteNavigationMenu.expanded ? \'menu-toggle dashicons-before dashicons-menu activated\' : \'menu-toggle dashicons-before dashicons-menu\'" [aria-expanded]="siteNavigationMenu.expanded ? \'true\' : \'false\'" [aria-pressed]="siteNavigationMenu.expanded ? \'true\' : \'false\'">Menu</button>';
+		}
+
+		return $close_html;
+	}, 10, 2 );
+
+	add_filter( 'genesis_attr_nav-primary', function( $attributes ) {
+		$attributes['class'] .= ' genesis-responsive-menu amp-nav';
+		return $attributes;
 	});
 });

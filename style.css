@@ -1335,9 +1335,14 @@ img.alignright,
 
 /* Avoid flash of desktop menu on mobile devices.
 ----------------------------------------------*/
-.js nav {
+.js nav,
+.amp-nav {
 	display: none;
 	position: relative;
+}
+
+.menu-toggle.activated + .amp-nav {
+	display: block;
 }
 
 /* Responsive Menu
@@ -1885,7 +1890,8 @@ img.alignright,
 		margin: -46px 0 0 179px;
 	}
 
-	.js nav {
+	.js nav,
+	.amp-nav {
 		display: block;
 	}
 
