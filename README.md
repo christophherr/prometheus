@@ -8,6 +8,15 @@ Requires the Genesis Framework 2.6+ and PHP 5.6+
 
 [![Build Status](https://travis-ci.org/christophherr/prometheus.svg?branch=develop)](https://travis-ci.org/christophherr/prometheus)
 
+## !! Breaking change !!
+
+Gulp has been updated to version 4.
+You can find the Gulp 3 version here: https://github.com/christophherr/prometheus/releases/tag/1.0.0
+
+If you have Gulp 3 installed globally, please use the [npm scripts in package.json](https://github.com/christophherr/prometheus/blob/develop/package.json) to run the Gulp 4 tasks, e.g. `npm run gulp`.
+
+Bug fixes and new features will not be backported to the Gulp 3 version.
+
 ## Converkit 3 compatible Sass partials
 
 Brian Johnson, @themustardseed, has done outstanding work converting the Sass partials to be compatible with Convertkit 3.
