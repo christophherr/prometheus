@@ -14,7 +14,13 @@ namespace ChristophHerr\Prometheus2\Functions;
 
 use function ChristophHerr\Prometheus2\Utilities\is_amp_response;
 
-// Only add the js-no-js check when it is not an AMP request.
+/**
+ * Add the no-js body class if it is not an AMP request.
+ *
+ * @since 2.0.0
+ *
+ * @return void
+ */
 add_action( 'wp_head', function() {
 
 	if ( function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) && is_amp_response() ) {
@@ -27,6 +33,13 @@ add_action( 'wp_head', function() {
 	});
 });
 
+/**
+ * Add the no-js script if it is not an AMP request.
+ *
+ * @since 2.0.0
+ *
+ * @return void
+ */
 add_action( 'wp_enqueue_scripts', function() {
 
 	if ( function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) && is_amp_response() ) {

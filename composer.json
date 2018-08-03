@@ -1,9 +1,9 @@
 {
   "name": "christophherr/prometheus2",
-  "description": "Modular, sassified child theme for the Genesis Framework based on the Genesis Sample Theme 2.6",
-  "version": "1.0.0",
+  "description": "Modular, sassified child theme for the Genesis Framework with a Gulp 4 workflow based on the Genesis Sample Theme 2.6",
+  "version": "2.0.0",
   "type": "wordpress-theme",
-  "keywords": [ "genesis child theme", "sass partials", "mobile-first", "modular", "config-based"],
+  "keywords": [ "genesis child theme", "sass partials", "mobile-first", "modular", "config-based", "gulp4"],
   "homepage": "https://github.com/christophherr/prometheus",
   "license": "GPL-2.0-or-later",
   "authors": [{

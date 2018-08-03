@@ -55,6 +55,13 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 });
 
+/**
+ * Remove scripts loaded by the Genesis Framework if it is an AMP response.
+ *
+ * @since 2.0.0
+ *
+ * @return void
+ */
 add_action( 'wp_print_scripts', function() {
 
 	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! is_amp_response() ) {

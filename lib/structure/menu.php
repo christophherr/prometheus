@@ -35,8 +35,15 @@ add_action( 'genesis_setup', function() {
 	});
 });
 
-// Add mobile-responsive menu for AMP requests.
-// Does not work for sub menus right now.
+/**
+ * Add mobile-responsive menu markup for AMP requests.
+ *
+ * Does not work for sub-menus right now.
+ *
+ * @since 2.0.0
+ *
+ * @return void
+ */
 add_action( 'wp_head', function() {
 
 	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! is_amp_response() ) {
