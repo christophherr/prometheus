@@ -311,9 +311,7 @@ Loaded on WooCommerce pages */
 	min-width: 140px;
 }
 
-.woocommerce-cart table.cart th.product-price,
-.woocommerce-cart table.cart th.product-quantity,
-.woocommerce-cart table.cart th.product-subtotal {
+.woocommerce-cart table.cart th.product-price, .woocommerce-cart table.cart th.product-quantity, .woocommerce-cart table.cart th.product-subtotal {
 	min-width: 110px;
 }
 
@@ -379,8 +377,7 @@ Loaded on WooCommerce pages */
 	cursor: pointer;
 }
 
-.woocommerce a.button:focus,
-.woocommerce a.button:hover,
+.woocommerce a.button:focus, .woocommerce a.button:hover,
 .woocommerce a.button.alt:focus,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button:focus,
@@ -420,9 +417,7 @@ Loaded on WooCommerce pages */
 	line-height: 1.5;
 }
 
-.woocommerce form.checkout_coupon,
-.woocommerce form.login,
-.woocommerce form.register,
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register,
 .woocommerce form .form-row .select2-container,
 .woocommerce form .form-row.woocommerce-validated input.input-text,
 .woocommerce form .form-row.woocommerce-validated select,
@@ -455,9 +450,7 @@ Loaded on WooCommerce pages */
 
 /* WooCommerce Disabled Buttons
 ------------------------------------------------------------- */
-.woocommerce a.button.disabled,
-.woocommerce a.button:disabled,
-.woocommerce a.button:disabled[disabled],
+.woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled],
 .woocommerce button.button.disabled,
 .woocommerce button.button:disabled,
 .woocommerce button.button:disabled[disabled],
@@ -472,12 +465,7 @@ Loaded on WooCommerce pages */
 	background-color: #000;
 }
 
-.woocommerce a.button.alt.disabled,
-.woocommerce a.button.alt.disabled:hover,
-.woocommerce a.button.alt:disabled,
-.woocommerce a.button.alt:disabled:hover,
-.woocommerce a.button.alt[disabled]:disabled,
-.woocommerce a.button.alt[disabled]:disabled:hover,
+.woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt[disabled]:disabled, .woocommerce a.button.alt[disabled]:disabled:hover,
 .woocommerce button.button.alt.disabled,
 .woocommerce button.button.alt.disabled:hover,
 .woocommerce button.button.alt:disabled,
@@ -657,23 +645,19 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 
 /* Woo Shopping Cart
 -------------------------------------------------- */
-.woocommerce .widget_shopping_cart ul.cart_list li,
-.woocommerce.widget_shopping_cart ul.cart_list li {
+.woocommerce .widget_shopping_cart ul.cart_list li, .woocommerce.widget_shopping_cart ul.cart_list li {
 	padding-top: 15px;
 }
 
-.woocommerce .widget_shopping_cart ul.cart_list li a.remove,
-.woocommerce.widget_shopping_cart ul.cart_list li a.remove {
+.woocommerce .widget_shopping_cart ul.cart_list li a.remove, .woocommerce.widget_shopping_cart ul.cart_list li a.remove {
 	top: 15px;
 }
 
-.woocommerce .widget_shopping_cart .buttons a,
-.woocommerce.widget_shopping_cart .buttons a {
+.woocommerce .widget_shopping_cart .buttons a, .woocommerce.widget_shopping_cart .buttons a {
 	margin-bottom: 5px;
 }
 
-.woocommerce .widget_shopping_cart .cart_list li.empty,
-.woocommerce.widget_shopping_cart .cart_list li.empty {
+.woocommerce .widget_shopping_cart .cart_list li.empty, .woocommerce.widget_shopping_cart .cart_list li.empty {
 	padding-left: 0;
 }
 
@@ -870,3 +854,4 @@ div.woocommerce-info.wc-memberships-restriction-message.wc-memberships-restricte
 		margin-bottom: 20px;
 	}
 }
+/*# sourceMappingURL=prometheus2-woocommerce.css.map */
