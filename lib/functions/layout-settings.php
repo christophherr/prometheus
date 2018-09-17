@@ -11,9 +11,6 @@
 
 namespace ChristophHerr\Prometheus2\Functions;
 
-use function ChristophHerr\Prometheus2\Utilities\is_amp_response;
-
-
 // Needs to run before admin_init.
 add_action( 'after_setup_theme', function() {
 

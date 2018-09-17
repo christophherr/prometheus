@@ -14,7 +14,6 @@
 namespace ChristophHerr\Prometheus2\Functions;
 
 use ChristophHerr\Prometheus2\Utilities;
-use function ChristophHerr\Prometheus2\Utilities\is_amp_response;
 
 add_action( 'wp_enqueue_scripts', function() {
 
@@ -28,7 +27,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'dashicons' );
 
 	// Don't load scripts if it is an AMP response.
-	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! is_amp_response() ) {
+	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! Utilities\is_amp_response() ) {
 
 		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 		wp_enqueue_script(
@@ -64,7 +63,7 @@ add_action( 'wp_enqueue_scripts', function() {
  */
 add_action( 'wp_print_scripts', function() {
 
-	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! is_amp_response() ) {
+	if ( ! function_exists( 'ChristophHerr\Prometheus2\Utilities\is_amp_response' ) || ! Utilities\is_amp_response() ) {
 		return;
 	}
 
