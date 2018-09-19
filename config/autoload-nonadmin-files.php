@@ -15,6 +15,7 @@ namespace ChristophHerr\Prometheus2\Config;
 
 return [
 	'setup.php',
+	'utilities/amp-checks.php',
 	// 'functions/formatting.php',
 	'functions/layout-settings.php',
 	'functions/load-assets.php',

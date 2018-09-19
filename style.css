@@ -1,11 +1,11 @@
 /*!
 	Theme Name: Prometheus 2
 	Theme URI: https://www.christophherr.com/
-	Description: This is the developer friendly, modular, sassified version of the Genesis sample theme.
+	Description: This is the developer friendly, modular, sassified child theme for the Genesis Framework with a Gulp 4 workflow based on the Genesis Sample Theme 2.6.
 	Author: Christoph Herr
 	Author URI: https://www.christophherr.com/
 
-	Version: 1.0.0
+	Version: 2.0.0
 
 	Template: genesis
 
@@ -1335,9 +1335,14 @@ img.alignright,
 
 /* Avoid flash of desktop menu on mobile devices.
 ----------------------------------------------*/
-.js nav {
+.js nav,
+.amp-nav {
 	display: none;
 	position: relative;
+}
+
+.menu-toggle.activated + .amp-nav {
+	display: block;
 }
 
 /* Responsive Menu
@@ -1885,7 +1890,8 @@ img.alignright,
 		margin: -46px 0 0 179px;
 	}
 
-	.js nav {
+	.js nav,
+	.amp-nav {
 		display: block;
 	}
 

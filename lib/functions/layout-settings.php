@@ -19,4 +19,9 @@ add_action( 'after_setup_theme', function() {
 
 	// Removes secondary sidebar.
 	unregister_sidebar( 'sidebar-alt' );
+
+	// Adjust genesis_responsive_viewport for AMP requests.
+	add_filter( 'genesis_viewport_value', function() {
+		return 'width=device-width,initial-scale=1,minimum-scale=1';
+	});
 });
