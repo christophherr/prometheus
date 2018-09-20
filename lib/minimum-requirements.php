@@ -68,7 +68,23 @@ function prometheus_2_show_deactivation_and_upgrade_notice() {
  * @return string
  */
 function prometheus_2_upgrade_message() {
-	if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) && version_compare( PHP_VERSION, '5.6', '<' ) ) {
+	$genesis_version = get_genesis_version();
+	$compare_wp_version = version_compare( $GLOBALS['wp_version'], '4.8', '<' );
+	$compare_php_version = version_compare( PHP_VERSION, '5.6', '<' );
+	$compare_genesis_version = version_compare( $genesis_version, '2.6', '<' );
+
+	if ( $compare_wp_version && $compare_php_version && $compare_genesis_version ) {
+		return sprintf(
+			// Translators: 1 is the required WordPress version and 2 is the user's current version.
+			__( 'Prometheus 2 cannot be activated because it requires Genesis version %1$s, WordPress version %2$s and PHP version %3$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %4$s, WordPress version %5$s and PHP version %6$s. Please upgrade Genesis, WordPress and PHP and try again.', 'prometheus2' ),
+			'2.6',
+			'4.9.6',
+			'5.6',
+			$genesis_version,
+			$GLOBALS['wp_version'],
+			PHP_VERSION
+		);
+	} elseif ( $compare_wp_version && $compare_php_version ) {
 		return sprintf(
 			// Translators: 1 is the required WordPress version and 2 is the user's current version.
 			__( 'Prometheus 2 cannot be activated because it requires WordPress version %1$s and PHP version %2$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %3$s and PHP version %4$s. Please upgrade WordPress and PHP and try again.', 'prometheus2' ),
@@ -77,19 +93,44 @@ function prometheus_2_upgrade_message() {
 			$GLOBALS['wp_version'],
 			PHP_VERSION
 		);
-	} elseif ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) ) {
+	} elseif ( $compare_genesis_version && $compare_wp_version ) {
+		return sprintf(
+			// Translators: 1 is the required WordPress version and 2 is the user's current version.
+			__( 'Prometheus 2 was not activated because it requires Genesis version %1$s and WordPress version %2$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %3$s and WordPress version %4$s. Please upgrade Genesis and WordPress and try again.', 'prometheus2' ),
+			'2.6',
+			'4.9.6',
+			$genesis_version,
+			$GLOBALS['wp_version']
+		);
+	} elseif ( $compare_genesis_version && $compare_php_version ) {
+		return sprintf(
+			// Translators: 1 is the required PHP version and 2 is the user's current version.
+			__( 'Prometheus 2 was not activated because it requires Genesis version %1$s and PHP version of %2$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %3$s and PHP version %4$s. Please upgrade Genesis and PHP and try again.', 'prometheus2' ),
+			'2.6',
+			'5.6',
+			$genesis_version,
+			PHP_VERSION
+		);
+	} elseif ( $compare_wp_version ) {
 		return sprintf(
 			// Translators: 1 is the required WordPress version and 2 is the user's current version.
 			__( 'Prometheus 2 was not activated because it requires WordPress version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %2$s. Please upgrade WordPress and try again.', 'prometheus2' ),
 			'4.9.6',
 			$GLOBALS['wp_version']
 		);
-	} elseif ( version_compare( PHP_VERSION, '5.6', '<' ) ) {
+	} elseif ( $compare_php_version ) {
 		return sprintf(
 			// Translators: 1 is the required PHP version and 2 is the user's current version.
-			__( 'Prometheus 2 was not activated because it requires a minimum PHP version of %1$s. The Genesis Framework (parent theme) has been activated instead. You are running PHP version %2$s. Please upgrade your PHP version and try again.', 'prometheus2' ),
+			__( 'Prometheus 2 was not activated because it requires PHP version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running PHP version %2$s. Please upgrade PHP and try again.', 'prometheus2' ),
 			'5.6',
 			PHP_VERSION
+		);
+	} elseif ( $compare_genesis_version ) {
+		return sprintf(
+			// Translators: 1 is the required PHP version and 2 is the user's current version.
+			__( 'Prometheus 2 was not activated because it requires Genesis version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %2$s. Please upgrade Genesis and try again.', 'prometheus2' ),
+			'2.6',
+			$genesis_version
 		);
 	}
 	return '';
