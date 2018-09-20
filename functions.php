@@ -10,7 +10,11 @@
  * @link    https://www.christophherr.com/
  */
 
-namespace ChristophHerr\Prometheus2;
+// Check minimum requirements.
+if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
+	require_once 'lib/minimum-requirements.php';
+	return;
+}
 
 // Start the Child Theme.
 require_once 'lib/init.php';

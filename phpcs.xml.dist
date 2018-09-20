@@ -61,6 +61,7 @@
 			<property name="prefixes" type="array">
 				<element value="CHILD_THEME"/>
 				<element value="CHILD_TEXT_DOMAIN"/>
+				<element value="prometheus_2"/>
 			</property>
 		</properties>
 	</rule>
