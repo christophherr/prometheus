@@ -26,7 +26,8 @@ export default function sass( done ) {
 				})
 			]),
 			gulpPlugins.stylelint({
-				fix: true
+				fix: true,
+				reporters: [ { formatter: 'string', console: true } ]
 			}),
 			dest( paths.styles.dest, { sourcemaps: './' })
 		],
