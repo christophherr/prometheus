@@ -3,21 +3,21 @@
   "version": "2.0.0",
   "description": "Modular, sassified child theme for the Genesis Framework with a Gulp 4 workflow based on the Genesis Sample Theme 2.6",
   "scripts": {
-    "gulp": "node ./node_modules/gulp/bin/gulp.js",
-    "watch": "node ./node_modules/gulp/bin/gulp.js watch",
-    "lintStyles": "node ./node_modules/gulp/bin/gulp.js lintStyles",
-    "sass": "node ./node_modules/gulp/bin/gulp.js sass",
-    "minify": "node ./node_modules/gulp/bin/gulp.js minifyStyles",
-    "styles": "node ./node_modules/gulp/bin/gulp.js styles",
-    "js": "node ./node_modules/gulp/bin/gulp.js js",
-    "minifyScripts": "node ./node_modules/gulp/bin/gulp.js minifyScripts",
-    "scripts": "node ./node_modules/gulp/bin/gulp.js scripts",
-    "images": "node ./node_modules/gulp/bin/gulp.js images",
-    "bump": "node ./node_modules/gulp/bin/gulp.js bump",
-    "watchFiles": "node ./node_modules/gulp/bin/gulp.js watchFiles",
-    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
-		"translation": "node ./node_modules/gulp/bin/gulp.js translation",
-		"wc": "node ./node_modules/gulp/bin/gulp.js wc"
+    "gulp": "gulp",
+    "watch": "gulp watch",
+    "lintStyles": "gulp lintStyles",
+    "sass": "gulp sass",
+    "minify": "gulp minifyStyles",
+    "styles": "gulp styles",
+    "js": "gulp js",
+    "minifyScripts": "gulp minifyScripts",
+    "scripts": "gulp scripts",
+    "images": "gulp images",
+    "bump": "gulp bump",
+    "watchFiles": "gulp watchFiles",
+    "serve": "gulp serve",
+    "translation": "gulp translation",
+    "wc": "gulp wc"
   },
   "repository": {
     "type": "git",
@@ -88,6 +88,9 @@
       "es6": true
     },
     "root": true,
-    "extends": "wordpress"
+    "extends": "wordpress",
+    "parserOptions": {
+      "sourceType": "module"
+    }
   }
 }
