@@ -11,15 +11,14 @@
 
 add_action( 'after_switch_theme', 'prometheus_2_switch_theme' );
 /**
- * Switch to the previously active theme after the theme has been activated.
+ * Switch to the Genesis parent theme after the theme has been activated.
  *
  * @since 2.0.0
  *
- * @param string $previous_theme Previous theme name/slug.
  * @return void
  */
-function prometheus_2_switch_theme( $previous_theme ) {
-	switch_theme( $previous_theme ? $previous_theme : WP_DEFAULT_THEME );
+function prometheus_2_switch_theme() {
+	switch_theme( 'genesis' );
 	unset( $_GET['activated'] );
 	add_action( 'admin_notices', 'prometheus_2_show_deactivation_and_upgrade_notice' );
 }
@@ -69,17 +68,26 @@ function prometheus_2_show_deactivation_and_upgrade_notice() {
  * @return string
  */
 function prometheus_2_upgrade_message() {
-	if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) ) {
+	if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) && version_compare( PHP_VERSION, '5.6', '<' ) ) {
 		return sprintf(
 			// Translators: 1 is the required WordPress version and 2 is the user's current version.
-			__( 'Prometheus 2 was not activated because it requires a minimum WordPress version of %1$s. You are running version %2$s. Please upgrade WordPress and try again.', 'prometheus2' ),
+			__( 'Prometheus 2 cannot be activated because it requires WordPress version %1$s and PHP version %2$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %3$s and PHP version %4$s. Please upgrade WordPress and PHP and try again.', 'prometheus2' ),
+			'4.9.6',
+			'5.6',
+			$GLOBALS['wp_version'],
+			PHP_VERSION
+		);
+	} elseif ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) ) {
+		return sprintf(
+			// Translators: 1 is the required WordPress version and 2 is the user's current version.
+			__( 'Prometheus 2 was not activated because it requires WordPress version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %2$s. Please upgrade WordPress and try again.', 'prometheus2' ),
 			'4.9.6',
 			$GLOBALS['wp_version']
 		);
 	} elseif ( version_compare( PHP_VERSION, '5.6', '<' ) ) {
 		return sprintf(
 			// Translators: 1 is the required PHP version and 2 is the user's current version.
-			__( 'Prometheus 2 was not activated because it requires a minimum PHP version of %1$s. You are running version %2$s. Please upgrade your PHP version and try again.', 'prometheus2' ),
+			__( 'Prometheus 2 was not activated because it requires a minimum PHP version of %1$s. The Genesis Framework (parent theme) has been activated instead. You are running PHP version %2$s. Please upgrade your PHP version and try again.', 'prometheus2' ),
 			'5.6',
 			PHP_VERSION
 		);
