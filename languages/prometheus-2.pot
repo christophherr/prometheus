@@ -55,6 +55,21 @@ msgstr ""
 msgid "The maximum width of the logo in pixels."
 msgstr ""
 
+#. translators: 1 is the required WordPress version and 2 is the user's current version.
+#: lib/minimum-requirements.php:74
+msgid "Prometheus 2 cannot be activated because it requires WordPress version %1$s and PHP version %2$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %3$s and PHP version %4$s. Please upgrade WordPress and PHP and try again."
+msgstr ""
+
+#. translators: 1 is the required WordPress version and 2 is the user's current version.
+#: lib/minimum-requirements.php:83
+msgid "Prometheus 2 was not activated because it requires WordPress version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %2$s. Please upgrade WordPress and try again."
+msgstr ""
+
+#. translators: 1 is the required PHP version and 2 is the user's current version.
+#: lib/minimum-requirements.php:90
+msgid "Prometheus 2 was not activated because it requires a minimum PHP version of %1$s. The Genesis Framework (parent theme) has been activated instead. You are running PHP version %2$s. Please upgrade your PHP version and try again."
+msgstr ""
+
 #: lib/plugins/woocommerce/woocommerce-setup.php:67
 msgid "Previous Page"
 msgstr ""
