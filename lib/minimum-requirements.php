@@ -68,9 +68,9 @@ function prometheus_2_show_deactivation_and_upgrade_notice() {
  * @return string
  */
 function prometheus_2_upgrade_message() {
-	$genesis_version = get_genesis_version();
-	$compare_wp_version = version_compare( $GLOBALS['wp_version'], '4.8', '<' );
-	$compare_php_version = version_compare( PHP_VERSION, '5.6', '<' );
+	$genesis_version         = prometheus_2_get_genesis_version();
+	$compare_wp_version      = version_compare( $GLOBALS['wp_version'], '4.8', '<' );
+	$compare_php_version     = version_compare( PHP_VERSION, '5.6', '<' );
 	$compare_genesis_version = version_compare( $genesis_version, '2.6', '<' );
 
 	if ( $compare_wp_version && $compare_php_version && $compare_genesis_version ) {

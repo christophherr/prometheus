@@ -10,7 +10,14 @@
  * @link    https://www.christophherr.com/
  */
 
-function get_genesis_version() {
+/**
+ * Get the version of the Genesis framework.
+ *
+ * @since 2.0
+ *
+ * @return string
+ */
+function prometheus_2_get_genesis_version() {
 	return wp_get_theme( 'genesis' )->get( 'Version' );
 }
 
