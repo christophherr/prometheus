@@ -22,7 +22,7 @@ function prometheus_2_get_genesis_version() {
 }
 
 // Check minimum requirements.
-if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) || version_compare( get_genesis_version(), '2.6', '<' ) ) {
+if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) || version_compare( prometheus_2_get_genesis_version(), '2.6', '<' ) ) {
 	require_once 'lib/minimum-requirements.php';
 	return;
 }
