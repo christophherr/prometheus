@@ -21,6 +21,7 @@ export const paths = {
 			notify: false,
 			open: 'external',
 			browser: 'chrome',
+			reloadDelay: 1000,
 			httpsKey: 'path/to/your/key/file/placeholder.key',
 			httpsCert: `path/to/your/cert/file/siteName.crt`
 		}
