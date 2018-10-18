@@ -13,7 +13,8 @@ export function serve( done ) {
 		port: paths.config.watch.port,
 		notify: paths.config.watch.notify,
 		open: paths.config.watch.open,
-		browser: paths.config.watch.browser
+		browser: paths.config.watch.browser,
+		reloadDelay: paths.config.watch.reloadDelay
 
 		// https: {
 		// 	key: paths.config.watch.httpsKey,
