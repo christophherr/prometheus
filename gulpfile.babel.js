@@ -20,17 +20,18 @@ import scripts from './gulp/scripts';
 import minifyScripts from './gulp/minifyScripts';
 import translation from './gulp/translation';
 import wc from './gulp/woocommerce';
+
 // import watch from './gulp/watch';
 
 /**
  * Create a task for all style related tasks.
  */
-export const styles = series(lintSass, sass, minifyStyles);
+export const styles = series( lintSass, sass, minifyStyles );
 
 /**
  * Create a task for all script related tasks.
  */
-export const js = series(scripts, minifyScripts);
+export const js = series( scripts, minifyScripts );
 
 /**
  * Task to watch files because something is not working importing it from './gulp/watch' on Windows.
@@ -39,14 +40,15 @@ export const js = series(scripts, minifyScripts);
 task(
 	'watchFiles',
 	parallel(
+
 		// () => gulpWatch('./lib/plugins/woocommerce/scss/**/*.scss', series(wc, reload)),
-		() => gulpWatch('./js/src/*.js', series(js, reload)),
-		() => gulpWatch('./scss/**/*.scss', series(styles, reload)),
-		() => gulpWatch('./images/src/*.*', series(images, reload)),
+		() => gulpWatch( './js/src/*.js', series( js, reload ) ),
+		() => gulpWatch( './scss/**/*.scss', series( styles, reload ) ),
+		() => gulpWatch( './images/src/*.*', series( images, reload ) ),
 		() =>
 			gulpWatch(
-				['*.php', './lib/*.php', './lib/**/*.php', './lib/**/**/*.php'],
-				series(reload)
+				[ '*.php', './lib/*.php', './lib/**/*.php', './lib/**/**/*.php' ],
+				series( reload )
 			)
 	)
 );
@@ -54,7 +56,7 @@ task(
 /**
  * Create the watch task
  */
-export const watch = series(serve, 'watchFiles');
+export const watch = series( serve, 'watchFiles' );
 
 /**
  * Create an order of all the tasks and make it the default task.
@@ -76,7 +78,7 @@ export default allTasks;
  * Create the bump task.
  * Instructions can be found in the task.
  */
-export const bump = parallel(bumpRootFiles, bumpSass);
+export const bump = parallel( bumpRootFiles, bumpSass );
 
 /**
  * Export all imported functions as tasks
