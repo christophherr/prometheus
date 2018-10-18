@@ -10,7 +10,22 @@
  * @link    https://www.christophherr.com/
  */
 
-namespace ChristophHerr\Prometheus2;
+/**
+ * Get the version of the Genesis framework.
+ *
+ * @since 2.0
+ *
+ * @return string
+ */
+function prometheus_2_get_genesis_version() {
+	return wp_get_theme( 'genesis' )->get( 'Version' );
+}
+
+// Check minimum requirements.
+if ( version_compare( $GLOBALS['wp_version'], '4.8', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) || version_compare( prometheus_2_get_genesis_version(), '2.6', '<' ) ) {
+	require_once 'lib/minimum-requirements.php';
+	return;
+}
 
 // Start the Child Theme.
 require_once 'lib/init.php';

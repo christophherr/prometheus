@@ -55,6 +55,41 @@ msgstr ""
 msgid "The maximum width of the logo in pixels."
 msgstr ""
 
+#. translators: 1 is the required Genesis Version, 2 is the required WordPress version, 3 is the required PHP version, 4 is the user's current Genesis version, 5 is the user's current WordPress version and 6 is the user's current PHP version.
+#: lib/minimum-requirements.php:79
+msgid "Prometheus 2 cannot be activated because it requires Genesis version %1$s, WordPress version %2$s and PHP version %3$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %4$s, WordPress version %5$s and PHP version %6$s. Please upgrade Genesis, WordPress and PHP and try again."
+msgstr ""
+
+#. translators: 1 is the required WordPress version, 2 is the required PHP version, 3 is the user's current WordPress version amd 4 is the user's current PHP version.
+#: lib/minimum-requirements.php:90
+msgid "Prometheus 2 cannot be activated because it requires WordPress version %1$s and PHP version %2$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %3$s and PHP version %4$s. Please upgrade WordPress and PHP and try again."
+msgstr ""
+
+#. translators: 1 is the required Genesis version, 2 is the required WordPress version, 3 is the user's current Genesis version and 4 is the user's current WordPress version.
+#: lib/minimum-requirements.php:99
+msgid "Prometheus 2 was not activated because it requires Genesis version %1$s and WordPress version %2$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %3$s and WordPress version %4$s. Please upgrade Genesis and WordPress and try again."
+msgstr ""
+
+#. translators: 1 is the required Genesis version, 2 is the required PHP version, 3 is the user's current Genesis version and 4 is the user's current PHP version.
+#: lib/minimum-requirements.php:108
+msgid "Prometheus 2 was not activated because it requires Genesis version %1$s and PHP version of %2$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %3$s and PHP version %4$s. Please upgrade Genesis and PHP and try again."
+msgstr ""
+
+#. translators: 1 is the required WordPress version and 2 is the user's current WordPress version.
+#: lib/minimum-requirements.php:117
+msgid "Prometheus 2 was not activated because it requires WordPress version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running WordPress version %2$s. Please upgrade WordPress and try again."
+msgstr ""
+
+#. translators: 1 is the required PHP version and 2 is the user's current PHP version.
+#: lib/minimum-requirements.php:124
+msgid "Prometheus 2 was not activated because it requires PHP version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running PHP version %2$s. Please upgrade PHP and try again."
+msgstr ""
+
+#. translators: 1 is the required Genesis version and 2 is the user's current Genesis version.
+#: lib/minimum-requirements.php:131
+msgid "Prometheus 2 was not activated because it requires Genesis version %1$s. The Genesis Framework (parent theme) has been activated instead. You are running Genesis version %2$s. Please upgrade Genesis and try again."
+msgstr ""
+
 #: lib/plugins/woocommerce/woocommerce-setup.php:67
 msgid "Previous Page"
 msgstr ""
