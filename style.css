@@ -1328,6 +1328,10 @@ img.alignright,
 	word-wrap: break-word;
 }
 
+.genesis-nav-menu .sub-menu[focus-within] {
+	opacity: 1;
+}
+
 .genesis-nav-menu .sub-menu:focus-within {
 	opacity: 1;
 }

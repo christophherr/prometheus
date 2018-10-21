@@ -2,9 +2,9 @@
 
 import { src, dest } from 'gulp';
 import pump from 'pump';
-import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
 import { paths, gulpPlugins } from '../config/gulpConfig';
+import postcssPresetEnv from 'postcss-preset-env';
 
 export default function sass( done ) {
 
@@ -20,7 +20,7 @@ export default function sass( done ) {
 			}),
 			gulpPlugins.pixrem(),
 			gulpPlugins.postcss([
-				autoprefixer(),
+				postcssPresetEnv(),
 				mqpacker({
 					sort: true
 				})

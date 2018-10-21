@@ -2,8 +2,8 @@
 
 import { src, dest, series } from 'gulp';
 import pump from 'pump';
-import autoprefixer from 'autoprefixer';
 import mqpacker from 'css-mqpacker';
+import postcssPresetEnv from 'postcss-preset-env';
 import sortCSSmq from 'sort-css-media-queries';
 import { paths, gulpPlugins } from '../config/gulpConfig';
 
@@ -43,7 +43,7 @@ export function wcSass( done ) {
 			}),
 			gulpPlugins.pixrem({ rootValue: '10px' }),
 			gulpPlugins.postcss([
-				autoprefixer(),
+				postcssPresetEnv(),
 				mqpacker({
 					sort: sortCSSmq.desktopFirst
 				})

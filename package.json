@@ -31,7 +31,6 @@
   "homepage": "https://github.com/christophherr/prometheus#readme",
   "devDependencies": {
     "ajv": "^6.5.0",
-    "autoprefixer": "^9.2.1",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
@@ -63,6 +62,7 @@
     "gulp-sort": "^2.0.0",
     "gulp-stylelint": "^7.0.0",
     "gulp-wp-pot": "^2.3.2",
+    "postcss-preset-env": "^6.1.2",
     "prettier": "^1.12.1",
     "prettier-eslint": "^8.2.1",
     "prettier-stylelint": "^0.4.2",
