@@ -61,7 +61,7 @@ add_action( 'wp_head', function() {
 	}, 10, 2 );
 
 	add_filter( 'genesis_attr_nav-primary', function( $attributes ) {
-		$attributes['class'] .= ' genesis-responsive-menu amp-nav';
+		$attributes['class'] .= ' amp-nav';
 		return $attributes;
 	});
 });
