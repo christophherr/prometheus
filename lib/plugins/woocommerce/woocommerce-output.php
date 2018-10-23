@@ -13,12 +13,12 @@ namespace ChristophHerr\Prometheus2\Plugins\Woocommerce;
 
 // Enqueues the theme's custom WooCommerce styles to the WooCommerce plugin.
 add_filter( 'woocommerce_enqueue_styles', function( $enqueue_styles ) {
-	$enqueue_styles['prometheus2-woocommerce-styles'] = array(
+	$enqueue_styles['prometheus2-woocommerce-styles'] = [
 		'src'     => get_stylesheet_directory_uri() . '/lib/plugins/woocommerce/prometheus2-woocommerce.css',
 		'deps'    => '',
 		'version' => CHILD_THEME_VERSION,
 		'media'   => 'screen',
-	);
+	];
 
 	return $enqueue_styles;
 });
