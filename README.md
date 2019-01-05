@@ -34,29 +34,29 @@ Thank you, Brian!
 3.  The child theme uses a simple autoloader (see `/lib/functions/autoload.php`).
 4.  The autoloader is 'fed' from two config files found in `config/autoload-admin-files.php` and `config/autoload-nonadmin-files.php`.
 5.  Woocommerce and additional Customizer functionality are deactivated but can easily be activated by uncommenting the files in the autoloader config.
-6.  AdSense settings are deactivated in `admin/remove-adsense.php` and in `customizer/remove-adsense.php`.
+6.  AdSense settings are deactivated in `lib/admin/remove-adsense.php` and in `lib/customizer/remove-adsense.php`.
 7.  The Sass partials for the theme are located in `scss`.
     The Sass partials for Woocommerce are located in `/lib/plugins/woocommerce/scss`.
 8.  Print styles are commented out in `scss/styles.scss`.
 9.  Gulp commands are available to lint and compile Sass, minify the stylesheet, lint and minify the JavaScript files.
 
-    Please open `gulpfile.js` and configure Browser-Sync (in the watch task) to load the website you are working on.
+    Please open `gulpfile.babel.js` and configure Browser-Sync (in the watch task) to load the website you are working on.
 
-    To use Gulp, you can either just type `gulp` in a terminal window or take a look at the available commands in `gulpfile.js`.
+    To use Gulp, you can either just type `gulp` in a terminal window or take a look at the available commands in `gulpfile.babel.js`.
 
     Please be aware that the Javascript minifier expects ES2016+ syntax.
 
     More functionality (e.g. image optimization) may be added in the future.
-    If you want more advanced Gulp features, take a look at Craig Simpson's [Gulp WP Toolkit](https://github.com/craigsimps/gulp-wp-toolkit/) or Lee Anthony's [gulpfile.js](https://github.com/seothemes/genesis-starter/blob/master/gulpfile.js).
+    If you want more advanced Gulp features, take a look at Craig Simpson's [Gulp WP Toolkit](https://github.com/craigsimps/gulp-wp-toolkit/) or Lee Anthony's [gulpfile.js](https://github.com/seothemes/genesis-starter-theme/blob/master/Gulpfile.js).
 
-10. The minified stylesheet is loaded from `functions/load-minified-css.php`. Please uncomment the file in the (nonadmin) config to use style.min.css. Unminified JavaScript files are loaded if `SCRIPT_DEBUG` is set to true in `wp-config.php`.
+10. The minified stylesheet is loaded from `lib/functions/load-minified-css.php`. Please uncomment the file in the (nonadmin) config to use style.min.css. Unminified JavaScript files are loaded if `SCRIPT_DEBUG` is set to true in `wp-config.php`.
 11. Stylelint and ESlint are configured to follow WordPress standards and available to check CSS and JavaScript.
     Four Stylelint rules were changed to allow including the HTML resets and the Genesis structure; one additional rule was changed because Stylelint can't autofix it, yet.
 12. If you are using VS Code, you can automatically format CSS and JavaScript files with Prettier (e.g. using the `prettier-eslint` and `prettier-stylelint` extensions).
 13. If Javascript ES5 style is required, please replace the files with copies from Genesis Sample.
 14. The functionality of Gary Jones' [genesis-js-no-js](https://github.com/GaryJones/genesis-js-no-js) has been added/enqueued to the theme in order to help prevent a flash of the desktop menu on mobile devices.
 
-    It can be deactivated by commenting out the line `functions/no-js.php` in the nonadmin files autoloader.
+    It can be deactivated by commenting out the line `lib/functions/no-js.php` in the nonadmin files autoloader.
     If you need ES5 JavaScript syntax, please deactivate the feature and use Gary's plugin.
 
 ## Installation Instructions
