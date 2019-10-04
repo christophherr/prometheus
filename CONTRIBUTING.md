@@ -117,7 +117,7 @@ $ git push origin [name_of_your_new_branch]
 
 If you have composer installed on your machine, please run `composer install` on the root of your `develop` branch.
 After the installation finishes, you can run PHPCS over the code with the command `composer phpcs`.
-If you don't have composer, you can go to (https://getcomposer.org/doc/00-intro.md)[https://getcomposer.org/doc/00-intro.md] and follow the steps to install it.
+If you don't have composer, you can go to [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md) and follow the steps to install it.
 
 When you open a pull request, Travis CI will run PHPCS over your code and let me know if there are any errors.
 
@@ -174,7 +174,7 @@ This is the recommended method. Read about [How to Setup and Maintain a Local In
 Please make sure to write a commit message that summarizes the changes.
 If you find yourself in the need to use `and` it might be better to do two separate commits.
 
-See (Writing good commit messages)[https://github.com/copyblogger/genesis/wiki/Writing-good-commit-messages] for inspiration.
+See [Useful Tips for writing better Git commit messages](https://code.likeagirl.io/useful-tips-for-writing-better-git-commit-messages-808770609503) for inspiration.
 
 As a note, I started my commit messages in the past tense. `Added` instead of `Add`.
 
