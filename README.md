@@ -1,3 +1,8 @@
+# Project out-of-date
+
+This starter theme will not work with Genesis versions 3+.
+Please check out Seothemes' [genesis-starter-theme](https://github.com/seothemes/genesis-starter-theme) instead.
+
 # Prometheus 2 Theme
 
 ![Prometheus Statue](https://raw.githubusercontent.com/christophherr/prometheus/develop/screenshot.png)
