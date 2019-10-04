@@ -22,7 +22,7 @@ return [
 	// 'functions/load-minified-css.php',
 	// 'functions/markup.php',
 	'functions/no-js.php',
-	// 'gutenberg/theme-supports.php',
+	'gutenberg/enqueues-theme-supports.php',
 	// 'structure/footer.php',
 	'structure/gravatar-sizes.php',
 	'structure/header.php',
